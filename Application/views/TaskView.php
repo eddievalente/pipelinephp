@@ -45,7 +45,7 @@ class TaskView {
     $pipeline = $obj->pipeline;
     //
     $exibe = '';    
-    $exibe .= $this->url->dlg_question('exclui_bt','Confirma a exclusão da tarefa ?',
+    $exibe .= $this->url->dlg_question('exclui_bt','Confirm to delete the task ?',
                                        $this->url->get_href_int($this->route,'exclusao',$token));
     //
     $link1 = $this->url->get_link_int('My Tasks');
@@ -54,25 +54,25 @@ class TaskView {
     $breadcrumb = $this->url->breadcrumb(4,$tarefa,$link1,$link2,$link3);
     //
     $vetor = array();
-    $vetor[] = $this->url->dlg_button('exclui_bt','excluir'); 
-    $vetor[] = $this->url->get_link_int('Editar',$this->route,'editar',$token);
+    $vetor[] = $this->url->dlg_button('exclui_bt','Delete'); 
+    $vetor[] = $this->url->get_link_int('Edit',$this->route,'editar',$token);
     //$exibe .= $this->html->filtro_header($pipeline,'',$vetor,$acao,$breadcrumb);
-    $exibe .= $this->html->filtro_header('Pipeline &rarr; Ação &rarr; Tarefa',$o_pipeline.'. '.$pipeline,$vetor,
+    $exibe .= $this->html->filtro_header('Pipeline &rarr; Action &rarr; Task',$o_pipeline.'. '.$pipeline,$vetor,
                                          $o_pipeline.'.'.$o_acao.'. '.$acao,$breadcrumb);
     //
     $exibe .= $this->html->ficha_inicio();
     $vetor = Array();
     $vetor[] = 'Pipeline¦'.$pipeline.'¦40';
-    $vetor[] = 'Ação¦'.$acao.'¦40';
-    $vetor[] = 'Prioridade¦'.$this->utili->get_prioridade($prioridade).'¦20';
+    $vetor[] = 'Action¦'.$acao.'¦40';
+    $vetor[] = 'Priority¦'.$this->utili->get_prioridade($prioridade).'¦20';
     $exibe .= $this->html->ficha_vetor($vetor);
     $vetor = Array();
-    $vetor[] = 'Tarefa¦'.$tarefa.'¦80';
-    $vetor[] = 'Início¦'.$this->utili->get_strdata($dtinicio).'¦10';
-    $vetor[] = 'Entrega¦'.$this->utili->get_strdata($dtentrega).'¦10';
+    $vetor[] = 'Task¦'.$tarefa.'¦80';
+    $vetor[] = 'Start Date¦'.$this->utili->get_strdata($dtinicio).'¦10';
+    $vetor[] = 'Due Date¦'.$this->utili->get_strdata($dtentrega).'¦10';
     $exibe .= $this->html->ficha_vetor($vetor);
     $vetor = Array();
-    $vetor[] = 'Instruções¦'.nl2br($instrucao).'¦100';
+    $vetor[] = 'Instructions¦'.nl2br($instrucao).'¦100';
     $exibe .= $this->html->ficha_vetor($vetor);
     $exibe .= $this->html->ficha_fim();
     return $exibe;
@@ -104,7 +104,7 @@ class TaskView {
       $obj->dtentrega = $this->form->get_formdata("dtentrega");
       $dados_ok = true;
       if ( empty($obj->tarefa) ) {
-        $msg_erro .= 'Tarefa não informada<br/>';
+        $msg_erro .= 'Task name is mandatory';
         $dados_ok = false;
       }
       if ( $dados_ok ) {
@@ -115,7 +115,7 @@ class TaskView {
       }
     }
     if( $exibe_form ) {
-      $titform = 'Tarefa &bull; Novo';
+      $titform = 'Task &bull; New';
       // monta vetores
       $vet_prioridade = $this->utili->get_vet_prioridade();
       //
@@ -129,11 +129,11 @@ class TaskView {
       $exibe .= $this->html->formdiv_inicio();
       $linkform = $this->url->get_href_int($this->route,'novo',$obj->a_token);
       $exibe .= $this->form->inicio($linkform,$msg_erro);
-      $exibe .= $this->form->data('dtinicio','Início',$obj->dtinicio,10);
-      $exibe .= $this->form->data('dtentrega','Entrega',$obj->dtentrega,10);
-      $exibe .= $this->form->combo('prioridade','Prioridade',$obj->prioridade,$vet_prioridade,30);
-      $exibe .= $this->form->texto('tarefa','Tarefa',$obj->tarefa,100,100);
-      $exibe .= $this->form->memo('instrucao','Instruções',$obj->instrucao,10,100);
+      $exibe .= $this->form->data('dtinicio','Start Date',$obj->dtinicio,10);
+      $exibe .= $this->form->data('dtentrega','Due Date',$obj->dtentrega,10);
+      $exibe .= $this->form->combo('prioridade','Priority',$obj->prioridade,$vet_prioridade,30);
+      $exibe .= $this->form->texto('tarefa','Task',$obj->tarefa,100,100);
+      $exibe .= $this->form->memo('instrucao','Instructions',$obj->instrucao,10,100);
       
       $botoes = $this->form->botao_cancelar($this->url->get_href_int('action','ficha',$obj->a_token));
       $botoes .= $this->form->botao_ok();
@@ -154,7 +154,7 @@ class TaskView {
       $obj->dtentrega = $this->form->get_formdata("dtentrega");
       $dados_ok = true;
       if ( empty($obj->tarefa) ) {
-        $msg_erro .= 'Tarefa não informada<br/>';
+        $msg_erro .= 'Task name is mandatory';
         $dados_ok = false;
       }
       if ( $dados_ok ) {
@@ -165,7 +165,7 @@ class TaskView {
       }
     }
     if( $exibe_form ) {
-      $titform = 'Editar';
+      $titform = 'Edit';
       // monta vetores
       $vet_prioridade = $this->utili->get_vet_prioridade();
       //
@@ -180,11 +180,11 @@ class TaskView {
       $exibe .= $this->html->formdiv_inicio();
       $linkform = $this->url->get_href_int($this->route,'editar',$obj->token);
       $exibe .= $this->form->inicio($linkform,$msg_erro);   
-      $exibe .= $this->form->data('dtinicio','Início',$obj->dtinicio,10);
-      $exibe .= $this->form->data('dtentrega','Entrega',$obj->dtentrega,10);
-      $exibe .= $this->form->combo('prioridade','Prioridade',$obj->prioridade,$vet_prioridade,30);
-      $exibe .= $this->form->texto('tarefa','Tarefa',$obj->tarefa,100,100);
-      $exibe .= $this->form->memo('instrucao','Instruções',$obj->instrucao,10,100);
+      $exibe .= $this->form->data('dtinicio','Start Date',$obj->dtinicio,10);
+      $exibe .= $this->form->data('dtentrega','Due Date',$obj->dtentrega,10);
+      $exibe .= $this->form->combo('prioridade','Priority',$obj->prioridade,$vet_prioridade,30);
+      $exibe .= $this->form->texto('tarefa','Task',$obj->tarefa,100,100);
+      $exibe .= $this->form->memo('instrucao','Instructions',$obj->instrucao,10,100);
       $botoes = $this->form->botao_cancelar($this->url->get_href_int($this->route,'ficha',$obj->token));
       $botoes .= $this->form->botao_ok();
       $exibe .= $this->form->fim($botoes);
@@ -205,7 +205,7 @@ class TaskView {
       return $this->url->redirect($this->url->get_href_int());
     }
     if( $exibe_form ) {
-      $titform = 'Progresso da Tarefa';
+      $titform = 'Task Progress';
       // monta vetores
       $vet_prioridade = $this->utili->get_vet_prioridade();
       $vet_progresso = $this->utili->get_vet_progresso();
@@ -218,31 +218,31 @@ class TaskView {
       $breadcrumb = $this->url->breadcrumb(5,$titform,$link1,$link2,$link3,$link4);
       //
       $exibe = '';
-      $exibe .= $this->html->filtro_header('Pipeline &rarr; Ação &rarr; Tarefa',$o_pipeline.'. '.$pipeline,'',
+      $exibe .= $this->html->filtro_header('Pipeline &rarr; Action &rarr; Task',$o_pipeline.'. '.$pipeline,'',
                                            $o_pipeline.'.'.$o_acao.'. '.$acao,$breadcrumb);
       $exibe .= $this->html->ficha_inicio();
       $vetor = Array();
       $vetor[] = 'Pipeline¦'.$pipeline.'¦100';
       $exibe .= $this->html->ficha_vetor($vetor);
       $vetor = Array();
-      $vetor[] = 'Ação¦'.$acao.'¦100';
+      $vetor[] = 'Action¦'.$acao.'¦100';
       $exibe .= $this->html->ficha_vetor($vetor);
       $vetor = Array();
-      $vetor[] = 'Tarefa¦'.$tarefa.'¦100';
+      $vetor[] = 'Task¦'.$tarefa.'¦100';
       $exibe .= $this->html->ficha_vetor($vetor);
       $vetor = Array();
-      $vetor[] = 'Instruções¦'.nl2br($instrucao).'¦100';
+      $vetor[] = 'Instructions¦'.nl2br($instrucao).'¦100';
       $exibe .= $this->html->ficha_vetor($vetor);
       $exibe .= $this->html->ficha_fim();
       //
       $linkform = $this->url->get_href_int($this->route,'progresso',$token);
       $exibe .= $this->html->formdiv_inicio();
       $exibe .= $this->form->inicio($linkform);
-      $exibe .= $this->form->data('dtinicio','Início',$dtinicio,10);
-      $exibe .= $this->form->data('dtentrega','Entrega',$dtentrega,10);
-      $exibe .= $this->form->combo('prioridade','Prioridade',$prioridade,$vet_prioridade,30);
-      $exibe .= $this->form->combo('progresso','Porcentagem Executada',$progresso,$vet_progresso,25);
-      $exibe .= $this->form->combo('indicador','Viés de Entrega',$indicador,$vet_vies,25);
+      $exibe .= $this->form->data('dtinicio','Start Date',$dtinicio,10);
+      $exibe .= $this->form->data('dtentrega','Due Date',$dtentrega,10);
+      $exibe .= $this->form->combo('prioridade','Priority',$prioridade,$vet_prioridade,30);
+      $exibe .= $this->form->combo('progresso','Percent Done',$progresso,$vet_progresso,25);
+      $exibe .= $this->form->combo('indicador','Delivery Bias',$indicador,$vet_vies,25);
       //
       $botoes = $this->form->botao_cancelar($this->url->get_href_int($this->route,'ficha',$token));
       $botoes .= $this->form->botao_ok();
