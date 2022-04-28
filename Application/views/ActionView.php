@@ -35,7 +35,7 @@ class ActionView {
     //
     $exibe = '';
     if ( $q_tarefa == 0 ) {
-      $exibe .= $this->url->dlg_question('exclui_bt','Confirma a exclusão da ação ?',
+      $exibe .= $this->url->dlg_question('exclui_bt','Confirm to delete the action ?',
                                          $this->url->get_href_int($this->route,'exclusao',$token));
     }
     //
@@ -44,32 +44,32 @@ class ActionView {
     $breadcrumb = $this->url->breadcrumb(3,$acao,$link1,$link2);
     //
     $vetor = array();
-    $vetor[] = $this->url->get_link_int('Editar',$this->route,'editar',$token);
-    if ( $q_tarefa == 0 ) $vetor[] = $this->url->dlg_button('exclui_bt','excluir'); 
-    $exibe .= $this->html->filtro_header('Pipeline &rarr; Ação',$o_pipeline.'. '.$pipeline,$vetor,$o_pipeline.'.'.$o_acao.'. '.$acao,$breadcrumb);
+    $vetor[] = $this->url->get_link_int('Edit',$this->route,'editar',$token);
+    if ( $q_tarefa == 0 ) $vetor[] = $this->url->dlg_button('exclui_bt','delete'); 
+    $exibe .= $this->html->filtro_header('Pipeline &rarr; Action',$o_pipeline.'. '.$pipeline,$vetor,$o_pipeline.'.'.$o_acao.'. '.$acao,$breadcrumb);
     //
-    if ( $q_tarefa == 0 ) $q_tarefa = 'Nenhuma';
+    if ( $q_tarefa == 0 ) $q_tarefa = 'None';
     $exibe .= $this->html->ficha_inicio();
     $vetor = Array();
     $vetor[] = 'Pipeline¦'.$pipeline.'¦45';
-    $vetor[] = 'Ação¦'.$acao.'¦45';
-    $vetor[] = 'Tarefas¦'.$q_tarefa.'¦10';
+    $vetor[] = 'Action¦'.$acao.'¦45';
+    $vetor[] = 'Tasks¦'.$q_tarefa.'¦10';
     $exibe .= $this->html->ficha_vetor($vetor);
     $vetor = Array();
-    $vetor[] = 'Informação¦'.nl2br($info).'¦100';
+    $vetor[] = 'Info¦'.nl2br($info).'¦100';
     $exibe .= $this->html->ficha_vetor($vetor);
     $exibe .= $this->html->ficha_fim();
     
     $vetor = array();
-    $vetor[] = $this->url->get_link_int('nova tarefa','task','novo',$token);
-    $exibe .= $this->html->filtro_divisor('Tarefas',$vetor);
+    $vetor[] = $this->url->get_link_int('new task','task','novo',$token);
+    $exibe .= $this->html->filtro_divisor('Tasks',$vetor);
 
     $colunas = array();
-    $colunas[] = 'Tarefa¦55¦false';
-    $colunas[] = 'Entrega¦10¦false';
-    $colunas[] = 'Prioridade¦20¦false';
-    $colunas[] = 'Progresso¦10¦false';
-    $colunas[] = 'Opções¦5¦false';
+    $colunas[] = 'Task¦55¦false';
+    $colunas[] = 'Due Date¦10¦false';
+    $colunas[] = 'Priority¦20¦false';
+    $colunas[] = 'Progress¦10¦false';
+    $colunas[] = 'Options¦5¦false';
     $exibe .= $this->html->scroll_inicio($colunas,'50vh');
     foreach( $obj->task_list as $task ) {
       $idtask = $task->id_task;
@@ -132,7 +132,7 @@ class ActionView {
       $obj->info = $obj->get_post("info");
       $dados_ok = true;
       if ( empty($obj->acao) ) {
-        $msg_erro .= 'Título não informado<br/>';
+        $msg_erro .= 'Action title is required';
         $dados_ok = false;
       }
       if ( $dados_ok ) {
@@ -144,7 +144,7 @@ class ActionView {
     }
     if( $exibe_form ) {
       $exibe = '';
-      $titform = 'Ação &bull; Novo';
+      $titform = 'Action &bull; New';
       //
       $link1 = $this->url->get_link_int('My Tasks');
       $link2 = $this->url->get_link_int($obj->pipeline,'pipeline','ficha',$obj->p_token);
@@ -154,8 +154,8 @@ class ActionView {
       $exibe .= $this->html->filtro_header($obj->pipeline,'','',$titform,$breadcrumb);
       $exibe .= $this->html->formdiv_inicio();
       $exibe .= $this->form->inicio($linkform,$msg_erro);
-      $exibe .= $this->form->texto('acao','Título',$obj->acao,100,100);
-      $exibe .= $this->form->memo('info','Informação',$obj->info,10,100);
+      $exibe .= $this->form->texto('acao','Action',$obj->acao,100,100);
+      $exibe .= $this->form->memo('info','Info',$obj->info,10,100);
       $botoes = $this->form->botao_cancelar($this->url->get_href_int('pipeline','ficha',$obj->p_token));
       $botoes .= $this->form->botao_ok();
       $exibe .= $this->form->fim($botoes);
@@ -172,7 +172,7 @@ class ActionView {
       $obj->info = $obj->get_post("info");
       $dados_ok = true;
       if ( empty($obj->acao) ) {
-        $msg_erro .= 'Título não informado<br/>';
+        $msg_erro .= 'Action title is required';
         $dados_ok = false;
       }
       if ( $dados_ok ) {
@@ -183,7 +183,7 @@ class ActionView {
       }
     }
     if( $exibe_form ) {
-      $titform = 'Ação &bull; Editar';
+      $titform = 'Action &bull; Edit';
       //
       $link1 = $this->url->get_link_int('My Tasks');
       $link2 = $this->url->get_link_int($obj->pipeline,'pipeline','ficha',$obj->p_token);
@@ -195,8 +195,8 @@ class ActionView {
       $exibe .= $this->html->formdiv_inicio();
       $linkform = $this->url->get_href_int($this->route,'editar',$obj->token);
       $exibe .= $this->form->inicio($linkform,$msg_erro);
-      $exibe .= $this->form->texto('acao','Título',$obj->acao,100,100);
-      $exibe .= $this->form->memo('info','Informação',$obj->info,10,100);
+      $exibe .= $this->form->texto('acao','Action',$obj->acao,100,100);
+      $exibe .= $this->form->memo('info','Info',$obj->info,10,100);
       $botoes = $this->form->botao_cancelar($this->url->get_href_int($this->route,'ficha',$obj->token));
       $botoes .= $this->form->botao_ok();
       $exibe .= $this->form->fim($botoes);
