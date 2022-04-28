@@ -21,7 +21,7 @@ class TaskView {
     $this->form = new form;
   }
   
-  function tarefa_ficha($obj) {    
+  function ficha($obj) {    
     $idtask = $obj->id_task;
     $idacao = $obj->id_acao;
     $o_task = $obj->ordem;
@@ -78,22 +78,22 @@ class TaskView {
     return $exibe;
   }
   
-  function tarefa_exclui($obj) {
+  function exclui($obj) {
     $obj->remove();
     return $this->url->redirect($this->url->get_href_int('action','ficha',$obj->a_token));
   }
 
-  function tarefa_up($obj) {
+  function up($obj) {
     $obj->up($obj);
     return $this->url->redirect($this->url->get_href_int('action','ficha',$obj->a_token));
   }
 
-  function tarefa_down($obj) {
+  function down($obj) {
     $obj->down($obj);
     return $this->url->redirect($this->url->get_href_int('action','ficha',$obj->a_token));
   }
   
-  function tarefa_nova($obj) {
+  function nova($obj) {
     $exibe_form = empty($_POST);
     $msg_erro = '';
     if( !$exibe_form ) {
@@ -143,7 +143,7 @@ class TaskView {
     }
   }
   
-  function tarefa_editar($obj) {
+  function editar($obj) {
     $exibe_form = empty($_POST);
     $msg_erro = '';
     if( !$exibe_form ) {
@@ -193,7 +193,7 @@ class TaskView {
     }
   }
   
-  function tarefa_progresso($obj) {
+  function progresso($obj) {
     $exibe_form = empty($_POST);
     if( !$exibe_form ) {
       $progresso = $_POST["progresso"];
@@ -248,8 +248,6 @@ class TaskView {
       $botoes .= $this->form->botao_ok();
       $exibe .= $this->form->fim($botoes);
       $exibe .= $this->html->formdiv_fim();
-      $exibe .= '</div>
-        ';
       return $exibe;
     }
   }

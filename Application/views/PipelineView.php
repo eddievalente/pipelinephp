@@ -20,7 +20,7 @@ class PipelineView {
     $this->form = new form;
   }
   
-  function lista_pipeline($obj) {
+  function lista($obj) {
     $lista = $obj->listAll();
     //
     $lista_pipe = '';
@@ -116,7 +116,7 @@ class PipelineView {
     return $exibe;
   }
   
-  function pipeline_ficha($obj) {
+  function ficha($obj) {
     $id = $obj->idpipeline;
     $token = $obj->token;
     $o_pipeline = $obj->ordem;
@@ -191,12 +191,12 @@ class PipelineView {
     return $exibe;
   }
   
-  function pipeline_exclui($obj) {
+  function exclui($obj) {
     $obj->remove();
     return $this->url->redirect($this->url->get_href_int());
   }
 
-  function pipeline_novo($obj) {
+  function novo($obj) {
     $exibe_form = empty($_POST);
     $msg_erro = '';
     if( !$exibe_form ) {
@@ -235,7 +235,7 @@ class PipelineView {
     }
   }
   
-  function pipeline_editar($obj) {
+  function editar($obj) {
     $exibe_form = empty($_POST);
     $msg_erro = '';
     if( !$exibe_form ) {

@@ -20,7 +20,7 @@ class ActionView {
     $this->form = new form;
   }
   
-  function acao_ficha($obj) {
+  function ficha($obj) {
     $idacao = $obj->id_acao;
     $idpipeline = $obj->id_pipeline;
     $o_acao = $obj->ordem;
@@ -109,22 +109,22 @@ class ActionView {
     return $exibe;
   }
   
-  function acao_exclui($obj) {
+  function exclui($obj) {
     $obj->remove();
     return $this->url->redirect($this->url->get_href_int('pipeline','ficha',$obj->p_token));
   }
 
-  function acao_up($obj) {
+  function up($obj) {
     $obj->up();
     return $this->url->redirect($this->url->get_href_int('pipeline','ficha',$obj->p_token));
   }
 
-  function acao_down($obj) {
+  function down($obj) {
     $obj->down();
     return $this->url->redirect($this->url->get_href_int('pipeline','ficha',$obj->p_token));
   }
   
-  function acao_nova($obj) {
+  function nova($obj) {
     $exibe_form = empty($_POST);
     $msg_erro = '';
     if( !$exibe_form ) {
@@ -164,7 +164,7 @@ class ActionView {
     }
   }
   
-  function acao_editar($obj) { 
+  function editar($obj) { 
     $exibe_form = empty($_POST);
     $msg_erro = '';
     if( !$exibe_form ) {

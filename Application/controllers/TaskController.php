@@ -22,25 +22,25 @@ class TaskController {
     $ret = '';
     if ( $modo == 'ficha' ) {
       $obj->loadItem($token);
-      $ret .= $view->tarefa_ficha($obj); 
+      $ret .= $view->ficha($obj); 
     } elseif ( $modo == 'novo' ) {
       $obj->loadNew($token);
-      $ret .= $view->tarefa_nova($obj); 
+      $ret .= $view->nova($obj); 
     } elseif ( $modo == 'editar' ) {
       $obj->loadItem($token);
-      $ret .= $view->tarefa_editar($obj); 
+      $ret .= $view->editar($obj); 
     } elseif ( $modo == 'exclusao' ) { 
       $obj->loadItem($token);
-      $ret .= $view->tarefa_exclui($obj); 
+      $ret .= $view->exclui($obj); 
     } elseif ( $modo == 'up' ) {
       $obj->loadItem($token);
-      $ret .= $view->tarefa_up($obj); 
+      $ret .= $view->up($obj); 
     } elseif ( $modo == 'down' ) {
       $obj->loadItem($token);
-      $ret .= $view->tarefa_down($obj); 
+      $ret .= $view->down($obj); 
     } elseif ( $modo == 'progresso' ) {
       $obj->loadItem($token);
-      $ret .= $view->tarefa_progresso($obj); 
+      $ret .= $view->progresso($obj); 
     }
     return $ret;
   }

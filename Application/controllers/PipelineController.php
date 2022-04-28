@@ -19,18 +19,18 @@ class PipelineController {
     $ret = '';
     if ( $modo == 'ficha' ) {
       $obj->loadItem($token);
-      $ret .= $view->pipeline_ficha($obj); 
+      $ret .= $view->ficha($obj); 
     } elseif ( $modo == 'novo' ) {
       $obj->loadNew();
-      $ret .= $view->pipeline_novo($obj); 
+      $ret .= $view->novo($obj); 
     } elseif ( $modo == 'editar' ) {
       $obj->loadItem($token);
-      $ret .= $view->pipeline_editar($obj); 
+      $ret .= $view->editar($obj); 
     } elseif ( $modo == 'exclusao' ) {
       $obj->loadItem($token);
-      $ret .= $view->pipeline_exclui($obj); 
+      $ret .= $view->exclui($obj); 
     } else {
-      $ret .= $view->lista_pipeline($obj);
+      $ret .= $view->lista($obj);
     }
     return $ret;
   }
