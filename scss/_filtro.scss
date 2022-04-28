@@ -1,0 +1,812 @@
+@import 'variables';
+
+/******************************************************************************
+ * 
+ * 
+ *   filtro
+ * 
+ * 
+ ******************************************************************************/
+
+#filtro {
+  float: left;
+  position: relative;
+  display: table;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  text-align: left;
+  color: $corTexto;
+}
+
+@media screen and (max-width: 767px) {
+  #filtro {
+    margin-bottom: 20px;
+  }
+}
+
+#filtro .tag {
+  float: left;
+  display: block;
+  border: 0;
+  border-radius: 5px 0;
+  background: $corBase;
+  padding: 4px 10px;
+  margin: 0 5px 0 0;
+  font: 500 10px $fonteTitulo;
+  color: $corBranco;
+  text-transform: uppercase;
+}
+
+#filtro .tag_site {
+  float: left;
+  display: block;
+  border: solid 1px $corBaseDark;
+  border-left: solid 5px $corBaseDark;
+  background: $corAmareloClaro;
+  padding: 4px 10px;
+  margin: 0 5px 0 0;
+  font: 500 10px $fonteTitulo;
+  color: $corPreto;
+  text-transform: uppercase;
+}
+
+#filtro .taground {
+  float: left;
+  display: block;
+  border: 0;
+  border-radius: 5px;
+  background: $corBaseTag;
+  padding: 3px 10px;
+  margin: 0 0 0px 5px;
+  font: 700 10px $fonteTitulo;
+  color: $corPreto;
+}
+
+#filtro .icofiltro {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0 3px 0 0;
+  padding: 0px;
+  height: 16px;
+  width: 16px;
+  border: solid 1px transparent;
+  border-radius: 8px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  color: $corPreto;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+}
+
+#filtro .exibicao {
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+#filtro .exibicao .etiqueta {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  padding: 3px 10px;
+  background: $corCinzaEscuro;
+  color: $corBranco;
+  font: normal 12px $fonteTitulo;  
+}
+
+#filtro .header {
+  float: left;
+  display: block;
+  width: 100%;
+  font: 500 18px $fonteTitulo;
+  margin: 0 0 15px 0;
+  padding: 0;
+  background: transparent;
+  color: $corBranco;
+  border: 0;
+  clear: none;
+}
+
+#filtro .header .esquerda {
+  float: left;
+  display: block;
+  width: 40%;
+  font: 500 18px $fonteTitulo;
+  margin: 0;
+  padding: 5px 10px;
+  background: $corBaseDark;
+  color: $corBranco;
+  border: 0;
+  clear: none;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+#filtro .header .direita {
+  float: right;
+  display: block;
+  width: 60%;
+  font: 500 18px $fonteTitulo;
+  margin: 0;
+  padding: 5px 10px;
+  background: $corAzulEscuro;
+  color: $corBranco;
+  border: 0;
+  text-align: right;
+  clear: none;
+  text-transform: uppercase;
+}
+
+#filtro .header .extra {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 5px 0 0 0;
+  text-align: left;
+  border: 0;
+  background-color: transparent;
+  clear: none;
+  font: 500 14px $fonteTitulo;
+  color: $corAzulEscuro;
+  text-transform: uppercase;
+}
+
+#filtro .header .painel_botao {
+  position: relative;
+  float: right;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  background-color: transparent;
+  clear: none;
+}
+
+#filtro .header .painel_botao .botao {
+  float: right;
+  display: block;
+  margin: 5px 0px 0px 0px;
+  padding: 0;
+  font: normal 14px $fonteTitulo;
+  text-align: left;
+  border: 0;
+}
+
+#filtro .header .painel_botao .botao a {
+  display: inline-block;
+  margin-left: 5px;
+  border: 0;
+  background-color: $corBotao; 
+  color: $corBotaoFonte;
+  font: normal 10px $fonteTitulo;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 4px 10px 4px 10px;
+}
+
+#filtro .header .painel_botao .botao a:hover {
+  background-color: $corBotaoHover; 
+  color: $corBotaoFonte;
+}
+
+#filtro .header .painel_botao .botao span {
+  margin-left: 5px;
+  border: 0;
+  background-color: $corBotao; 
+  color: $corBotaoFonte;
+  font: normal 10px $fonteTitulo;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 4px 10px 4px 10px;
+ 
+}
+
+#filtro .header .painel_botao .botao span:hover {
+  background-color: $corBotaoHover; 
+  color: $corBotaoFonte;
+  cursor: pointer;
+}
+
+#filtro .header .painel_botao .botao img {
+  float: left;
+  height: 16px;
+  padding: 0px 10px 5px 0px;
+}
+
+#filtro .header .painel_botao .btdivisor {
+  float: right;
+  margin: 5px 0px 0px 0px;
+  display: block;
+  width: 20px;
+  height: 10px;
+  padding: 0;
+  font: normal 14px $fonteTitulo;
+  text-align: left;
+}
+
+@media screen and (max-width: 992px) {
+
+  #filtro .header .esquerda {
+    text-align: left;
+    width: 100%;
+  }
+
+  #filtro .header .direita {
+    text-align: left;
+    width: 100%;
+  }
+
+  #filtro .header .extra {
+    text-align: left;
+    width: 100%;
+  }
+
+  #filtro .header .painel_botao {
+    text-align: center;
+    width: 100%;
+  }
+  
+}
+
+#filtro h1 {
+  float: left;
+  display: block;
+  font: 500 18px $fonteTitulo;
+  margin: 0 0 5px 0;
+  padding: 3px 10px;
+  background: $corBase;
+  color: $corBranco;
+  border: 0;
+  border-radius: 0 0 0 0;
+  clear: none;
+}
+
+#filtro h2 {
+  float: left;
+  display: block;
+  font: 700 18px $fonteTitulo;
+  margin: 3px 0 0 0;
+  padding: 0px 10px;
+  color: $corBase;
+  border: 0;
+  clear: none;
+}
+
+#filtro h2 a {
+  float: right;
+  color: $corBase;
+  margin: 5px 0 0 5px;
+  border: 0;
+  background-color: $corBotao; 
+  font: 700 12px $fonteTitulo;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2px 8px 2px 8px;
+}
+
+#filtro h2 a:hover {
+  background-color: $corBase; 
+  color: $corBranco;
+}
+
+#filtro .divisor {
+  float: left;
+  width: 100%;
+  display: block;
+  margin: 5px 0px 10px 0;
+  border: 0;
+  padding: 0px 0 0 2px;
+  font: 700 12px $fonteTitulo;
+  text-align: left;
+  text-transform: uppercase;
+  color: $corPreto;
+}
+
+#filtro .divisor h1 {
+  float: left;
+  display: block;
+  width: auto;
+  font: 700 16px $fonteTitulo;
+  margin: 0 10px 0 0;
+  padding: 3px 10px 3px 0;
+  background: transparent;//$cor_verde_G9;
+  color: $corPreto;
+  border: 0;
+  clear: none;
+}
+
+#filtro .divisor h2 {
+  float: left;
+  display: block;
+  width: auto;
+  font: 700 14px $fonteTitulo;
+  margin: 0;
+  padding: 3px 10px;
+  color: $corTexto;
+  clear: none;
+}
+
+#filtro .subtitle {
+  margin: 3px 0px 2px 5px;
+  font: normal 14px $fonteTitulo;
+  text-align: left;
+  float: right;
+}
+
+#filtro .subtitle a {
+  background-color: $corBase; 
+  color: $corBranco;
+  display: block;
+  border: 0;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding: 4px 10px 4px 10px;
+}
+
+#filtro .subtitle a:hover {
+  background-color: $corCinzaEscuro; 
+  color: $corBranco;
+}
+
+#filtro .subtitle img {
+  float: left;
+  width: 200px;
+  padding: 0px 10px 5px 0px;
+}
+
+#filtro .categoria {
+  font: 700 16px $fonteTitulo;
+  color: dimgray;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  clear: left;
+}
+
+#filtro .categoria a {
+  border: none;
+  color: dimgray;
+}
+
+#filtro .categoria img {
+  float: left;
+  width: 200px;
+  padding: 0px 10px 5px 0px;
+}
+
+#filtro .chamada {
+  font: 700 12px $fonteTexto;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+#filtro .chamada img {
+  border: 0px;
+  padding-left: 5px;
+}
+
+#filtro .introducao {
+  font: italic 12px $fonteTexto;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+#filtro .introducao img {
+  border: 0px;
+  padding-left: 5px;
+}
+
+#filtro .texto {
+  font: normal 12px $fonteTexto;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#filtro .ui-tabs {
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 5px 5px 5px 5px;
+  background: $corBranco;
+  border: solid 1px $Silver; 
+}
+
+#filtro .ui-tabs-panel {
+  padding: 0;
+  border: 0; 
+  margin: 5px 0 0 0 ;
+}
+
+#filtro .ui-tabs-panel #ficha {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;  
+}
+
+#filtro .ui-widget-header { 
+  background: transparent; 
+  border: none; 
+}
+
+#filtro .ui-tabs-nav {
+  background: $corCinzaClaro; 
+  padding: 3px;
+  margin: 0;
+}
+
+#filtro .ui-tabs-nav .ui-state-default { 
+  padding: 3px;
+  margin: 0 3px 0 0;
+  background: $corBranco;
+  color: $corBase;
+  border: 0;
+} 
+
+#filtro .ui-tabs-nav .ui-state-active { 
+  padding: 3px;
+  margin: 0 3px 0 0;
+  background: $corBase;
+  color: $corBranco;
+  border: 0;
+} 
+
+#filtro .ui-tabs-nav .ui-state-default a { 
+  font: 700 10px $fonteTexto;
+  color: $corBase;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  outline: none;
+} 
+
+#filtro .ui-tabs-nav .ui-state-active a { 
+  font: 700 10px $fonteTexto;
+  color: $corBranco;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  outline: none;
+}
+
+#filtro .ui-tabs-nav img { 
+  border: 0; 
+  background: $corCinzaClaro;
+}
+
+#filtro .ui-tabs-nav img:hover { 
+  cursor: pointer;
+  background: $corAmarelo;
+  border: 0; 
+}
+
+#filtro .breadcrumb {
+  float: left;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 0 0 5px 0;
+  border: 0;
+  text-align: left;
+  background: transparent;
+
+  span {
+    float: left;
+    display: inline-block;
+    clear: none;
+    border: 0;
+    width: auto;
+  }
+  
+  .inicio {
+    margin: 0;
+    padding: 0;
+    font: 500 11px $fonteTitulo;
+    color: $corPreto;
+  }
+
+  .divisor {
+    margin: 0;
+    padding: 0 5px;
+    font: 700 11px $fonteTitulo;
+    color: $corPreto;
+  }
+
+  .texto {
+    font: 500 11px $fonteTitulo;
+    color: $corPreto;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    font: 500 11px $fonteTitulo;
+    color: $corBase;
+    padding: 0;
+    margin: 0;
+    
+    &:hover {
+      text-decoration: none;
+      color: $corBase;
+    }
+  }
+
+}
+
+.botoeira {
+  position: relative;
+  float: right;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  background-color: transparent;
+  clear: none;
+}
+
+.botoeira .botao {
+  float: right;
+  display: block;
+  margin: 5px 0px 0px 0px;
+  padding: 0;
+  font: normal 14px $fonteTitulo;
+  text-align: left;
+  border: 0;
+}
+
+.botoeira .botao a {
+  display: inline-block;
+  margin-left: 5px;
+  border: 0;
+  background-color: $corBotao; 
+  color: $corBotaoFonte;
+  font: 700 10px $fonteTitulo;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 3px 8px 3px 8px;
+}
+
+.botoeira .botao a:hover {
+  background-color: $corBotaoHover; 
+  color: $corBotaoFonte;
+}
+
+.botoeira .botao span {
+  margin-left: 5px;
+  border: 0;
+  background-color: $corBotao; 
+  color: $corBotaoFonte;
+  font: 700 10px $fonteTitulo;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 3px 8px 3px 8px;
+ 
+}
+
+.botoeira .botao span:hover {
+  background-color: $corBotaoHover; 
+  color: $corBotaoFonte;
+  cursor: pointer;
+}
+
+.botoeira .botao img {
+  float: left;
+  height: 16px;
+  padding: 0px 10px 5px 0px;
+}
+
+.botoeira .btdivisor {
+  float: right;
+  margin: 5px 0px 0px 0px;
+  display: block;
+  width: 20px;
+  height: 10px;
+  padding: 0;
+  font: normal 14px $fonteTitulo;
+  text-align: left;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   formfiltro
+ * 
+ * 
+ ******************************************************************************/
+
+#formfiltro {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  padding: 5px 0 5px 5px;
+  color: $corTexto;
+  text-align: left;
+  border: solid 1px $Silver; 
+  clear: both;
+  background: $Clouds;
+}
+
+#formfiltro form {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+}
+
+#formfiltro fieldset {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  clear: both;
+}
+
+#formfiltro .campo {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 0px;
+  margin: 0 5px 0 0;
+}
+
+#formfiltro .etiqueta {
+  position: relative;
+  float: left;
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font: 700 10px $fonteTexto;
+  color: $corTexto;
+}
+
+#formfiltro .controle {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 0 0 0 0;
+  width: 100%;
+  margin: 0;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  border: none;
+}
+
+#formfiltro .readonly {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  padding: 1px 5px ;
+  font: normal 12px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 5px 0;
+  border: solid 1px $Silver;
+  background-color:$corCampoReadOnly;
+}
+
+#formfiltro .caixa {
+  float: left;
+  display: block;
+  width: calc(100% - 8px);
+  padding: 2px 5px 0 5px;
+  font: normal 12px $fonteCampo;
+  color: $corTexto;
+  margin: 2px 0 5px 0;
+  border: solid 1px $Silver;
+  background-color:$corCampoReadOnly;
+}
+
+#formfiltro input {
+  float: left;
+  width: 100%;
+  padding-left: 5px;
+  font: normal 12px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 0 0;
+  border: solid 1px $Silver;
+  background-color:$corCampo;
+  resize: none;  
+}
+
+#formfiltro button {
+  background-color: $corBase;
+  color: $corBranco;
+  text-align: center;
+  min-width: 80px;
+  border: 0;
+  border-radius: 3px;
+  margin: 10px 0 0px 10px;
+  padding: 5px 13px;
+  font: 700 12px $fonteTitulo;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+}
+  
+#formfiltro button:hover {
+  background-color:$corCinza;
+  color: $corBranco;
+}
+
+#formfiltro button.ok {
+  background-color: $corBaseTag;
+  color: $corBranco;
+}
+
+#formfiltro button.ok:hover {
+  background-color:$corBaseHover;
+  color: $corBranco;
+}
+
+#formfiltro button.cancelar {
+  background-color: $Alizarin;
+  color: $corBranco;
+}
+
+#formfiltro button.cancelar:hover {
+  background-color:$Pomegranate;
+  color: $corBranco;
+}
+
+#formfiltro button.limpar {
+  background-color: $SunFlower;
+  color: $corBranco;
+}
+
+#formfiltro button.limpar:hover {
+  background-color:$Orange;
+  color: $corBranco;
+}
+
+#formfiltro select {
+  width: 100%;
+  padding: 1px 5px;
+  font: normal 12px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 5px 0;
+  border: solid 1px $Silver;
+  overflow: hidden;
+  background: url('img/ico-down.png') no-repeat right $corCampo;
+  outline: none;
+}
+
+#formfiltro select::-ms-expand {
+  display: none; /* hide default arrow in IE10 */
+}
+#formfiltro select {
+  width: 100%;
+  font: normal 12px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 5px 0;
+  border: solid 1px $Silver;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: "";
+  background: url('img/ico-down.png') no-repeat right center $corCampo;
+  -webkit-appearance: none; /* gets rid of default appearance in Webkit browsers*/
+  -moz-appearance: none; /* Get rid of default appearance for older Firefox browsers */
+  -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+  appearance: none;
+  outline: none;
+}
+#formfiltro select option {
+  background: $corCampo;
+  font: normal 12px $fonteCampo;
+  color: $corTexto;
+}

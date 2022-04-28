@@ -1,0 +1,141 @@
+$Turquoise: #1abc9c;
+$GreenSea: #16a085;
+$Emerald: #2ecc71;
+$Nephritis: #27ae60;
+$PeterRiver: #3498db;
+$BelizeHole: #2980b9;
+$Amethyst: #9b59b6;
+$Wisteria: #8e44ad;
+$WetAsphalt: #34495e;
+$MidnightBlue: #2c3e50;
+$SunFlower: #f1c40f;
+$Orange: #f39c12;
+$Carrot: #e67e22;
+$Pumpkin: #d35400;
+$Alizarin: #e74c3c;
+$Pomegranate: #c0392b;
+$Clouds: #ecf0f1;
+$Silver: #bdc3c7;
+$Concrete: #95a5a6;
+$Asbestos: #7f8c8d;
+//
+$Cobalt: #0047AB;
+$BondiBlue: #0F87B7;
+$Cerulean: #0C6C92;
+//
+//$cor_azul_E1: #39D5FF;
+//$cor_azul_E2: #29C5FF;
+$cor_azul_E3: #19B5FE;
+//$cor_azul_E4: #22A7F0;
+$cor_azul_E5: #1297E0;
+$cor_azul_E6: #0287D0;
+//$cor_azul_E7: #0077C0;
+//$cor_azul_E8: #0067B0;
+$cor_azul_E9: #0057A0;
+//$cor_azul_E10: #004790;
+//$cor_azul_E11: #003780;
+$cor_azul_E12: #102770;
+//
+$cor_cyan_F1: #5EFAF7;
+$cor_cyan_F2: #51F5EA;
+$cor_cyan_F3: #47EBE0;
+$cor_cyan_F4: #37DBD0;
+$cor_cyan_F5: #27CBC0;
+$cor_cyan_F6: #17BBB0;
+$cor_cyan_F7: #07ABA0;
+$cor_cyan_F8: #009B90;
+$cor_cyan_F9: #008B80;
+$cor_cyan_F10: #007B70;
+$cor_cyan_F11: #106B60;
+$cor_cyan_F12: #005B50;
+//
+$cor_verde_G1: #8EFFC1;
+$cor_verde_G2: #5EFCA1;
+$cor_verde_G3: #4EEC91;
+$cor_verde_G4: #3EDC81;
+$cor_verde_G5: #2ECC71;
+$cor_verde_G6: #1EBC61;
+$cor_verde_G7: #0EAC51;
+$cor_verde_G8: #009C41;
+$cor_verde_G9: #008C31;
+$cor_verde_G10: #007C21;
+$cor_verde_G11: #006C11;
+$cor_verde_G12: #005C01;
+//
+$cor_cinza_L1: #D5E5E6;
+$cor_cinza_L2: #C5D5D6;
+$cor_cinza_L3: #B5C5C6;
+$cor_cinza_L4: #A5B5B6;
+$cor_cinza_L5: #95A5A6;
+$cor_cinza_L6: #859596;
+$cor_cinza_L7: #758586;
+$cor_cinza_L8: #657576;
+$cor_cinza_L9: #556566;
+$cor_cinza_L10: #455556;
+$cor_cinza_L11: #354546;
+$cor_cinza_L12: #253536;  
+//
+$corBranco: white;
+$corPreto: black;
+$corSombra: rgba(0,0,0,0.5);
+$corAmarelo: yellow;
+$corAmareloClaro: lightyellow;
+$corVerdeClaro: #F0FFE6;
+  
+$corAzulEscuro: $MidnightBlue;
+
+$corCinzaClaro: $Silver;
+$corCinza: $Concrete;
+$corCinzaEscuro: $cor_cinza_L9;
+  
+$cor_crono_fase: $cor_cyan_F7;
+$cor_crono_sistema: $cor_cinza_L6;
+$cor_crono_item: $Clouds;
+$cor_crono_secao: $cor_cinza_L6;
+  
+$corDashFundo: $Clouds;
+$corDashDark: $cor_cinza_L3;
+$corDashHover: $cor_cinza_L9;
+$corDashTexto: $cor_cinza_L11;
+
+$corBase: $BondiBlue;
+$corBaseDark: $Cerulean;
+$corBaseBotao: $GreenSea;
+$corBaseTag: $Emerald;
+$corBaseHover: $Nephritis;
+  
+$corBaseForm: $cor_cinza_L10;
+$corBorda: $cor_cinza_L4;
+  
+$corFundo: $corBranco;
+$corTexto: $cor_cinza_L12;
+$corTitulo: $corBase;
+$corBotao: $corBase;
+$corBotaoFonte: $corBranco;
+$corBotaoHover: $cor_cinza_L8;
+$corCampo: $corBranco;
+$corCampoReadOnly: $corAmareloClaro;
+$corCampoFonte: $corCinzaEscuro;
+$corCampoHover: $corVerdeClaro;
+$corTabela: $Clouds;
+$corLinhaPar: $corBranco;
+$corLinhaImpar: $corAmareloClaro;
+  
+$corLinkHover: $Carrot;
+$corLinkSelected: $Pomegranate;
+  
+$ethos_escala_07: $Amethyst;
+$ethos_escala_06: $PeterRiver;
+$ethos_escala_05: $Emerald;
+$ethos_escala_04: $Silver;
+$ethos_escala_03: $SunFlower;
+$ethos_escala_02: $Carrot;
+$ethos_escala_01: $Alizarin;
+          
+$fonteTitulo:  'Quicksand', Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+$fonteCapa:  'Montserrat', 'Quicksand', Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+$fonteTexto:  'Montserrat', 'Open Sans', Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+$fonteCampo:  'Akshar', 'Open Sans', Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+
+
+

@@ -1,0 +1,685 @@
+@import 'variables';
+
+/******************************************************************************
+ * 
+ * 
+ *   file upload
+ * 
+ * 
+ ******************************************************************************/
+
+#file_browse_wrapper {
+  position: relative;
+  top: 5px;
+  right: 0px;
+  float: right;
+  display: table;
+  font: 700 12px $fonteCampo;
+  background: $corBotao; 
+  border:none;
+  border-radius: 5px;
+  overflow:hidden;
+  padding: 5px 10px;
+  margin: 0;
+  text-transform: uppercase;
+  color: $corBranco;
+
+
+  &:hover {
+    background: $corLinkHover; 
+  }
+
+  &:active {
+    background: $corLinkSelected; 
+  }
+
+  .file_browse{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
+#upload {
+  position: relative;
+  clear: both;
+  display: table;
+  border: solid 1px $corBase;
+  background-color:$corCampoReadOnly;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 5px 0;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+
+  .files {
+    background-color: transparent;
+    display: none;
+    width: 100%;
+    padding: 0 5px ;
+    font: normal 14px $fonteCampo;
+    color: $corTexto;
+    margin: 5px 0;
+  }
+
+  a {
+    float: right;
+    width: 22px;
+    height: 21px;
+    background-color: $corBase;
+    background-image: url('img/ico-folder.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding:6px 0;
+    color: $corBranco;
+    font-size:14px;
+    cursor:pointer;
+    display:inline-block;
+    text-align: center;
+    margin: 0;
+
+    &:hover{
+      background-color: $Pumpkin;
+      color: $corBranco;
+    }
+
+    img {
+      height: 18px;
+    }
+  }
+
+
+  input{
+    display:none;
+  }
+
+  .ui-progressbar {
+    float: left;
+    border: solid 1px $Clouds;
+    display: inline-block;
+    width: calc( 100% - 22px ); 
+    height: 21px;
+    font: normal 12px $fonteCampo;
+    background-color: $Clouds;
+    color: $corPreto;
+    position: relative;
+    margin: 0; 
+    text-align: center;
+    padding: 0;
+  
+    div {
+      height: 21px;
+      padding: 2px 0 0 0;
+      margin: 0;
+      text-align: center;
+      font: 500 12px $fonteCampo;
+      color: $corPreto;
+      background: transparent;
+    }
+    &.ui-widget-header {
+      background-color: $Carrot;
+    }
+
+    &.ui-progressbar-value {
+      margin: -1px;
+      diplay: block;
+      height: 100%;
+      background-color: $Carrot;
+      transition: width 0.5s;
+      -webkit-transition: width 0.5s;
+    }
+
+    &.ui-progressbar-overlay {
+      margin: -1px;
+      height: 100%;
+      background-color: $Alizarin;
+      transition: width 0.5s;
+      -webkit-transition: width 0.5s;
+    }
+  }
+  
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   breadcrumb
+ * 
+ * 
+ ******************************************************************************/
+
+.breadcrumb {
+  float: left;
+  display: block;
+  margin: 0 0 0 0;
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  clear: none;
+  border: 0;
+  text-align: left;
+  background: $corBase;
+
+  .inicio {
+    float: left;
+    display: block;
+    margin: 0;
+    display: block;
+    padding: 0;
+    border: 0;
+    font: 500 11px $fonteTitulo;
+    color: $corBranco;
+  }
+
+  .divisor {
+    float: left;
+    display: block;
+    margin: 0;
+    display: block;
+    padding: 0 5px;
+    border: 0;
+    font: 700 11px $fonteTitulo;
+    color: $corBranco;
+  }
+
+  .texto {
+    float: left;
+    display: block;
+    font: 500 11px $fonteTitulo;
+    color: $corBranco;
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+
+  a {
+    float: left;
+    display: block;
+    text-decoration: none;
+    font: 500 11px $fonteTitulo;
+    background: transparent;
+    color: $corBranco;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    
+    &:hover {
+      text-decoration: none;
+      color: $corBranco;
+    }
+  }
+
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   toggle
+ * 
+ * 
+ ******************************************************************************/
+ 
+#toggle {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  color: $corPreto;
+  background-color: transparent;
+  border: 0;
+  padding: 0px;
+
+
+  div {
+    margin: 0;
+    padding: 0;
+  }
+
+  .titulo {
+    position: relative;
+    float: left;
+    margin:0px;
+    width: 100%;
+    text-align:justify;
+    font: 400 14px $fonteTitulo;
+    display: block;
+    background-color: $corDashDark;
+    border: 0;
+    border-radius: 5px;
+    color: $corBranco;
+    padding: 5px 10px;
+    text-transform: uppercase;
+  }
+
+  .botao {
+    float: right;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    color: $corBranco;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+
+    &:hover {
+      color: $corPreto;
+    }
+  }
+
+  .toggle_panel {
+    display: block;
+    transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    -webkit-transition: 0.5s ease-out;
+  }
+
+}
+
+#togglediv {
+  float: left;
+  margin: 0;
+  padding: 5px 0 0 0;
+  width: 100%;
+  background: transparente;
+  border: 0;
+}
+
+#toggle_min {
+  position: relative;
+  float: left;
+  width: calc( 100% - 5px );
+  margin: 10px 0 5px 0;
+  color: $corPreto;
+  background-color: transparent;
+  border: 0;
+  padding: 0px;
+}
+
+#toggle_min div {
+  margin: 0;
+  padding: 0;
+}
+
+#toggle_min .titulo {
+  position: relative;
+  float: left;
+  margin:0px;
+  width: 100%;
+  text-align:justify;
+  font: 700 10px $fonteTexto;
+  display: block;
+  background-color: $corAmareloClaro;
+  border: 0;
+  border-radius: 5px;
+  color: $corPreto;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+#toggle_min .botao {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: 5;
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  color: $corPreto;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  text-align: center;
+}
+
+#toggle_min .botao:hover {
+  color: $corPreto;
+}
+
+#toggle_min .toggle_panel {
+  display: block;
+  
+  transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  -webkit-transition: 0.5s ease-out;
+}
+
+#toggle_min #togglediv {
+  float: left;
+  margin: 5px 0 0 0;
+  padding: 0 5px 5px 5px;
+  width: 100%;
+  background-color: $corAmareloClaro;
+  font: 400 12px $fonteTexto;
+  color: $corPreto;
+  border: 0;
+  border-radius: 5px;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   faqboard
+ * 
+ * 
+ ******************************************************************************/
+
+#faqboard {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 24px $fonteTitulo;
+  color: $corTexto;
+  border: 0;
+}
+
+@media screen and (max-width: 1366px) {
+
+  #faqboard {
+    width: calc( 100% - 10px );
+  }
+ 
+}
+
+@media screen and (max-width: 600px) {
+
+  #faqboard {
+    height: calc( 100vh - 160px );
+  }
+ 
+}
+
+#faqboard h1 {
+  position: relative;
+  clear: both;
+  display: block;
+  width: 100%;
+  font: 700 20px $fonteTitulo;
+  color: $corBase;
+  text-align: left;
+  padding: 10px 0px;
+  margin: 20px 0;
+  border-bottom: dotted 3px $corBase;
+}
+
+#faqboard h2 {
+  float: left;
+  position: relative;
+  clear: both;
+  display: block;
+  font: 400 20px $fonteTitulo;
+  color: $corPreto;
+  text-align: center;
+  padding: 5px 0 5px 50px;
+  margin: 0;
+}
+
+#faqboard h2 .icone {
+  float: left;
+  display: table;
+  position: absolute;
+  left: 5px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: 5;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  color: $corBaseBotao;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  text-align: center;
+  z-index: 50000;
+}
+
+#faqboard h2 .icone:hover {
+  color: $Carrot;
+}
+
+#faqboard .accordion {
+  position: relative;
+  display: table;
+  width: calc(100% - 2px);
+  font: normal 14px $fonteTexto;
+  margin: 10px 0 10px 40px;
+  padding: 0;
+  color: $corBranco;
+  clear: both;
+}
+
+#faqboard .accordion .ui-accordion {
+  background: $corBranco;
+  border: 0;
+  color: $corBranco;
+}
+
+#faqboard .accordion .ui-accordion-header {
+  margin: 0;
+  font: 700 12px $fonteTexto;
+  padding: 5px 0 5px 15px;
+  border: 0;
+  background: transparent;
+  border: 0;
+  color: $corBase;
+}
+
+#faqboard .accordion .ui-accordion-header .titulo {
+  font: 700 14px $fonteTexto;
+  color: $corBase;
+  display: block;
+  padding: 5px 10px;
+}
+
+#faqboard .accordion .ui-accordion-header-active .titulo {
+  color: $Pomegranate;
+}
+
+#faqboard .accordion .ui-accordion-header:hover {
+  cursor: help;
+}
+
+#faqboard .accordion .ui-accordion-content {
+  display: block;
+  border: 0;
+  font: 400 14px $fonteTexto;
+  text-decoration: none;
+  background-color: $Clouds;
+  color: $corPreto;
+  margin: 0 50px 10px 30px;
+  padding: 10px;
+  border: solid 1px $Silver;
+  border-radius: 10px;
+}
+
+#faqboard .accordion .ui-accordion-content p {
+  display: block;
+  width: 100%;
+  font: 400 14px $fonteTexto;
+  text-decoration: none;
+  color: $corTexto;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   site_destaque
+ * 
+ * 
+ ******************************************************************************/
+ 
+.site_destaque {
+  display: table;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 0 10px 0;
+}
+
+.bt_site_destaque {
+  float: right; 
+  width: 100%;
+  position: relative; 
+  display: inline-block; 
+  margin: 5px 0 0 0;
+  padding: 10px 10px; 
+  border: 0;
+  border-radius: 5px;
+  font: 500 14px $fonteTitulo;
+  background: $Carrot;
+  color: $corBranco;
+}
+
+.bt_site_destaque:hover {
+  background: $SunFlower;
+  color: $corPreto;
+}
+
+.bt_site_notifica {
+  float: left; 
+  width: 100%;
+  position: relative; 
+  display: inline-block; 
+  margin: 5px 0 0 0 ;
+  padding: 10px 10px; 
+  border: 0;
+  border-radius: 5px;
+  font: 500 14px $fonteTitulo;
+  background: $Pomegranate;
+  color: $corBranco;
+}
+
+.bt_site_notifica:hover {
+  background: $corBase;
+  color: $corBranco;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   ethos
+ * 
+ * 
+ ******************************************************************************/
+ 
+.ethos_nome {
+  background-color: $Clouds;
+  font: 400 10px $fonteTitulo;
+  color: $corBranco;
+}
+
+.ethos_etiq_impar {
+  background-color: $Clouds;
+  font: 400 10px $fonteTitulo;
+  color: $corBranco;
+}
+
+.ethos_etiq_par {
+  background-color: $corBranco;
+  font: 400 10px $fonteTitulo;
+  color: $corBranco;
+}
+
+.ethos_escala_07 {
+  background-color: $ethos_escala_07;
+  font: 700 14px $fonteTitulo;
+  color: $corBranco;
+  text-align: center;
+}
+
+.ethos_escala_06 {
+  background-color: $ethos_escala_06;
+  font: 700 14px $fonteTitulo;
+  color: $corBranco;
+  text-align: center;
+}
+
+.ethos_escala_05 {
+  background-color: $ethos_escala_05;
+  font: 700 14px $fonteTitulo;
+  color: $corBranco;
+  text-align: center;
+}
+
+.ethos_escala_04 {
+  background-color: $ethos_escala_04;
+  font: 700 14px $fonteTitulo;
+  color: $corBranco;
+  text-align: center;
+}
+
+.ethos_escala_03 {
+  background-color: $ethos_escala_03;
+  font: 700 14px $fonteTitulo;
+  color: $corBranco;
+  text-align: center;
+}
+
+.ethos_escala_02 {
+  background-color: $ethos_escala_02;
+  font: 700 14px $fonteTitulo;
+  color: $corBranco;
+  text-align: center;
+}
+
+.ethos_escala_01 {
+  background-color: $ethos_escala_01;
+  font: 700 14px $fonteTitulo;
+  color: $corBranco;
+  text-align: center;
+}
+
+a.botao_acao {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 15px;
+  font: 700 16px $fonteTitulo;
+  background: $Orange;
+  color: $corBranco;
+  border: 0;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.botao_acao:hover {
+  background: $Alizarin;
+  color: $corBranco;
+}

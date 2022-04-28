@@ -1,0 +1,1338 @@
+@import 'variables';
+
+/******************************************************************************
+ * 
+ * 
+ *   formulario
+ * 
+ * 
+ ******************************************************************************/
+
+#formulario {
+  float: left;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: table;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 10px 15px 10px;
+  color: $corTexto;
+  text-align: left;
+  border: solid 1px $Clouds;
+  clear: both;
+}
+
+#formulario.site {
+  border: 0;
+}
+
+#formulario .btselecao {
+  width: 100%; 
+  display: block;
+  background: $corBaseForm; 
+  color: $corBranco;
+  font: 700 8px $fonteTitulo;
+  margin: 0;
+  padding: 2px 0;
+  text-align: center;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#formulario .btopcao {
+  margin: 3px 10px 2px 0px;
+  font: normal 14px $fonteTitulo;
+  text-align: left;
+  float: right;
+}
+
+#formulario .btopcao a {
+  background-color: $corBaseForm; 
+  color: $corBranco;
+  display: block;
+  border-radius:5px;
+  border: solid 1px $corBaseForm;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding: 2px 10px 2px 10px;
+}
+
+#formulario .btopcao a:hover {
+  background-color: $corBranco; 
+  color: $corBase;
+}
+
+#formulario H4 {
+  margin: 5px 0px 5px 0px;
+  padding: 0px;
+  font: 700 18px $fonteTitulo;
+  text-align: left;
+  color: $corTexto;
+  text-transform: uppercase;
+}
+
+#formulario .subtitle {
+  font: 700 18px $fonteTitulo;
+  text-align: left;
+  margin: 0px 0px 5px 25px;
+  color: $corTexto;
+}
+
+#formulario form {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+}
+
+#formulario fieldset {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  clear: both;
+}
+
+#formulario legend {
+  display: block;
+  text-align: left;
+  padding: 5px 15px 5px 15px;
+  margin: 0px 10px 0px 10px;
+  font: 700 16px $fonteTitulo;
+  border: solid 2px $corTexto;
+  background: $Silver;
+  color: $corBase;
+}
+
+#formulario .secao {
+  float: left;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  padding: 0;
+  border: 0;
+  border-bottom: solid 2px $corCinza;
+  clear: both;
+}
+
+#formulario .secao p {
+  float: left;
+  display: block;
+  width: auto;
+  margin: 0 0 0 0;
+  font: 700 12px $fonteTitulo;
+  text-align: left;
+  text-transform: uppercase;
+  color: $corBranco;
+  background-color: $corCinza;
+  padding: 3px 10px;
+}
+
+#formulario .campo {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 0px;
+  margin: 0 5px 0 0;
+}
+
+#formulario .etiqueta {
+  position: relative;
+  float: left;
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font: 700 10px $fonteTexto;
+  color: $corBaseForm;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#formulario.site .etiqueta {
+  position: relative;
+  float: left;
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-transform: none;
+  font: 500 16px $fonteTitulo;
+  color: $corBaseForm;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#formulario .controle {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 0 0 5px 0;
+  width: 100%;
+  margin: 0;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  border: none;
+}
+
+#formulario .controle img {
+  position: relative;
+  float: left;
+  width: auto;
+  display: table;
+  border: 0;
+  padding: 0;
+  margin: 2px 0 5px 5px;
+}
+
+#formulario .painel {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  padding: 5px 10px 0 10px;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 5px 0;
+  border: solid 1px $corBorda;
+  white-space:nowrap;
+  overflow: hidden;
+}
+
+#formulario .readonly {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  padding: 1px 5px ;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 5px 0;
+  border: solid 1px $corBorda;
+  background-color:$corCampoReadOnly;
+  white-space:nowrap;
+  overflow: hidden;
+}
+
+#formulario .caixa {
+  float: left;
+  display: block;
+  width: calc(100% - 8px);
+  padding: 2px 5px 0 5px;
+  font: normal 10px $fonteCampo;
+  color: $corTexto;
+  margin: 2px 0 5px 0;
+  border: solid 1px $corBorda;
+  background-color:$corCampoReadOnly;
+}
+
+#formulario input {
+  float: left;
+  width: 100%;
+  padding-left: 5px;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 5px 0;
+  border: solid 1px $corBorda;
+  background-color:$corCampo;
+  resize: none;  
+  outline: none;
+}
+
+#formulario textarea.normal {
+  float: left;
+  width: 100%;
+  padding: 0 5px;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 5px 0;
+  border: solid 1px $corBorda;
+  background-color:$corCampo;
+  resize: none;  
+  outline: none;
+}
+
+#formulario select {
+  width: 100%;
+  padding: 2px 5px;
+  margin: 0 0 5px 0;
+  border: solid 1px $corBorda;
+  overflow: hidden;  
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: "";
+  background: url('img/ico-down.png') no-repeat right center $corCampo;
+  -webkit-appearance: none; /* gets rid of default appearance in Webkit browsers*/
+  -moz-appearance: none; /* Get rid of default appearance for older Firefox browsers */
+  -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+  appearance: none;
+  outline: none;
+}
+
+#formulario select::-ms-expand {
+  display: none; /* hide default arrow in IE10 */
+}
+#formulario select option {
+  font: 500 14px $fonteCampo; 
+  padding: 3px;
+  background: $corCampo;
+  color: $corTexto;
+}
+
+#formulario input:hover, select:hover, textarea.normal:hover {
+  background-color: $corCampoHover;
+}
+
+#formulario input:read-only {
+  background-color: $corCampoReadOnly;
+}
+
+#formulario textarea.tags {
+  float: left;
+  width: calc(100% - 15px);
+  padding: 0 5px;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 5px 0;
+  border: solid 1px $corBorda;
+  background-color: transparent;
+  resize: none;
+  width: 1008px;
+  outline: none;
+}
+
+#formulario textarea.tags:hover {
+  background-color: transparent;
+}
+
+#formulario .checkbox input[type=checkbox] {
+  display: none;
+}
+
+#formulario .checkbox label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 20px;
+  margin: 0 15px 5px 0;
+}
+
+#formulario .checkbox label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 1px;
+  background-color: $corBranco;
+  border: solid 2px $corBorda;
+  border-radius: 2px;
+  outline: none;
+}
+
+#formulario .checkbox input[type=checkbox]:checked + label:before {
+  content: "";
+  font-size: 10px;
+  color: $corBranco;
+  text-align: center;
+  line-height: 15px;
+  background-color: $corBaseForm;
+}
+
+#formulario .radio {
+  width: 15px;
+  font: 700 14px $fonteCampo;
+  color: $corTexto;
+  border: none;
+  outline: none;
+}
+
+#formulario .botoeira {
+  display: block;
+  width: 100%;
+  float: right;
+  text-align: right;
+  margin: 5px 0;
+  padding: 0;
+}
+
+#formulario button {
+  background-color: $corBaseForm;
+  color: $corBranco;
+  text-align: center;
+  min-width: 80px;
+  border: 0;
+  border-radius: 3px;
+  margin: 0px 5px 0px 0px;
+  padding: 5px 10px;
+  font: 700 12px $fonteTitulo;
+  text-transform: uppercase;
+  -moz-box-shadow: 2px 2px 2px 0 $corSombra;
+  -webkit-box-shadow: 2px 2px 2px 0 $corSombra;
+  box-shadow: 2px 2px 2px 0 $corSombra;  
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  outline: none;
+}
+  
+#formulario.site button {
+  font: 500 16px $fonteTitulo;
+}
+
+#formulario button:hover {
+  background-color:$corCinza;
+  color: $corBranco;
+}
+
+#formulario button.ok {
+  background-color: $corBaseTag;
+  color: $corBranco;
+}
+
+#formulario button.ok:hover {
+  background-color:$corBaseHover;
+  color: $corBranco;
+}
+ 
+#formulario button.cancelar {
+  background-color: $Alizarin;
+  color: $corBranco;
+}
+
+#formulario button.cancelar:hover {
+  background-color:$Pomegranate;
+  color: $corBranco;
+}
+
+#formulario button.limpar {
+  background-color: $SunFlower;
+  color: $corBranco;
+}
+
+#formulario button.limpar:hover {
+  background-color:$Orange;
+  color: $corBranco;
+}
+
+#formulario br {
+  clear: left;
+}
+
+#formulario .check-select-multiple {
+  float: left;
+  display: table;
+  overflow-y: auto;
+  padding: 5px 5px 0 5px;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  font: 700 12px $fonteTexto;
+  color: $corTexto;
+  border: solid 1px $corBorda;
+  background-color:transparent;
+  outline: none;
+}
+
+#formulario .check-select-multiple input[type=checkbox] {
+  display: none;
+}
+
+#formulario .filtro-checkbox {
+  float: left;
+  width: 100%;
+  overflow-y: none;
+  padding: 0;
+  margin: 0 0 3px 0;
+  font: normal 12px $fonteTexto;
+  color: $corTexto;
+  border: 0;
+  height: 17px;
+  outline: none;
+}
+
+#formulario .filtro-checkbox input[type=checkbox] {
+  display: none;
+}
+
+#formulario .filtro-checkbox label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin: 0 15px 5px 0;
+}
+
+#formulario .filtro-checkbox label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: $corBranco;
+  border: solid 2px $corBaseForm;
+  border-radius: 2px;
+}
+
+#formulario .filtro-checkbox input[type=checkbox]:checked + label:before {
+  content: "";
+  font-size: 10px;
+  color: $corBranco;
+  text-align: center;
+  line-height: 15px;
+  background-color: $corBase;
+}
+
+#formulario .filtro-tags {
+  float: left;
+  display: block;
+  overflow-y: none;
+  padding: 5px 0 0 5px;
+  margin: 0 5px 5px 0;
+  font: normal 12px $fonteTexto;
+  color: $corPreto;
+  border: solid 1px $Silver;
+  outline: none;
+  background-color: $Clouds;
+  text-transform: uppercase;
+}
+
+#formulario .filtro-tags input[type=checkbox] {
+  display: none;
+}
+
+#formulario .filtro-tags label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin: 0 15px 5px 0;
+}
+
+#formulario .filtro-tags label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: $corBranco;
+  border: solid 2px $corBaseForm;
+  border-radius: 2px;
+}
+
+#formulario .filtro-tags input[type=checkbox]:checked + label:before {
+  content: "";
+  font-size: 10px;
+  color: $corBranco;
+  text-align: center;
+  line-height: 15px;
+  background-color: $corBase;
+}
+
+#formulario .infobotao {
+  float: right;
+  display: block;
+  background-color: $corBaseForm;
+  color: $corBranco;
+  text-align: center;
+  min-width: 80px;
+  border: 0;
+  margin: 0px 15px 0px 0px;
+  padding: 4px 10px;
+  font: 700 10px $fonteTitulo;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#formulario .infobotao:hover {
+  background-color: $corCinza;
+  color: $corBranco;
+  text-decoration: none;
+}
+
+#formulario a {
+  font: 700 10px $fonteTexto;
+  color: $corTexto;
+  text-decoration: none;
+}
+
+#formulario a:hover {
+  color: $corBase;
+}
+
+#formulario img {
+  border: none;
+  text-decoration: none;
+  padding-left: 3px;
+}
+
+#formulario .divisor {
+  font: 700 16px $fonteTitulo;
+  text-align: left;
+  margin: 0px 0px 5px 25px;
+  color: $corTexto;
+}
+
+#formulario .btspin {
+  float: left;
+  display: table;
+  vertical-align: middle;
+  background-color: $corBaseForm;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border: 0;
+  margin: 0 2px;
+  padding: 0;
+  font: 700 14px $fonteTexto;
+  color: $corBranco;
+  text-decoration: none;
+}
+ 
+#formulario .btspin:hover {
+  background-color:$corCinza;
+}
+
+#formulario .divtab {
+  position: relative;
+  display: table; 
+  width: 100%; 
+  border: solid 1px $Silver; 
+  padding: 5px;
+  clear: both;
+}
+
+#formulario .divtabtotal {
+  position: relative;
+  display: table; 
+  width: 100%; 
+  border: solid 1px $Silver; 
+  border-top: 0;
+  padding: 5px;
+  clear: both;
+}
+
+#formulario .exibetab {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: calc(100% - 12px);
+  padding: 2px 5px;
+  margin: 0;
+  font: normal 12px $fonteCampo;
+  color: $corTexto;
+  border: solid 1px $corBaseForm;
+  background-color:$corCampoReadOnly;
+}
+
+#formulario .exibetabico {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: calc(100% - 12px);
+  padding: 0;
+  margin: 0 0 3px 0;
+  font: normal 12px $fonteCampo;
+  color: $corTexto;
+  border: 0;
+  background-color: transparent;
+}
+
+#formulario .totaltab {
+  position: relative;
+  float: left;
+  display: table;
+  width: 100%;
+  padding: 2px 5px;
+  margin: 0px 2px 0px 5px;
+  text-align: right;
+  font: 700 12px $fonteCampo;
+  color: $corBranco;
+  border: solid 1px $corBaseForm;
+  background-color: $corBaseForm;
+}
+
+#formulario .blanktab {
+  position: relative;
+  float: left;
+  display: table;
+  width: 100%;
+  padding: 2px 0;
+  margin: 0;
+  font: 700 14px $fonteCampo;
+  color: $corBaseForm;
+  text-transform: uppercase;
+  border: solid 1px transparent;
+  background-color: transparent;
+  text-align: right;
+}
+
+#formulario .divtab .campo {
+  position: relative;
+  float: left;
+  display: table;
+  padding: 0px;
+  margin: 0 0 3px 0;
+  width: calc(100% - 5px);
+}
+
+#formulario .divtab .etiqueta {
+  position: relative;
+  float: left;
+  display: table-cell;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font: 700 10px $fonteTexto;
+  color: $corBaseForm;
+}
+
+#formulario .divtab .controle {
+  position: relative;
+  float: left;
+  display: table-cell;
+  padding: 0 0 0 0;
+  width: 100%;
+  margin: 0;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  border: none;
+}
+
+#formulario .divtab .controle img {
+  position: relative;
+  float: left;
+  width: auto;
+  display: table;
+  border: 0;
+  padding: 0;
+  height: 22px;
+  margin: 0 0 0 5px;
+}
+
+#formulario .divtab input {
+  float: left;
+  width: 100%;
+  margin: 0;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  border: solid 1px $corBaseForm;
+  background-color:$corCampo;
+  resize: none;  
+}
+
+#formulario .divtab select {
+  width: 100%;
+  padding: 0 2px;
+  font: normal 14px $fonteCampo;
+  color: $corTexto;
+  margin: 0 0 5px 0;
+  border: solid 1px $corBaseForm;
+  background-color:$corCampo;
+}
+
+#formulario .ui-spinner {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#formulario .ui-spinner-input {
+  margin: 0;
+  padding: 1px 5px;
+  font: normal 14px $fonteCampo;
+  border: solid 1px $corBorda;
+  background-color:$corCampo;
+  width: calc( 100% - 18px );
+  outline: none;
+}
+
+#formulario .ui-spinner-button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+#formulario .ui-spinner-up {
+  margin: 0;
+  background-color: transparent;
+  background-image: url('img/seta-up.png');
+  background-repeat: no-repeat;
+  background-position: center; 
+  border: 0;
+}
+
+#formulario .ui-spinner-down {
+  margin: 0;
+  background-color: transparent;
+  background-image: url('img/seta-down.png');
+  background-repeat: no-repeat;
+  background-position: center; 
+  border: 0;
+}
+
+#formulario .comentario {
+  font: 700 10px $fonteTexto;
+  color: $corPreto;
+  padding: 0;
+  maregin: 0;
+}
+
+#formulario .styled-radio-control {
+  list-style: none;
+  display: table;
+  margin: 0 0 10px 0;
+  padding: 5px 0 5px 5px;
+  background: $Clouds;
+  border: solid 1px $corCinzaClaro;
+}
+
+#formulario .styled-radio-control input[type=radio] {
+  display:none; 
+  margin:0;
+}
+
+#formulario .styled-radio-control:after {
+  content: "";
+  clear: both;
+}
+
+#formulario .styled-radio-item {
+  float: left;
+  position: relative;
+  margin: 0 5px 0 0;
+  display: table;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  font: 700 10px $fonteTexto;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid $corBranco;
+  color: $corBranco;
+}
+
+#formulario .styled-radio-item label {
+  background: transparent;
+  bottom: 1px;
+  left: 1px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  cursor: pointer;
+  display: inline-block;
+  color: $corBranco;
+  text-indent: 100%;
+}
+
+#formulario .styled-radio-item .etiq {
+  display: table-cell;
+  vertical-align: middle;
+  font: 700 12px $fonteTitulo;
+  text-align: center;
+  text-transform: uppercase;
+  color: $corBranco;
+}
+
+#formulario .styled-radio-control input:checked + label {
+  outline: 3px dashed $corPreto;
+  height: 35px;
+}
+
+#formulario .styled-radio-control input:checked + label:after {
+  background: url(img/check.png);
+  bottom: -10px;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  position: absolute;
+  right: -10px;
+  width: 20px;
+}
+
+@-moz-document url-prefix() {
+  #formulario .styled-radio-control input:checked + label:after {
+    bottom: 0;
+    right: 0;
+    background-color: #21b4d0;
+  }
+}
+
+/* DatePicker Container */
+.ui-datepicker {
+  background: $corBranco;
+  width: auto;
+  height: auto;
+  margin: 5px auto 0;
+  font: 700 12px $fonteTexto;
+  border: solid 1px $Silver;
+  outline: none;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+}
+.ui-datepicker a {
+  text-decoration: none;
+}
+/* DatePicker Table */
+.ui-datepicker table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.ui-datepicker-header {
+  background: $corBase;
+  color: $corPreto;
+  font: 400 14px $fonteTitulo;
+  height: 30px;
+  border: 0;
+}
+.ui-datepicker-header select {
+  background: $Clouds;
+  color: $corPreto;
+  font: 500 14px $fonteTitulo;
+  border: 0;
+}
+.ui-datepicker-title {
+  text-align: center;
+}
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+  background-image: none !important;
+}
+.ui-datepicker-prev:before,
+.ui-datepicker-next:before {
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+}
+.ui-datepicker-prev:before {
+  content: "\f053";
+}
+.ui-datepicker-next:before {
+  content: "\f054";
+}
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+  background-color: $corBase;
+  color: $corBranco;
+}
+.ui-datepicker thead {
+  background-color: $corCinza;
+  color: $corBranco;
+  border: 0;
+}
+.ui-datepicker thead {
+  background-color: #f7f7f7;
+  background-image: -moz-linear-gradient(top,  #f7f7f7 0%, #f1f1f1 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#f1f1f1));
+  background-image: -webkit-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+  background-image: -o-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+  background-image: -ms-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+  background-image: linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f1f1f1',GradientType=0 );
+}
+.ui-datepicker th {
+  text-transform: uppercase;
+  font: 700 12px $fonteTitulo;
+  border: 0;
+  padding: 2px;
+}
+.ui-datepicker th {
+  text-transform: uppercase;
+  font-size: 6pt;
+  padding: 5px 0;
+  color: #666666;
+  text-shadow: 1px 0px 0px #fff;
+  filter: dropshadow(color=#fff, offx=1, offy=0);
+}
+.ui-datepicker tbody tr {
+  border-bottom: 1px solid #bbb;
+}
+.ui-datepicker tbody tr:last-child {
+  border-bottom: 0px;
+}
+.ui-datepicker tbody td {
+  font: normal 12px $fonteTitulo;
+  padding: 2px;
+  border: 0;
+}
+.ui-datepicker tbody td {
+  padding: 0;
+  border-right: 1px solid #bbb;
+}
+.ui-datepicker tbody td:last-child {
+  border-right: 0px;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+  display: inline-block;
+  font: bold 12px $fonteTitulo;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: $corPreto;
+
+  filter: dropshadow(color=#fff, offx=1, offy=1);
+}
+.ui-datepicker-calendar .ui-state-default {
+  background: $corCinzaClaro;
+  color: $corPreto;
+}
+.ui-datepicker-calendar .ui-state-default {
+  background: #ededed;
+  background: -moz-linear-gradient(top,  #ededed 0%, #dedede 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#dedede));
+  background: -webkit-linear-gradient(top,  #ededed 0%,#dedede 100%);
+  background: -o-linear-gradient(top,  #ededed 0%,#dedede 100%);
+  background: -ms-linear-gradient(top,  #ededed 0%,#dedede 100%);
+  background: linear-gradient(top,  #ededed 0%,#dedede 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dedede',GradientType=0 );
+  -webkit-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+  -moz-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+  box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+}
+.ui-datepicker-calendar .ui-state-active {
+  background: $Pomegranate;
+  color: $corBranco;
+  -webkit-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+  -moz-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+  box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+  border: 1px solid #55838f;
+  position: relative;
+  margin: -1px;
+}
+.ui-datepicker-calendar .ui-state-hover {
+  background: $corBase;
+  color: $corBranco;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+  background: #f4f4f4;
+  color: #b4b3b3;
+}
+.ui-datepicker-calendar td:first-child .ui-state-active {
+  width: 29px;
+  margin-left: 0;
+}
+.ui-datepicker-calendar td:last-child .ui-state-active {
+  width: 29px;
+  margin-right: 0;
+}
+.ui-datepicker-calendar tr:last-child .ui-state-active {
+  height: 29px;
+  margin-bottom: 0;
+}
+.ui-datepicker-calendar .ui-datepicker-cmd-today {
+  background: $SunFlower;  
+  color: $Pomegranate;
+}
+
+#formulario table {
+  width: 100%;
+  border: none;
+  margin: 0;
+  cellpadding: 0px;
+  border: 0;
+}
+
+#formulario th {
+  font: 700 14px $fonteTexto;
+  background: $corCinzaEscuro;
+  padding: 5px 10px;
+  color: $corBranco;
+  text-align: left;
+  border: solid 1px $Silver;
+}
+
+#formulario td {
+  font: 500 14px $fonteTexto;
+  color: $corPreto;
+  border: solid 1px $Silver;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+#formulario td.oculta {
+  background: transparent;
+  border: solid 1px transparent;
+  font: 500 14px $fonteTexto;
+  padding: 5px 10px;
+  margin: 0;
+  color: transparent;
+  text-transform: none;
+}
+
+#formulario td.total {
+  background: $corTabela;
+  border: solid 1px $Silver;
+  font: 700 14px $fonteTexto;
+  padding: 5px 10px;
+  margin: 0;
+  color: $corTexto;
+  text-transform: none;
+}
+
+#formulario td .campo, #formulario td .controle {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+}
+
+#formulario td input {
+  border: 0;
+  color: blue;
+  font-weight: 700;
+}
+
+#formulario button.aplicar {
+  background-color: $Carrot;
+  color: $corBranco;
+}
+
+#formulario button.aplicar:hover {
+  background-color:$Pumpkin;
+  color: $corBranco;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   super-combo
+ * 
+ * 
+ ******************************************************************************/
+ 
+.super-combo {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color:$corCampo;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+    border: solid 1px $corBorda;
+}
+
+.super-combo:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -3px;
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: grey transparent;
+}
+
+.super-combo .dropdown {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  background-color:$corCampo;
+  transition: all 0.3s ease-out;
+  list-style: none;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 50000;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.super-combo .dropdown li a {
+  font: 400 12px $fonteTexto;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 0;
+  transition: all 0.3s ease-out;
+  backgroundr: transparent;
+  border: 0;
+  margin: 0;
+}
+
+.super-combo .dropdown li i {
+  border: 0;
+  margin-right: 5px;
+  color: inherit;
+  vertical-align: middle;
+}
+
+/* Hover state */
+
+.super-combo .dropdown li:hover a {
+  background-color:$corCampoHover;
+  color: $corPreto;
+}
+
+.super-combo.active:after {
+  border-width: 0 6px 6px 6px;
+}
+
+.super-combo.active .dropdown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.super-combo .item_richcombo {
+  font: 400 12px $fonteTexto;
+  background: transparent;
+  z-index: 100;
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  margin: 0;
+  border: solid 1px $corDashFundo;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   div_knob
+ * 
+ * 
+ ******************************************************************************/
+ 
+.div_knob {
+  position: relative;
+  float: left;
+  display: block;
+  border: solid 1px $Silver; 
+  border-radius:10px; 
+  padding: 10px; 
+  margin:0 5px;
+  font: 500 14px $fonteTitulo;
+  text-alig: center;
+}
+  
+.div_knob .contador {
+  display: block;
+  width: 100%;
+  font: 700 32px $fonteTitulo;
+  color: $corPreto;
+  padding: 10px 0px; 
+  text-align: center;
+}
+
+.div_knob .info {
+  display: block;
+  width: 100%;
+  font: 500 14px $fonteTitulo;
+  color: $corPreto;
+  padding: 0px; 
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   btgenerico
+ * 
+ * 
+ ******************************************************************************/
+ 
+span.btgenerico {
+  display: inline-block;
+  font: 700 12px $fonteTitulo;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 3px 0;
+}
+
+span.btgenerico:hover {
+  color: $corBotaoFonte;
+  cursor: pointer;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   msg
+ * 
+ * 
+ ******************************************************************************/
+ 
+.msg_erro  {
+  display: table;
+  margin: 5px auto;
+  background-color: rgba(255,0,0,0.5);
+  border: solid 3px transparent;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  font: 700 14px $fonteTexto;
+  color: $corBranco;
+}
+
+.msg_sucesso  {
+  display: table;
+  margin: 5px auto;
+  background-color: rgba(0,255,0,0.5);
+  border: solid 3px transparent;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  font: 700 14px $fonteTexto;
+  color: $corPreto;
+}
+
+.msg_info  {
+  display: table;
+  margin: 5px auto;
+  background-color: rgba(0,0,255,0.5);
+  border: solid 3px transparent;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  font: 700 14px $fonteTexto;
+  color: $corBranco;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   input[type=search]
+ * 
+ * 
+ ******************************************************************************/
+ 
+input[type=search] {
+  -webkit-appearance: none;
+}

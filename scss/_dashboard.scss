@@ -1,0 +1,1732 @@
+@import 'variables';
+
+/******************************************************************************
+ * 
+ * 
+ *   dashboard
+ * 
+ * 
+ ******************************************************************************/
+
+#dashboard {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: left;
+  font: 700 24px $fonteTitulo;
+  background-color: transparent;
+  color: $corTexto;
+}
+
+@media screen and (max-width: 1366px) {
+
+  #dashboard {
+    width: 100%;
+  }
+ 
+}
+
+#dashboard .anuncio {
+  float: left;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 30px 15px;
+  color: $corBase;
+  text-align: left;
+  border: solid 2px $corBase;
+  border-radius: 5px;
+  clear: both;
+  background: $corBranco; 
+  font: 700 24px $fonteTitulo;
+  text-align: center;
+}
+
+#dashboard .resumo_dash {
+  float: left;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  padding: 5px;
+  color: $corTexto;
+  text-align: left;
+  border: solid 2px $corDashFundo;
+  border-radius: 5px;
+  clear: both;
+  background: $corBranco; 
+}
+
+#dashboard .resumo_dash:hover {
+  background: $corAmareloClaro; 
+}
+
+#dashboard .resumo_dash span.total {
+  float: left;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+  padding: 10px;
+  width: 30%;
+  height: 100%;
+  color: $corTexto;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  background: $corDashFundo; 
+  font: 700 24px $fonteCampo;
+}
+
+#dashboard .resumo_dash span.etiqueta {
+  float: right;
+  margin: 0 0 5px 0;
+  padding: 0;
+  color: $corTexto;
+  text-transform: uppercase;
+  text-align: center;
+  font: 700 16px $fonteCampo;
+}
+
+#dashboard .resumo_dash span.funcao {
+  float: right;
+  clear: right;
+  margin: 0;
+  padding: 0;
+  color: $corDashFundo;
+  text-align: center;
+  font: 700 11px $fonteCampo;
+}
+
+#dashboard .tag {
+  float: left;
+  display: block;
+  border: 0;
+  border-radius: 5px 0;
+  background: $corBaseTag;
+  padding: 4px 10px;
+  margin: 5px 5px 0px 0;
+  font: 500 10px $fonteTitulo;
+  color: $corBranco;
+  text-transform: uppercase;
+}
+
+#dashboard .icodash {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0 3px 0 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  color: $corPreto;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+}
+
+#dashboard .icodash:hover {
+  background-color: $corPreto;
+  color: $corBranco;
+}
+
+#dashboard .taground {
+  float: right;
+  display: block;
+  height: 20px;
+  border: 0;
+  border-radius: 10px 5px 5px 10px;
+  background: $corBaseTag;
+  padding: 4px 10px;
+  margin: 2px 5px 0px 5px;
+  font: 500 10px $fonteTitulo;
+  color: $corPreto;
+  text-transform: uppercase;
+}
+
+#dashboard #mainpanel {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: calc( 100vh - 150px );
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px $fonteTitulo;
+  border: 0;
+  background-color: transparent;
+  color: $corPreto;
+  order: 2;
+}
+
+#dashboard #toppanel {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 5px 0 5px 0;
+  padding: 5px 10px;
+  text-align: left;
+  font: 500 18px $fonteTitulo;
+  border: solid 1px $corDashDark;
+  border-radius: 0;
+  background-color: transparent;
+  color: $corDashDark;
+  overflow-y: auto;
+  order: 2;
+}
+
+#dashboard #toppanel .logo {
+  display: inline-block;
+  float: left;
+  height: 35px;
+  margin: 0 5px 0 0;
+}
+
+#dashboard #toppanel .apoio {
+  display: inline-block;
+  float: right;
+  margin: 0 0 0 0;
+  font: 500 10px $fonteTitulo;
+  color: $corDashDark;
+  text-transform: uppercase;
+}
+
+#dashboard #toppanel .apoio img {
+  display: inline-block;
+  float: right;
+  height: 35px;
+  margin: 0 0 0 10px;
+}
+
+#dashboard #toppanel .esquerda {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+#dashboard #toppanel .direita {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+#dashboard #toppanel .titulo {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+#dashboard #toppanel .nome {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 400 18px $fonteTitulo;
+  color: $corDashTexto;
+  clear: left;
+}
+
+#dashboard #toppanel .nome_r {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 400 18px $fonteTitulo;
+  color: $corDashTexto;
+  clear: right;
+}
+
+#dashboard #toppanel .tipo {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 2px 0;
+  text-align: left;
+  font: 700 14px $fonteTitulo;
+  color: $corDashTexto;
+  clear: left;
+}
+
+#dashboard #toppanel .tipo_r {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 2px 0;
+  text-align: left;
+  font: 700 14px $fonteTitulo;
+  color: $corDashTexto;
+  clear: right;
+}
+
+#dashboard #toppanel .info {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 500 12px $fonteTitulo;
+  color: $corDashTexto;
+  clear: left;
+}
+
+#dashboard #toppanel .info_r {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 500 12px $fonteTitulo;
+  color: $corDashTexto;
+  clear: right;
+}
+
+#dashboard #toppanel a { 
+  color: $corDashDark;
+  text-decoration: none;
+} 
+
+#dashboard #toppanel a:hover { 
+  color: $corAmarelo;
+  text-decoration: none;
+} 
+
+#dashboard #toppanel a.btacao {
+  float: right;
+  display: block;
+  padding: 5px 15px;
+  font: 500 10px $fonteTexto;
+  background: $cor_crono_sistema;
+  color: $corBranco;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#dashboard #toppanel a.btacao:hover {
+  background: $corDashHover;
+  color: $corBranco;
+}
+
+@media screen and (max-width: 1169px) {
+
+  #dashboard #toppanel a.btacao {
+    display: none;
+  }
+
+}
+
+#dashboard #dirpanel {
+  float:  right;
+  display: block;
+  position: relative;
+  width: calc( 75% - 5px );
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px $fonteTitulo;
+  border: 0;
+  background-color: transparent;
+  color: $corPreto;
+  overflow-y: auto;
+  order: 2;
+}
+
+#dashboard #dirpanel_ficha {
+  float:  right;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px $fonteTitulo;
+  border: 0;
+  background-color: transparent;
+  color: $corPreto;
+  overflow-y: auto;
+  order: 2;
+}
+
+#dashboard #dirpanel a.btacao {
+  float: right;
+  position: relative;
+  display: block;
+  padding: 3px 5px 2px 5px;
+  font: 500 10px $fonteTexto;
+  background: transparent;
+  color: $corBranco;
+  border: 0;
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#dashboard #dirpanel a.btacao:hover {
+  background: $Orange;
+  color: $corBranco;
+}
+
+#dashboard #fullpanel {
+  float:  left;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px $fonteTitulo;
+  border: 0;
+  background-color: transparent;
+  color: $corPreto;
+  height: 80vh;
+  overflow-y: auto;
+  order: 2;
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+  height: calc( 90vh - 250px );  
+}
+
+#dashboard #fullpanel::-webkit-scrollbar {
+  width: 10px;
+}
+
+#dashboard #fullpanel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#dashboard #fullpanel::-webkit-scrollbar-thumb {
+  background-color: $corCinzaEscuro;
+  border-radius: 6px;
+  border: 3px solid $corCinzaEscuro;
+}
+
+#dashboard #fullpanel a {
+  color: $corBase;
+  text-decoration: none;
+}
+
+#dashboard #fullpanel a:hover {
+  color: $corBaseHover;
+  text-decoration: none;
+}
+
+#dashboard #doclist {
+  width: calc( 50% - 520px );
+  height: calc( 100% - 90px );
+  margin: 0 0 0 5px;
+  padding: 5px;
+  text-align: left;
+  font: 700 22px $fonteTitulo;
+  border: 0;
+  background-color: transparent;
+  color: $corPreto;
+  overflow-y: auto;
+  order: 3;
+}
+
+#dashboard #ficha {
+  float: left;
+  align: left;
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 10px 0;
+  background: transparent;
+  clear: both;
+  border: 0;
+}
+
+#dashboard #ficha .title {
+  float: left;
+  display: block;
+  margin: 0px 0px 0px 0px;
+  padding: 0;
+  font: 700 20px $fonteTitulo;
+  text-align: left;
+  color: $corPreto;
+}
+
+#dashboard #ficha .title img {
+  float: left;
+  display: inline-block;
+  margin: 0 15px 0 0;
+}
+
+#dashboard #ficha .informe {
+  float: right;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font: 700 14px $fonteTitulo;
+  text-align: left;
+  color: $corPreto;
+}
+
+#dashboard #ficha table {
+  width: 100%;
+  border: 0;
+  border-spacing: 2px;
+  border-collapse: separate;
+  margin: 0;
+  padding: 0px;  
+}
+
+#dashboard #ficha tr {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+#dashboard #ficha th {
+  font: 700 10px $fonteTexto;
+  background: transparent;
+  padding: 3px 0 0 0;
+  margin: 0;
+  color: $corPreto;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#dashboard #ficha td {
+  background: $corBranco;
+  color: $corPreto;
+  font: 500 12px $fonteTexto;
+  padding: 3px 8px 3px 8px;
+  text-transform: none;
+  border: solid 1px $Asbestos;
+  border-radius: 3px;
+}
+
+#dashboard #ficha p {
+  font: normal 10px $fonteTexto;
+  text-align: left;
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  color: $corPreto;
+}
+
+#dashboard #ficha ul {
+  margin: 0;
+  padding: 5px;
+  list-style-position: inside;
+  list-style-type: lower-roman;
+}
+
+#dashboard #ficha ul li {
+  font: normal 10px $fonteTexto;
+  color: $corPreto;
+  padding:0 0 5px 0;
+  margin: 0;
+}
+
+
+#dashboard #ficha a {
+  text-decoration: none;
+  color: $corDashFundo;
+}
+
+#dashboard #ficha img {
+  border: none;
+  text-decoration: none;
+  padding-left: 3px;
+}
+
+#dashboard #ficha .legenda {
+  float: right;
+  display: table;
+  vertical-align: middle;
+  font: normal 10px $fonteTexto;
+  margin: 5px 2px 10px 0px;
+  padding: 0;
+  text-align: right;
+  border: 0;
+}
+
+#dashboard #ficha .legenda .icone {
+  margin-left: 5px;
+  padding: 0 3px;
+  display: table-cell;
+  vertical-align: middle;
+  border: 0;
+}
+
+#dashboard #ficha .legenda .texto {
+  display: table-cell;
+  vertical-align: middle;
+  font: normal 10px $fonteTexto;
+  border: 0;
+}
+
+#dashboard .item_header {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 5px;
+  text-align: left;
+  font: 700 12px $fonteTitulo;
+  border: 0;
+  background-color: $corBranco;
+  color: $corPreto;
+  text-transform: uppercase;
+}
+
+#dashboard .item {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 10px;
+  text-align: left;
+  font: 700 14px $fonteTitulo;
+  border: 0;
+  border-radius: 5px;
+  background-color: $corDashFundo;
+  color: $corPreto;
+}
+#dashboard .secao_topo {
+  float: left;
+  width: 100%;
+  display: block;
+  padding: 5px;
+  background-color: $corDashFundo;
+  margin: 0 0 0 0;
+  border: solid 2px $corDashFundo;
+  border-bottom: 0;  
+  clear: both;
+}
+#dashboard .secao_conteudo {
+  float: left;
+  width: 100%;
+  display: block;
+  clear: both;
+  font: normal 12px $fonteTexto;
+  text-decoration: none;
+  color: $corPreto;
+  border: 0;
+  margin: 0 0 5px 0;
+  padding: 5px;
+  
+}
+#dashboard #doclist .item a {
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+#dashboard .item a:hover {
+  text-decoration: none;
+}
+#dashboard .item .titulo {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 0;
+  text-align: left;
+  border: 0;
+  font: 700 14px $fonteTitulo;
+  color: $corPreto;
+}
+#dashboard .item .esquerda {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border: 0;
+  font: 500 14px $fonteTitulo;
+  color: $corPreto;
+}
+#dashboard .item .direita {
+  position: relative;
+  float: right;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  font: 500 14px $fonteTitulo;
+  color: $corPreto;
+}
+#dashboard .item .pequeno {
+  display: inline-block;
+  margin: 5px 0 0 0;
+  font: 300 12px $fonteTitulo;
+  color: $corPreto;
+}
+#dashboard .tagdata {
+  color: $corPreto;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  font: 500 12px $fonteTitulo;
+}
+#dashboard .item .info {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 0;
+  text-align: left;
+  border: 0;
+  font: 300 12px $fonteTitulo;
+  color: $corPreto;
+}
+#dashboard .item .lista {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 5px 0 0 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  font: 700 12px $fonteTitulo;
+  color: $corPreto;
+}
+
+#dashboard .item .lista > icone {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  padding: 2px 5px;
+  text-align: center;
+  border: solid 1px $corBranco;
+  border-radius: 5px 0 0 0;
+  font: 400 10px $fonteTitulo;
+  color: $corPreto;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+#dashboard .item .lista > quant {
+  display: inline-block;
+  margin: 0;
+  padding: 2px 5px;
+  text-align: center;
+  border: solid 2px $corPreto;
+  border-radius: 0 0 5px 0;
+  font: 700 12px $fonteTitulo;
+  color: $corPreto;
+}
+#dashboard .ui-tabs {
+  float: left;
+  position: relative;
+  width: 100%;
+  border: solid 1px $corDashDark;
+  margin: 0;
+  padding: 5px;
+  background: transparent;
+}
+
+#dashboard .ui-tabs-panel {
+  background: transparent;
+  display: block;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#dashboard .ui-widget-header { 
+  background: transparent;
+  border: 0;
+  border-bottom: solid 1px $corDashDark; 
+  padding: 0 0 5px 0;
+  margin: 0 0 5px 0;
+} 
+#dashboard .ui-tabs-nav .ui-state-default { 
+  background: transparent; 
+  display: inline-block;
+  padding: 0;
+  margin: 0 4px 0 0;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+} 
+#dashboard .ui-tabs-nav .ui-state-active { 
+  display: inline-block;
+  padding: 0;
+  margin: 0 4px 0 0;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+} 
+
+#dashboard .ui-tabs-nav .ui-state-default a { 
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  font: 700 10px $fonteTexto;
+  background: transparent;
+  color: $corTexto;
+  text-decoration: none;
+  border: solid 1px $corDashDark;
+  text-align: center;
+  text-transform: uppercase;
+} 
+#dashboard .ui-tabs-nav .ui-state-default a:hover { 
+  background-color: $corDashHover;
+  color: $corBranco;
+} 
+#dashboard .ui-tabs-nav .ui-state-active a { 
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  font: 700 10px $fonteTexto;
+  background: $corDashDark;
+  color: $corBranco;
+  text-decoration: none;
+  border: solid 1px $corDashDark;
+  text-align: center;
+  text-transform: uppercase;
+}
+#dashboard .ui-tabs-nav .ui-state-active a:hover { 
+  background-color: $corDashHover;
+  color: $corBranco;
+} 
+
+#dashboard .tagrole {
+  float: left;
+  display: block;
+  border: solid 1px $corBranco;
+  border-radius: 5px 0;
+  background: transparent;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px $fonteTexto;
+  color: $corBranco;
+  text-transform: uppercase;
+}
+#dashboard .botoeira {
+  position: relative;
+  float: right;
+  width: 100%;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 5px 5px 2px 5px;
+  text-align: right;
+  border: 0;
+  background-color: transparent;
+}
+#dashboard .botoeira img {
+  margin: 0 0 0 3px;
+}
+#dashboard .botoeira span:hover {
+  cursor: pointer;
+}
+
+#dashboard #formulario {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 10px 15px 10px;
+  color: $corTexto;
+  clear: both;
+  background: $corBranco;
+  border: solid 1px $corBorda;
+  border-radius: 3px;
+}
+
+#dashboard #formulario input {
+  border: solid 1px $corBorda;
+}
+
+#dashboard #formulario select {
+  border: solid 1px $corBorda;
+}
+
+#dashboard #formulario textarea {
+  border: solid 1px $corBorda;
+}
+
+#dashboard #printbar {
+  float: right;
+  display: table;
+  position: relative;
+  margin: 0 0 0 25px;
+  padding: 0;
+  border: 0;
+  z-index: 5;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: $SunFlower;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  font: 700 12px $fonteTitulo;
+  color: $corPreto;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 15%;  
+}
+
+#dashboard #printbar:hover {
+  background-color: $Carrot;
+}
+
+#dashboard .item_contato {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 0;
+  text-align: left;
+  font: 700 14px $fonteTitulo;
+  border: 0;
+  background: transparent;
+  color: $corPreto;
+}
+
+#dashboard .item_contato .titulo {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  text-align: left;
+  background: $corAmareloClaro;
+  border: solid 1px $Silver;
+  border-radius: 0;
+  font: 700 14px $fonteTitulo;
+  color: $corPreto;
+}
+#dashboard .item_contato .esquerda {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border: 0;
+  font: 500 14px $fonteTitulo;
+  color: $corPreto;
+}
+#dashboard .item_contato .direita {
+  position: relative;
+  float: right;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  font: 500 14px $fonteTitulo;
+  color: $corPreto;
+}
+#dashboard .item_contato .pequeno {
+  display: inline-block;
+  margin: 5px 0 0 0;
+  font: 300 12px $fonteTitulo;
+  color: $corPreto;
+}
+
+#dashboard .item_contato .papeis {
+  float: left;
+  width: 100%;
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 0 0;
+}
+#dashboard .item_contato .papeis span {
+  float: left;
+  display: block;
+  border: solid 1px $Silver;
+  border-radius: 5px 0;
+  background: $corBranco;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px $fonteTexto;
+  color: $corPreto;
+  text-transform: uppercase;
+}
+
+#dashboard .accordion {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: $corBranco;
+  clear: both;
+}
+
+#dashboard .accordion .ui-accordion {
+  background: $corBranco;
+  border: 0;
+  color: $corBranco;
+}
+
+#dashboard .accordion .ui-accordion-header {
+  margin: 0 0 5px 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+#dashboard .accordion .ui-accordion-header-active {
+  margin: 0;
+}
+#dashboard .accordion .ui-accordion-header:hover {
+  cursor: pointer;
+}
+
+#dashboard .accordion .ui-accordion-content {
+  margin: 0 0 10px 0;
+  padding: 5px;
+  background: transparent;
+  border: solid 1px $Silver;
+  border-top: 0;
+  outline: none;
+  height: auto;
+}
+#dashboard .accordion .ui-accordion-content table {
+  width: 100%;
+  border: none;
+  margin: 0;
+  cellpadding: 2px;
+  border: 0;
+}
+#dashboard .accordion .ui-accordion-content th {
+  font: 700 12px $fonteTexto;
+  background: $Silver;
+  color: $corPreto;
+  border: solid 1px $Silver;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  text-align: left;
+}
+#dashboard .accordion .ui-accordion-content td {
+  font: 400 12px $fonteTexto;
+  background: $Clouds;
+  color: $corPreto;
+  border: solid 1px $Silver;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  text-align: left;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   filtro_panel
+ * 
+ * 
+ ******************************************************************************/
+
+#filtro_panel {
+  float:  left;
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  right: 5px;
+  top: 0;
+  width: 340px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px $fonteTitulo;
+  border: 0;
+  background-color: transparent;
+  color: $corPreto;
+  overflow-y: auto;
+  order: 2;
+  overflow: hidden;
+}
+#filtro_panel #filtro_esq {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+#filtro_panel .slide {
+  float: right;
+  height: auto;  
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  border: solid 2px $corBaseDark;
+  border-radius: 0 0 10px 10px;
+  background: $corBase;
+}
+#filtro_panel .btn-slide {
+  background: url(images/white-arrow.gif) no-repeat right -50px;
+  text-align: center;
+  width: 144px;
+  height: 31px;
+  padding: 10px 10px 0 0;
+  margin: 0 auto;
+  display: block;
+  font: 700 12px $fonteTitulo;
+  color: #fff;
+  text-decoration: none;
+}
+#filtro_panel .active {
+  background-position: right 12px;
+  height: auto;  
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   toolbar
+ * 
+ * 
+ ******************************************************************************/
+
+#icobar {
+  position: relative;
+  float: right;
+  display: block;
+  border: 0;
+  height: 30px;
+  width: 30px;
+  margin: -5px 0 0 0;
+  border-radius: 15px;
+  background-color: $Clouds;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  font: 700 12px $fonteTitulo;
+  color: $corBranco;
+-webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+   -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+     -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+        transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+
+-webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+   -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+     -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+        transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */  
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 15%;
+       
+}
+
+#icobar.neutro {
+  background-color: $Clouds;
+  color: $corPreto;
+}
+#icobar.desativado {
+  background-color: transparent;
+  border: solid 1px $Clouds;
+  color: $Silver;
+}
+#icobar.tudook {
+  border-color: $corBaseTag;
+  background-color: $corBaseHover;
+}
+#icobar.leve {
+  border-color: $corBase;
+  background-color: $corBaseDark;
+}
+#icobar.moderada {
+  border-color: $SunFlower;
+  background-color: $Orange;
+}
+#icobar.alta {
+  border-color: $Carrot;
+  background-color: $Pumpkin;
+}
+#icobar.critica {
+  border-color: $Alizarin;
+  background-color: $Pomegranate;
+}
+#icobar.projeto {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 15%;
+}
+#icobar.impressao {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 15%;
+}
+#icobar.neutro:hover {
+  color: $corBase;
+}
+
+#icobar > numero {
+  position: absolute;
+  display: block;
+  padding: 2px 4px;
+  bottom: -5px;
+  right: 0;
+  border: 0;
+  border-radius: 5px;
+  background-color: $corPreto;
+  font: 400 10px $fonteTitulo;
+  color: $corBranco;
+}
+#icobar > etiqueta {
+  position: absolute;
+  display: block;
+  width: 60px;
+  text-align: center;
+  padding: 2px 0;
+  bottom: -25px;
+  left: -10px;
+  border: 0;
+  font: 500 12px $fonteCampo;
+  color: $corBranco;
+}
+
+.ico_pend {
+  float: left;
+  display: table;
+  margin: 0 5px 0 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 10px;
+  background: $corBranco;
+  text-align: center;
+  background: $corBranco;
+  background-image: url(img/close.png);
+  background-position: center center;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   span_dash
+ * 
+ * 
+ ******************************************************************************/
+ 
+.span_dash {
+  float: none;
+  display: inline;
+  font: 500 10px $fonteTitulo;
+  text-transform: uppercase;
+}
+
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  height: 20px;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   sidebar
+ * 
+ * 
+ ******************************************************************************/
+ 
+#sidebar {
+  position: fixed;
+  left: 0; 
+  top: 2vh;
+  display:block;
+  background: transparent;
+  text-align: center;
+  font: 700 22px $fonteTitulo;
+  border: 0;
+  padding: 0;
+  color: $corBranco;
+  z-index: 1000;
+}
+
+#sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#sidebar ul li {
+  float: left;
+  display: block;
+  clear: left;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0 0 0 0;
+  color: $corBranco;
+}
+
+#sidebar .icone {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  border: 0;
+  color: inherited;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  width: 25px;
+  padding: 5px 0 5px 0;
+}
+
+#sidebar .selecao {
+  color: $corPreto;
+}
+
+#sidebar ul li a {
+  display: table;
+  background: $corBase;
+  padding: 5px 5px 5px 5px;
+  color: $corBranco;
+  width: 30px;
+  transition: color 1s;
+}
+
+#sidebar ul li:first-child a {
+  border-top-right-radius: 10px;
+}
+
+#sidebar ul li:last-child a {
+  border-bottom-right-radius: 10px;
+}
+
+#sidebar ul li a .etiqueta {
+  float: left;
+  clear: right;
+  display: none;
+  position: relative;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font: 500 16px $fonteTitulo;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+
+#sidebar ul li a:hover {
+  width: auto;
+  background: $corBaseDark;
+  color: $SunFlower;
+  border-radius: 0 10px 10px 0;
+}
+
+#sidebar ul li a:hover .etiqueta {
+  display: inline-block;
+  color: $corBranco;
+  transition: all 1s;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   titulo_post
+ * 
+ * 
+ ******************************************************************************/
+ 
+.titulo_post {
+  font-family: 'Montserrat', 'Ubuntu','Open Sans', sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  display: block; 
+  float:left; 
+  width: 100%; 
+  color:$corBaseDark; 
+  line-height: 1em;
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+.titulo_post_sub {
+  font-family: 'Montserrat', 'Ubuntu','Open Sans', sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  display: block; 
+  float:left; 
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+.titulo_post_margem {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .titulo_post {
+    margin-left: 20px ;
+    margin-right: 20px ;
+    text-align: center;
+  }
+
+  .titulo_post_sub {
+    margin-left: 20px ;
+    margin-right: 20px ;
+    text-align: center;
+  }
+
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   lista_dash
+ * 
+ * 
+ ******************************************************************************/
+ 
+.lista_dash {
+  font: 500 20px $fonteTitulo;
+  margin: 0 0 20px 0;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+.lista_dash tr {
+  width: 100%;
+}
+
+.lista_dash tr td {
+  font: 500 16px $fonteTitulo;
+  color: $corPreto;
+  border: 0;
+  vertical-align: middle;
+  padding: 5px 10px;
+  margind: 0;
+}
+
+.lista_dash tr td.imagem {
+  background: $corBranco;
+  background-image: url('img/bg-dialogo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.lista_dash tr td.botao {
+  background: $Carrot;
+  font: 500 14px $fonteTitulo;
+  color: $corBranco;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.lista_dash tr td.botao:hover {
+  background: $Pumpkin;
+}
+
+.lista_dash tr td.botao a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: $corBranco;
+}
+
+.lista_dash .icone {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px 0 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  color: $corPreto;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+}
+
+.lista_dash .pequeno {
+  font: 300 12px $fonteTitulo;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   foto
+ * 
+ * 
+ ******************************************************************************/
+ 
+.foto_pequena {
+  float: left;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: $Silver;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.foto_header {
+  float: left;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-image: url('img/foto-base.jpg');
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.foto_capa {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-image: url('img/fundo-base.jpg');
+  background-color: $Silver;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.foto_banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 25vh;
+  background-color: $Silver;
+  background-image: url('../images/hands.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   survey
+ * 
+ * 
+ ******************************************************************************/
+ 
+.item_survey {
+  float: left; 
+  display: block;
+  width: 100%;
+}
+
+.item_survey input {
+  float: left; 
+  display: block;
+  width: 30px;
+  margin-top: 2px;
+}
+
+.item_survey label {
+  float: left; 
+  display: block;
+  width: calc(100% - 30px);
+}
+
+
+/******************************************************************************
+ * 
+ * 
+ *   style-data
+ * 
+ * 
+ ******************************************************************************/
+ 
+.filtro_calendario {
+  padding: 0;
+  margin: 0;
+}
+
+.filtro_calendario .ui-datepicker {
+  width: 320px;
+  height: auto;
+  margin: 5px auto 0;
+  font: 500 14px $fonteTitulo;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+} 
+.filtro_calendario  .ui-datepicker thead {
+  background-color: $corBase;
+  border-bottom: 1px solid white;
+}
+
+.filtro_calendario .ui-datepicker th {
+  text-transform: uppercase;
+  font-size: 6pt;
+  padding: 5px 0;
+  color: #666666;
+  text-shadow: 1px 0px 0px #fff;
+  filter: dropshadow(color=#fff, offx=1, offy=0);
+}
+
+.filtro_calendario .ui-datepicker tbody td {
+  width: 48px;
+  padding: 0;
+  border-right: 1px solid white;
+}
+.filtro_calendario .ui-datepicker tbody td:last-child {
+  border-right: 0px;
+}
+.filtro_calendario .ui-datepicker tbody tr {
+  border-bottom: 1px solid white;
+}
+.filtro_calendario .ui-datepicker tbody tr:last-child {
+  border-bottom: 0px;
+}
+
+.filtro_calendario  .ui-datepicker td span, .ui-datepicker td a {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #666666;
+  text-shadow: 1px 1px 0px #fff;
+  filter: dropshadow(color=#fff, offx=1, offy=1);
+}
+.filtro_calendario  .ui-datepicker-calendar .ui-state-default {
+  width: 100%;
+  background: #ededed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dedede',GradientType=0 );
+  -webkit-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+  -moz-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+  box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+}
+.filtro_calendario  .ui-datepicker-unselectable .ui-state-default {
+  width: 100%;
+  background: #f4f4f4;
+  color: #b4b3b3;
+}
+.filtro_calendario .ui-datepicker-calendar .ui-state-hover {
+  background: #f7f7f7;
+}
+.filtro_calendario .ui-datepicker-calendar .ui-state-active {
+  background: $corBase;
+  -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+  -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+  color: #e0e0e0;
+  text-shadow: 0px 1px 0px #4d7a85;
+  filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+  border: 1px solid #55838f;
+  position: relative;
+  margin: -1px;
+}
+.filtro_calendario .ui-datepicker-calendar td:first-child .ui-state-active {
+  width: 29px;
+  margin-left: 0;
+}
+.filtro_calendario .ui-datepicker-calendar td:last-child .ui-state-active {
+  width: 29px;
+  margin-right: 0;
+}
+.filtro_calendario .ui-datepicker-calendar tr:last-child .ui-state-active {
+  height: 29px;
+  margin-bottom: 0;
+}
+
+#relogio {
+  float: right;
+  display: block;
+  font: 500 12px $fonteTitulo;
+  margin: 0;
+  padding: 3px 10px;
+  background: $corBase;
+  color: $corBranco;
+  border: 0;
+  border-radius: 0;
+  clear: none;
+}
+
+.ico_mensageria {
+  position:fixed;
+  width:60px;
+  height:60px;
+  left:30px;
+  bottom:80px;
+  background-color:$Pomegranate;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index:1000;
+}
+

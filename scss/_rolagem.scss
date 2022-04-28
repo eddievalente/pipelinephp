@@ -1,0 +1,800 @@
+@import 'variables';
+
+/******************************************************************************
+ * 
+ * 
+ *   rolagem
+ * 
+ * 
+ ******************************************************************************/
+
+.rolagem  {
+  float: left;
+  display: block;
+  align: center;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0 0 0;
+  background: $corBranco;
+  border: solid 1px $corCinzaClaro; 
+  clear: both;
+  overflow: hidden;
+  height: calc( 90vh - 280px );
+}
+
+.rolagem .scroll {
+  height: 100%;
+  border: solid 1px $corCinzaClaro;
+}
+
+.rolagem table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-color: gray;
+  width: 100%;
+  position: relative;
+  border: 0;
+  margin: 0px 0px 0px 0px;
+}
+
+.rolagem table.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+}
+
+.rolagem thead {
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.rolagem tbody {
+  vertical-align: middle;
+  border-color: inherit
+}
+
+.rolagem tfoot {
+  vertical-align: middle;
+  border-color: inherit
+}
+
+.rolagem table > tr {
+  vertical-align: middle;
+  background-color: $corLinhaPar;
+}
+
+.rolagem tbody tr:nth-child(odd) {
+  background-color: $corLinhaImpar;
+}
+
+.rolagem tbody tr:hover {
+  background-color: $cor_verde_G1;
+}
+
+.rolagem tr {
+  vertical-align: inherit;
+  border-color: inherit
+}
+
+.rolagem td, th {
+  vertical-align: inherit
+}
+
+.rolagem th {
+  font: 700 10px $fonteTexto;
+  text-transform: uppercase;
+  background: $corCinzaClaro;
+  padding: 5px 5px;
+  color: $corTexto;
+  text-align: left;
+}
+
+.rolagem th.sticky  {
+  position: sticky;
+  top: 0;
+}
+
+.rolagem td {
+  font: 500 12px $fonteTexto;
+  color: $corTexto;
+  border: none;
+  padding: 3px 5px;
+}
+
+.rolagem table.doc {
+  border-spacing: 2px;
+}
+
+.rolagem td.volume {
+  font: 700 14px $fonteTexto;
+  background: $cor_crono_sistema;
+  color: $corBranco;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.rolagem td.secao {
+  font: 700 12px $fonteTexto;
+  background: $Silver;
+  color: $corTexto;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.rolagem td.espec {
+  font: 500 12px $fonteTexto;
+  background: $Clouds;
+  color: $corTexto;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.rolagem a.btacao {
+  float: right;
+  display: block;
+  padding: 2px 10px;
+  font: 500 10px $fonteTexto;
+  background: $cor_crono_sistema;
+  color: $corBranco;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.rolagem a.btacao:hover {
+  background: $cor_crono_fase;
+  color: $corBranco;
+}
+
+.rolagem td.opcao {
+  text-align: center;
+}
+
+.rolagem td.opcao a {
+  float: none;
+  display: block;
+  width: 100%;
+  padding: 5px 0px;
+  margin: 0;
+  font: 500 10px $fonteTexto;
+  background: $Orange;
+  color: $corBranco;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.rolagem td.opcao a:hover {
+  background: $SunFlower;
+  color: $corBranco;
+}
+
+
+.rolagem a.icoacao {
+  float: right;
+  display: block;
+  padding: 0;
+  font: 500 10px $fonteTexto;
+  color: $corBranco;
+  border: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.rolagem a.icoacao:hover {
+  color: $corBranco;
+}
+
+.rolagem th.vazio {
+  background: transparent;
+  padding: 0;
+  height: 0;
+}
+
+.rolagem th.header { 
+  width: auto;
+  background-image: url(img/bg.gif);     
+  cursor: pointer; 
+  font-weight: 700; 
+  background-repeat: no-repeat; 
+  background-position: center left; 
+  padding-left: 20px; 
+  border-right: 1px solid $corBranco; 
+  margin-left: -1px; 
+} 
+
+.rolagem .pequeno {
+  font: 300 10px $fonteTitulo;
+}
+
+.rolagem th.headerSortUp { 
+  background-image: url(img/asc.gif);
+} 
+
+.rolagem th.headerSortDown { 
+  background-image: url(img/desc.gif);
+} 
+
+/******************************************************************************
+ * 
+ * 
+ *   rolagembloco
+ * 
+ * 
+ ******************************************************************************/
+
+.rolagembloco  {
+  float: left;
+  display: block;
+  align: center;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0 0 0;
+  background: $corBranco;
+  border: solid 1px $corCinzaClaro; 
+  clear: both;
+  overflow: hidden;
+  height: calc( 90vh - 280px );
+}
+
+.rolagembloco .scroll {
+  height: 100%;
+  border: solid 1px $corCinzaClaro;
+}
+
+.rolagembloco table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+  width: 100%;
+  position: relative;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+
+.rolagembloco table.sticky {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-spacing: 2px 0;
+  margin-top: 2px;
+}
+
+.rolagembloco thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.rolagembloco tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit
+}
+
+.rolagembloco tfoot {
+  display: table-footer-group;
+  vertical-align: middle;
+  border-color: inherit
+}
+
+.rolagembloco table > tr {
+  vertical-align: middle;
+}
+
+.rolagembloco col {
+  display: table-column
+}
+
+.rolagembloco colgroup {
+  display: table-column-group
+}
+
+.rolagembloco tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.rolagembloco a.btacao {
+  float: right;
+  display: block;
+  padding: 2px 10px;
+  font: 500 10px $fonteTexto;
+  background: $cor_crono_sistema;
+  color: $corBranco;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.rolagembloco a.btacao:hover {
+  background: $cor_crono_fase;
+  color: $corBranco;
+}
+
+.rolagembloco a.icoacao {
+  float: right;
+  display: block;
+  padding: 0;
+  font: 500 10px $fonteTexto;
+  color: $corBranco;
+  border: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.rolagembloco a.icoacao:hover {
+  color: $corBranco;
+}
+
+.rolagembloco td, th {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+.rolagembloco th {
+  font: 700 10px $fonteTexto;
+  background: $corCinzaClaro;
+  padding: 5px 5px;
+  margin: 0;
+  color: $corPreto;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.rolagembloco th.sticky  {
+  position: sticky;
+  top: 0;
+}
+
+.rolagembloco td {
+  position: relative;
+  background: $corTabela;
+  border: solid 1px $corCinzaClaro;
+  font: 500 12px $fonteTexto;
+  padding: 3px 10px 3px 10px;
+  color: $corPreto;
+  text-transform: none;
+}
+
+.rolagembloco table.doc {
+  border-spacing: 2px;
+}
+
+.rolagembloco td.volume {
+  font: 700 14px $fonteTexto;
+  background: $cor_crono_sistema;
+  color: $corBranco;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.rolagembloco td.secao {
+  font: 700 12px $fonteTexto;
+  background: $Silver;
+  color: $corTexto;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.rolagembloco td.espec {
+  font: 500 12px $fonteTexto;
+  background: $Clouds;
+  color: $corTexto;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.rolagembloco th.vazio {
+  background: transparent;
+  padding: 0;
+  height: 0;  
+}
+
+.rolagembloco th.header { 
+  display: table-cell;
+  width: auto;
+  background-image: url(img/bg.gif);     
+  cursor: pointer; 
+  font-weight: 700; 
+  background-repeat: no-repeat; 
+  background-position: center left; 
+  padding-left: 20px; 
+  border-right: 1px solid $corBranco; 
+  margin-left: -1px; 
+} 
+
+.rolagembloco .pequeno {
+  font: 300 10px $fonteTitulo;
+}
+
+.rolagembloco th.headerSortUp { 
+  background-image: url(img/asc.gif);
+} 
+
+.rolagembloco th.headerSortDown { 
+  background-image: url(img/desc.gif);
+}
+
+.rolagembloco td.oculta {
+  background: transparent;
+  border: solid 1px transparent;
+  font: 500 12px $fonteTexto;
+  padding: 3px 10px 3px 10px;
+  margin: 0;
+  color: transparent;
+  text-transform: none;
+}
+
+.rolagembloco td.total {
+  background: $corTabela;
+  border: solid 1px $corCinzaClaro;
+  font: 700 12px $fonteTexto;
+  padding: 3px 10px 3px 10px;
+  margin: 0;
+  color: $corTexto;
+  text-transform: none;
+}
+
+.rolagembloco td.titulo {
+  background: $corBase;
+  border: solid 1px $corBase;
+  border-radius: 5px;
+  font: 700 12px $fonteTexto;
+  padding: 3px 3px 3px 3px;
+  text-align: center;
+  color: $corBranco;
+}
+
+.rolagembloco td.centro {
+  background: $corTabela;
+  border: solid 1px $corTexto;
+  border-radius: 5px;
+  font: 500 12px $fonteTexto;
+  padding: 3px 10px 3px 10px;
+  color: $corTexto;
+  text-align: center;
+}
+
+.rolagembloco td.direita {
+  background: $corTabela;
+  border: solid 1px $corTexto;
+  border-radius: 5px;
+  font: 500 12px $fonteTexto;
+  padding: 3px 10px 3px 10px;
+  color: $corTexto;
+  text-align: right;
+}
+
+.rolagembloco td.mini {
+  background: $corTabela;
+  border: solid 1px $corTexto;
+  border-radius: 5px;
+  font: 500 10px $fonteTexto;
+  padding: 3px 10px 3px 10px;
+  text-align: left;
+  color: $corTexto;
+}
+
+.rolagembloco .comentario {
+  font: 500 10px $fonteTexto;
+  color: $corPreto;
+}
+
+.rolagembloco p {
+  font: 500 12px $fonteTexto;
+  text-align: left;
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  color: $corPreto;
+}
+
+.rolagembloco td p {
+  font: 500 12px $fonteTexto;
+  text-align: left;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  color: $corPreto;
+}
+
+.rolagembloco span.titulo {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: 700 14px $fonteTitulo;
+  color: $corPreto;
+}
+
+.rolagembloco span.tag {
+  display: inline-block;
+  border: 0;
+  border-radius: 5px 0;
+  background: $cor_cinza_L2;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 9px $fonteTitulo;
+  color: $corPreto;
+}
+
+.rolagembloco .bt_acao {
+  float: right;
+  margin: 0 1px;
+  padding: 2px 5px;
+  background : $corAzulEscuro;
+  color: $corBranco;
+  font: 400 9px $fonteTexto;
+  text-transform: uppercase;
+}
+
+.rolagembloco .bt_acao:hover {
+  background : $Pomegranate;
+  color: $corBranco;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   rolagempainel
+ * 
+ * 
+ ******************************************************************************/
+
+.rolagempainel  {
+  float: left;
+  display: block;
+  align: center;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0 0 0;
+  background: $corBranco;
+  border: 0; 
+  clear: both;
+  overflow: hidden;
+  height: calc( 90vh - 280px );
+}
+
+.rolagempainel .scroll {
+  height: calc( 100% - 25px );
+}
+
+.rolagempainel table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-color: gray;
+  width: 100%;
+  position: relative;
+  border: 0;
+  margin: 0px 0px 0px 0px;
+}
+
+.rolagempainel table > tr {
+  vertical-align: middle;
+}
+
+.rolagempainel col {
+  display: table-column
+}
+
+.rolagempainel colgroup {
+  display: table-column-group
+}
+
+.rolagempainel tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit
+}
+
+.rolagempainel td, th {
+  display: table-cell;
+  vertical-align: inherit
+}
+
+.rolagempainel td,th {
+  border: 0;
+  padding: 3px 5px;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   scroll
+ * 
+ * 
+ ******************************************************************************/
+ 
+.scroll {
+  float: left;
+  display: block;
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  clear: both;
+  margin: 0;
+  background: $corBranco;
+  padding: 0;
+  border: solid 1px $corCinzaClaro;
+  height: calc( 90vh - 280px );  
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: $Clouds;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: $corCinzaEscuro;
+  border-radius: 6px;
+  border: 3px solid $corCinzaEscuro;
+}
+
+.scroll .pnscroll {
+  width: 100%;
+  height: 100%;
+  font: 300 14px $fonteTexto;
+  margin: 0;
+  padding: 15px;
+}
+
+.scroll img {
+  border: none;
+  text-decoration: none;
+  padding-left: 3px;
+}
+
+.scroll a {
+  font: 700 12px $fonteTexto;
+  color: $corTexto;
+  text-decoration: none;
+}
+
+.scroll a:hover {
+  color: $corBase;
+}
+
+.scroll .comentario {
+  font: 500 10px $fonteTexto;
+  color: $corPreto;
+}
+
+.scroll_fecho {
+  float: left;
+  display: table;
+  position: relative;
+  width: 100%;
+  margin: 5px 0 0 0;
+  background: transparent;
+  padding: 5px;
+  clear: both;
+  border: solid 1px $corCinzaClaro; 
+}
+
+.scroll_botoeira {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: transparent;
+}
+
+.scroll_botao {
+  float: right;
+  display: block;
+  margin: 0 5px 0px 0px;
+  padding: 0;
+  font: normal 14px $fonteTitulo;
+  text-align: left;
+  border: 0;
+  color: $corBranco;
+}
+
+.scroll_botao a {
+  display: inline-block;
+  margin-left: 5px;
+  border: solid 1px $corBaseDark;
+  background-color: $corBranco; 
+  color: $corBaseDark;
+  font: 400 10px $fonteTitulo;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2px 8px 2px 8px;
+}
+
+.scroll_botao a:hover {
+  background-color: $corBaseDark; 
+  color: $corBranco;
+}
+
+.scroll_botao span {
+  margin-left: 5px;
+  border: 0;
+  border: solid 1px $corBaseDark;
+  background-color: $corBranco; 
+  color: $corBaseDark;
+  font: 400 10px $fonteTitulo;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2px 8px 2px 8px;
+ 
+}
+
+.scroll_botao span:hover {
+  background-color: $corBaseDark; 
+  color: $corBranco;
+  cursor: pointer;
+}
+
+.scroll_botao img {
+  float: left;
+  height: 16px;
+  padding: 0px 10px 5px 0px;
+}
+
+.scroll_btdivisor {
+  float: right;
+  margin: 5px 0px 0px 0px;
+  display: block;
+  width: 20px;
+  height: 10px;
+  padding: 0;
+  font: normal 14px $fonteTitulo;
+  text-align: left;
+}
+
+.scroll_legenda {
+  float: right;
+  display: table;
+  vertical-align: middle;
+  font: normal 10px $fonteTexto;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+}
+
+.scroll_legenda .icone {
+  float: left;
+  margin: 0 0 0 5px;
+  padding: 2px 0px 0 0;
+  display: table-cell;
+  vertical-align: middle;
+  border: 0;
+}
+
+.scroll_legenda .texto {
+  float: right;
+  display: table-cell;
+  vertical-align: middle;
+  font: normal 10px $fonteTitulo;
+  border: 0;
+  margin:0;
+  padding: 0 5px 0 0;
+  text-align: left;
+}

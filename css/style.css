@@ -1,0 +1,7784 @@
+/*
+    Created on : 11/02/2022, 09:03:52
+    Author     : Eduardo Valente
+*/
+@import url(../css/jquery-ui.css);
+@import url(../css/site/theme.css);
+@import url(../css/site/font-awesome.min.css);
+@import url(../css/site/bootsnav.css);
+@import url(../css/site/style.css);
+@import url(../css/site/main.css);
+.laranja {
+  color: orange; }
+
+.vermelho {
+  color: red; }
+
+/*Filter styles*/
+.saturate {
+  -webkit-filter: saturate(3);
+  filter: saturate(3); }
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+.contrast {
+  -webkit-filter: contrast(160%);
+  filter: contrast(160%); }
+
+.brightness {
+  -webkit-filter: brightness(0.25);
+  filter: brightness(0.25); }
+
+.blur {
+  -webkit-filter: blur(3px);
+  filter: blur(3px); }
+
+.invert {
+  -webkit-filter: invert(100%);
+  filter: invert(100%); }
+
+.sepia {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%); }
+
+.huerotate {
+  -webkit-filter: hue-rotate(180deg);
+  filter: hue-rotate(180deg); }
+
+.rss.opacity {
+  -webkit-filter: opacity(50%);
+  filter: opacity(50%); }
+
+* {
+  outline: none; }
+
+/******************************************************************************
+ * 
+ * 
+ *   elementos-base
+ * 
+ * 
+ ******************************************************************************/
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+body {
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font: normal 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  overflow: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: transparent; }
+
+body::-webkit-scrollbar {
+  width: 8px; }
+
+body::-webkit-scrollbar-track {
+  background: #ecf0f1; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #556566;
+  border-radius: 6px;
+  border: 3px solid #556566; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 700; }
+
+a, a:hover {
+  text-decoration: none; }
+
+/******************************************************************************
+ * 
+ * 
+ *   componentes gerais
+ * 
+ * 
+ ******************************************************************************/
+.larg_5 {
+  width: calc(5% - 5px); }
+
+.larg_10 {
+  width: calc(10% - 5px); }
+
+.larg_15 {
+  width: calc(15% - 5px); }
+
+.larg_20 {
+  width: calc(20% - 5px); }
+
+.larg_25 {
+  width: calc(25% - 5px); }
+
+.larg_30 {
+  width: calc(30% - 5px); }
+
+.larg_35 {
+  width: calc(35% - 5px); }
+
+.larg_40 {
+  width: calc(40% - 5px); }
+
+.larg_45 {
+  width: calc(45% - 5px); }
+
+.larg_50 {
+  width: calc(50% - 5px); }
+
+.larg_55 {
+  width: calc(55% - 5px); }
+
+.larg_60 {
+  width: calc(60% - 5px); }
+
+.larg_65 {
+  width: calc(65% - 5px); }
+
+.larg_70 {
+  width: calc(70% - 5px); }
+
+.larg_75 {
+  width: calc(75% - 5px); }
+
+.larg_80 {
+  width: calc(80% - 5px); }
+
+.larg_85 {
+  width: calc(85% - 5px); }
+
+.larg_90 {
+  width: calc(90% - 5px); }
+
+.larg_95 {
+  width: calc(95% - 5px); }
+
+.larg_100 {
+  width: calc(100% - 5px); }
+
+@media screen and (max-width: 768px) {
+  .larg_5 {
+    width: calc(50% - 5px); }
+
+  .larg_10 {
+    width: calc(50% - 5px); }
+
+  .larg_15 {
+    width: calc(50% - 5px); }
+
+  .larg_20 {
+    width: calc(50% - 5px); }
+
+  .larg_25 {
+    width: calc(50% - 5px); }
+
+  .larg_30 {
+    width: calc(50% - 5px); }
+
+  .larg_35 {
+    width: calc(50% - 5px); }
+
+  .larg_40 {
+    width: calc(50% - 5px); }
+
+  .larg_45 {
+    width: calc(50% - 5px); }
+
+  .larg_50 {
+    width: calc(100% - 5px); }
+
+  .larg_55 {
+    width: calc(100% - 5px); }
+
+  .larg_60 {
+    width: calc(100% - 5px); }
+
+  .larg_65 {
+    width: calc(100% - 5px); }
+
+  .larg_70 {
+    width: calc(100% - 5px); }
+
+  .larg_75 {
+    width: calc(100% - 5px); }
+
+  .larg_80 {
+    width: calc(100% - 5px); }
+
+  .larg_85 {
+    width: calc(100% - 5px); }
+
+  .larg_90 {
+    width: calc(100% - 5px); }
+
+  .larg_95 {
+    width: calc(100% - 5px); }
+
+  .larg_100 {
+    width: calc(100% - 5px); } }
+.sempre_no_topo {
+  position: sticky;
+  top: 0; }
+
+.icone_site {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0 3px 0 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  color: white;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center; }
+
+.rodape-copyright {
+  width: 100%;
+  text-align: right;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 400 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white; }
+
+.rodape-conexao {
+  width: 100%;
+  text-align: left;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white; }
+
+.rodape-conexao b {
+  text-transform: none; }
+
+@media screen and (max-width: 800px) {
+  .rodape-copyright {
+    text-align: center; }
+
+  .rodape-conexao {
+    text-align: center; } }
+.capa_rolagem {
+  float: left;
+  display: block;
+  height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent; }
+
+.capa_rolagem::-webkit-scrollbar {
+  width: 8px; }
+
+.capa_rolagem::-webkit-scrollbar-track {
+  background: transparent; }
+
+.capa_rolagem::-webkit-scrollbar-thumb {
+  background-color: #ecf0f1;
+  border-radius: 6px;
+  border: 3px solid #ecf0f1; }
+
+.capa_botao {
+  float: right;
+  display: table;
+  position: relative;
+  height: 100%;
+  padding: 10px 20px;
+  border: 0;
+  background: #16a085;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0; }
+
+.capa_botao:hover {
+  text-decoration: none;
+  background: #2ecc71;
+  color: white; }
+
+@media screen and (max-width: 768px) {
+  .tag_capa {
+    width: 100%;
+    margin: 0 0 10px 0; } }
+/******************************************************************************
+ * 
+ * 
+ *   icon
+ * 
+ * 
+ ******************************************************************************/
+.icon {
+  text-decoration: none;
+  position: relative;
+  text-decoration: none;
+  margin: 0 5px 0 0; }
+
+.icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: none !important;
+  float: left;
+  padding: 0 2px; }
+
+.icon > .label {
+  display: none; }
+
+etiqueta {
+  margin-left: 5px;
+  font-weight: 400; }
+
+@media screen and (max-width: 600px) {
+  .icon {
+    margin: 0; }
+
+  etiqueta {
+    display: none; } }
+/******************************************************************************
+ * 
+ * 
+ *   barra_icone
+ * 
+ * 
+ ******************************************************************************/
+.barra_icone {
+  display: inline-block; }
+
+@media screen and (max-width: 992px) {
+  .barra_icone {
+    position: relative;
+    right: 15px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    clear: both; } }
+@media screen and (max-width: 767px) {
+  .barra_icone {
+    right: 0; } }
+/******************************************************************************
+ * 
+ * 
+ *   formulario
+ * 
+ * 
+ ******************************************************************************/
+#formulario {
+  float: left;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: table;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 10px 15px 10px;
+  color: #253536;
+  text-align: left;
+  border: solid 1px #ecf0f1;
+  clear: both; }
+
+#formulario.site {
+  border: 0; }
+
+#formulario .btselecao {
+  width: 100%;
+  display: block;
+  background: #455556;
+  color: white;
+  font: 700 8px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 2px 0;
+  text-align: center;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer; }
+
+#formulario .btopcao {
+  margin: 3px 10px 2px 0px;
+  font: normal 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  float: right; }
+
+#formulario .btopcao a {
+  background-color: #455556;
+  color: white;
+  display: block;
+  border-radius: 5px;
+  border: solid 1px #455556;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding: 2px 10px 2px 10px; }
+
+#formulario .btopcao a:hover {
+  background-color: white;
+  color: #0F87B7; }
+
+#formulario H4 {
+  margin: 5px 0px 5px 0px;
+  padding: 0px;
+  font: 700 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #253536;
+  text-transform: uppercase; }
+
+#formulario .subtitle {
+  font: 700 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 5px 25px;
+  color: #253536; }
+
+#formulario form {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: none; }
+
+#formulario fieldset {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  clear: both; }
+
+#formulario legend {
+  display: block;
+  text-align: left;
+  padding: 5px 15px 5px 15px;
+  margin: 0px 10px 0px 10px;
+  font: 700 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: solid 2px #253536;
+  background: #bdc3c7;
+  color: #0F87B7; }
+
+#formulario .secao {
+  float: left;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  padding: 0;
+  border: 0;
+  border-bottom: solid 2px #95a5a6;
+  clear: both; }
+
+#formulario .secao p {
+  float: left;
+  display: block;
+  width: auto;
+  margin: 0 0 0 0;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+  background-color: #95a5a6;
+  padding: 3px 10px; }
+
+#formulario .campo {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 0px;
+  margin: 0 5px 0 0; }
+
+#formulario .etiqueta {
+  position: relative;
+  float: left;
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #455556;
+  white-space: nowrap;
+  overflow: hidden; }
+
+#formulario.site .etiqueta {
+  position: relative;
+  float: left;
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-transform: none;
+  font: 500 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #455556;
+  white-space: nowrap;
+  overflow: hidden; }
+
+#formulario .controle {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 0 0 5px 0;
+  width: 100%;
+  margin: 0;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: none; }
+
+#formulario .controle img {
+  position: relative;
+  float: left;
+  width: auto;
+  display: table;
+  border: 0;
+  padding: 0;
+  margin: 2px 0 5px 5px; }
+
+#formulario .painel {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  padding: 5px 10px 0 10px;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 5px 0;
+  border: solid 1px #A5B5B6;
+  white-space: nowrap;
+  overflow: hidden; }
+
+#formulario .readonly {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  padding: 1px 5px;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 5px 0;
+  border: solid 1px #A5B5B6;
+  background-color: lightyellow;
+  white-space: nowrap;
+  overflow: hidden; }
+
+#formulario .caixa {
+  float: left;
+  display: block;
+  width: calc(100% - 8px);
+  padding: 2px 5px 0 5px;
+  font: normal 10px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 2px 0 5px 0;
+  border: solid 1px #A5B5B6;
+  background-color: lightyellow; }
+
+#formulario input {
+  float: left;
+  width: 100%;
+  padding-left: 5px;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 5px 0;
+  border: solid 1px #A5B5B6;
+  background-color: white;
+  resize: none;
+  outline: none; }
+
+#formulario textarea.normal {
+  float: left;
+  width: 100%;
+  padding: 0 5px;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 5px 0;
+  border: solid 1px #A5B5B6;
+  background-color: white;
+  resize: none;
+  outline: none; }
+
+#formulario select {
+  width: 100%;
+  padding: 2px 5px;
+  margin: 0 0 5px 0;
+  border: solid 1px #A5B5B6;
+  overflow: hidden;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: "";
+  background: url("img/ico-down.png") no-repeat right center white;
+  -webkit-appearance: none;
+  /* gets rid of default appearance in Webkit browsers*/
+  -moz-appearance: none;
+  /* Get rid of default appearance for older Firefox browsers */
+  -ms-appearance: none;
+  /* get rid of default appearance for IE8, 9 and 10*/
+  appearance: none;
+  outline: none; }
+
+#formulario select::-ms-expand {
+  display: none;
+  /* hide default arrow in IE10 */ }
+
+#formulario select option {
+  font: 500 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  padding: 3px;
+  background: white;
+  color: #253536; }
+
+#formulario input:hover, select:hover, textarea.normal:hover {
+  background-color: #F0FFE6; }
+
+#formulario input:read-only {
+  background-color: lightyellow; }
+
+#formulario textarea.tags {
+  float: left;
+  width: calc(100% - 15px);
+  padding: 0 5px;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 5px 0;
+  border: solid 1px #A5B5B6;
+  background-color: transparent;
+  resize: none;
+  width: 1008px;
+  outline: none; }
+
+#formulario textarea.tags:hover {
+  background-color: transparent; }
+
+#formulario .checkbox input[type=checkbox] {
+  display: none; }
+
+#formulario .checkbox label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 20px;
+  margin: 0 15px 5px 0; }
+
+#formulario .checkbox label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 1px;
+  background-color: white;
+  border: solid 2px #A5B5B6;
+  border-radius: 2px;
+  outline: none; }
+
+#formulario .checkbox input[type=checkbox]:checked + label:before {
+  content: "";
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+  background-color: #455556; }
+
+#formulario .radio {
+  width: 15px;
+  font: 700 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: none;
+  outline: none; }
+
+#formulario .botoeira {
+  display: block;
+  width: 100%;
+  float: right;
+  text-align: right;
+  margin: 5px 0;
+  padding: 0; }
+
+#formulario button {
+  background-color: #455556;
+  color: white;
+  text-align: center;
+  min-width: 80px;
+  border: 0;
+  border-radius: 3px;
+  margin: 0px 5px 0px 0px;
+  padding: 5px 10px;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  -moz-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  outline: none; }
+
+#formulario.site button {
+  font: 500 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+#formulario button:hover {
+  background-color: #95a5a6;
+  color: white; }
+
+#formulario button.ok {
+  background-color: #2ecc71;
+  color: white; }
+
+#formulario button.ok:hover {
+  background-color: #27ae60;
+  color: white; }
+
+#formulario button.cancelar {
+  background-color: #e74c3c;
+  color: white; }
+
+#formulario button.cancelar:hover {
+  background-color: #c0392b;
+  color: white; }
+
+#formulario button.limpar {
+  background-color: #f1c40f;
+  color: white; }
+
+#formulario button.limpar:hover {
+  background-color: #f39c12;
+  color: white; }
+
+#formulario br {
+  clear: left; }
+
+#formulario .check-select-multiple {
+  float: left;
+  display: table;
+  overflow-y: auto;
+  padding: 5px 5px 0 5px;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: solid 1px #A5B5B6;
+  background-color: transparent;
+  outline: none; }
+
+#formulario .check-select-multiple input[type=checkbox] {
+  display: none; }
+
+#formulario .filtro-checkbox {
+  float: left;
+  width: 100%;
+  overflow-y: none;
+  padding: 0;
+  margin: 0 0 3px 0;
+  font: normal 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: 0;
+  height: 17px;
+  outline: none; }
+
+#formulario .filtro-checkbox input[type=checkbox] {
+  display: none; }
+
+#formulario .filtro-checkbox label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin: 0 15px 5px 0; }
+
+#formulario .filtro-checkbox label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: white;
+  border: solid 2px #455556;
+  border-radius: 2px; }
+
+#formulario .filtro-checkbox input[type=checkbox]:checked + label:before {
+  content: "";
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+  background-color: #0F87B7; }
+
+#formulario .filtro-tags {
+  float: left;
+  display: block;
+  overflow-y: none;
+  padding: 5px 0 0 5px;
+  margin: 0 5px 5px 0;
+  font: normal 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  border: solid 1px #bdc3c7;
+  outline: none;
+  background-color: #ecf0f1;
+  text-transform: uppercase; }
+
+#formulario .filtro-tags input[type=checkbox] {
+  display: none; }
+
+#formulario .filtro-tags label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin: 0 15px 5px 0; }
+
+#formulario .filtro-tags label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: white;
+  border: solid 2px #455556;
+  border-radius: 2px; }
+
+#formulario .filtro-tags input[type=checkbox]:checked + label:before {
+  content: "";
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+  background-color: #0F87B7; }
+
+#formulario .infobotao {
+  float: right;
+  display: block;
+  background-color: #455556;
+  color: white;
+  text-align: center;
+  min-width: 80px;
+  border: 0;
+  margin: 0px 15px 0px 0px;
+  padding: 4px 10px;
+  font: 700 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+#formulario .infobotao:hover {
+  background-color: #95a5a6;
+  color: white;
+  text-decoration: none; }
+
+#formulario a {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #253536;
+  text-decoration: none; }
+
+#formulario a:hover {
+  color: #0F87B7; }
+
+#formulario img {
+  border: none;
+  text-decoration: none;
+  padding-left: 3px; }
+
+#formulario .divisor {
+  font: 700 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 5px 25px;
+  color: #253536; }
+
+#formulario .btspin {
+  float: left;
+  display: table;
+  vertical-align: middle;
+  background-color: #455556;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border: 0;
+  margin: 0 2px;
+  padding: 0;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-decoration: none; }
+
+#formulario .btspin:hover {
+  background-color: #95a5a6; }
+
+#formulario .divtab {
+  position: relative;
+  display: table;
+  width: 100%;
+  border: solid 1px #bdc3c7;
+  padding: 5px;
+  clear: both; }
+
+#formulario .divtabtotal {
+  position: relative;
+  display: table;
+  width: 100%;
+  border: solid 1px #bdc3c7;
+  border-top: 0;
+  padding: 5px;
+  clear: both; }
+
+#formulario .exibetab {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: calc(100% - 12px);
+  padding: 2px 5px;
+  margin: 0;
+  font: normal 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: solid 1px #455556;
+  background-color: lightyellow; }
+
+#formulario .exibetabico {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: calc(100% - 12px);
+  padding: 0;
+  margin: 0 0 3px 0;
+  font: normal 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: 0;
+  background-color: transparent; }
+
+#formulario .totaltab {
+  position: relative;
+  float: left;
+  display: table;
+  width: 100%;
+  padding: 2px 5px;
+  margin: 0px 2px 0px 5px;
+  text-align: right;
+  font: 700 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  border: solid 1px #455556;
+  background-color: #455556; }
+
+#formulario .blanktab {
+  position: relative;
+  float: left;
+  display: table;
+  width: 100%;
+  padding: 2px 0;
+  margin: 0;
+  font: 700 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #455556;
+  text-transform: uppercase;
+  border: solid 1px transparent;
+  background-color: transparent;
+  text-align: right; }
+
+#formulario .divtab .campo {
+  position: relative;
+  float: left;
+  display: table;
+  padding: 0px;
+  margin: 0 0 3px 0;
+  width: calc(100% - 5px); }
+
+#formulario .divtab .etiqueta {
+  position: relative;
+  float: left;
+  display: table-cell;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #455556; }
+
+#formulario .divtab .controle {
+  position: relative;
+  float: left;
+  display: table-cell;
+  padding: 0 0 0 0;
+  width: 100%;
+  margin: 0;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: none; }
+
+#formulario .divtab .controle img {
+  position: relative;
+  float: left;
+  width: auto;
+  display: table;
+  border: 0;
+  padding: 0;
+  height: 22px;
+  margin: 0 0 0 5px; }
+
+#formulario .divtab input {
+  float: left;
+  width: 100%;
+  margin: 0;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: solid 1px #455556;
+  background-color: white;
+  resize: none; }
+
+#formulario .divtab select {
+  width: 100%;
+  padding: 0 2px;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 5px 0;
+  border: solid 1px #455556;
+  background-color: white; }
+
+#formulario .ui-spinner {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+#formulario .ui-spinner-input {
+  margin: 0;
+  padding: 1px 5px;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  border: solid 1px #A5B5B6;
+  background-color: white;
+  width: calc( 100% - 18px );
+  outline: none; }
+
+#formulario .ui-spinner-button {
+  margin: 0;
+  border: 0;
+  outline: none; }
+
+#formulario .ui-spinner-up {
+  margin: 0;
+  background-color: transparent;
+  background-image: url("img/seta-up.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0; }
+
+#formulario .ui-spinner-down {
+  margin: 0;
+  background-color: transparent;
+  background-image: url("img/seta-down.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0; }
+
+#formulario .comentario {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  padding: 0;
+  maregin: 0; }
+
+#formulario .styled-radio-control {
+  list-style: none;
+  display: table;
+  margin: 0 0 10px 0;
+  padding: 5px 0 5px 5px;
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7; }
+
+#formulario .styled-radio-control input[type=radio] {
+  display: none;
+  margin: 0; }
+
+#formulario .styled-radio-control:after {
+  content: "";
+  clear: both; }
+
+#formulario .styled-radio-item {
+  float: left;
+  position: relative;
+  margin: 0 5px 0 0;
+  display: table;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid white;
+  color: white; }
+
+#formulario .styled-radio-item label {
+  background: transparent;
+  bottom: 1px;
+  left: 1px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  text-indent: 100%; }
+
+#formulario .styled-radio-item .etiq {
+  display: table-cell;
+  vertical-align: middle;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: white; }
+
+#formulario .styled-radio-control input:checked + label {
+  outline: 3px dashed black;
+  height: 35px; }
+
+#formulario .styled-radio-control input:checked + label:after {
+  background: url(img/check.png);
+  bottom: -10px;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  position: absolute;
+  right: -10px;
+  width: 20px; }
+
+@-moz-document url-prefix() {
+  #formulario .styled-radio-control input:checked + label:after {
+    bottom: 0;
+    right: 0;
+    background-color: #21b4d0; } }
+/* DatePicker Container */
+.ui-datepicker {
+  background: white;
+  width: auto;
+  height: auto;
+  margin: 5px auto 0;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  border: solid 1px #bdc3c7;
+  outline: none;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+
+.ui-datepicker a {
+  text-decoration: none; }
+
+/* DatePicker Table */
+.ui-datepicker table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.ui-datepicker-header {
+  background: #0F87B7;
+  color: black;
+  font: 400 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  height: 30px;
+  border: 0; }
+
+.ui-datepicker-header select {
+  background: #ecf0f1;
+  color: black;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0; }
+
+.ui-datepicker-title {
+  text-align: center; }
+
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+  background-image: none !important; }
+
+.ui-datepicker-prev:before,
+.ui-datepicker-next:before {
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center; }
+
+.ui-datepicker-prev:before {
+  content: "\f053"; }
+
+.ui-datepicker-next:before {
+  content: "\f054"; }
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+  background-color: #0F87B7;
+  color: white; }
+
+.ui-datepicker thead {
+  background-color: #95a5a6;
+  color: white;
+  border: 0; }
+
+.ui-datepicker thead {
+  background-color: #f7f7f7;
+  background-image: -moz-linear-gradient(top, #f7f7f7 0%, #f1f1f1 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #f1f1f1));
+  background-image: -webkit-linear-gradient(top, #f7f7f7 0%, #f1f1f1 100%);
+  background-image: -o-linear-gradient(top, #f7f7f7 0%, #f1f1f1 100%);
+  background-image: -ms-linear-gradient(top, #f7f7f7 0%, #f1f1f1 100%);
+  background-image: linear-gradient(top, #f7f7f7 0%, #f1f1f1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f1f1f1',GradientType=0 ); }
+
+.ui-datepicker th {
+  text-transform: uppercase;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  padding: 2px; }
+
+.ui-datepicker th {
+  text-transform: uppercase;
+  font-size: 6pt;
+  padding: 5px 0;
+  color: #666666;
+  text-shadow: 1px 0px 0px #fff;
+  filter: dropshadow(color=#fff, offx=1, offy=0); }
+
+.ui-datepicker tbody tr {
+  border-bottom: 1px solid #bbb; }
+
+.ui-datepicker tbody tr:last-child {
+  border-bottom: 0px; }
+
+.ui-datepicker tbody td {
+  font: normal 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  border: 0; }
+
+.ui-datepicker tbody td {
+  padding: 0;
+  border-right: 1px solid #bbb; }
+
+.ui-datepicker tbody td:last-child {
+  border-right: 0px; }
+
+.ui-datepicker td span, .ui-datepicker td a {
+  display: inline-block;
+  font: bold 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: black;
+  filter: dropshadow(color=#fff, offx=1, offy=1); }
+
+.ui-datepicker-calendar .ui-state-default {
+  background: #bdc3c7;
+  color: black; }
+
+.ui-datepicker-calendar .ui-state-default {
+  background: #ededed;
+  background: -moz-linear-gradient(top, #ededed 0%, #dedede 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #dedede));
+  background: -webkit-linear-gradient(top, #ededed 0%, #dedede 100%);
+  background: -o-linear-gradient(top, #ededed 0%, #dedede 100%);
+  background: -ms-linear-gradient(top, #ededed 0%, #dedede 100%);
+  background: linear-gradient(top, #ededed 0%, #dedede 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dedede',GradientType=0 );
+  -webkit-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5);
+  -moz-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5);
+  box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5); }
+
+.ui-datepicker-calendar .ui-state-active {
+  background: #c0392b;
+  color: white;
+  -webkit-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5);
+  -moz-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5);
+  box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5);
+  border: 1px solid #55838f;
+  position: relative;
+  margin: -1px; }
+
+.ui-datepicker-calendar .ui-state-hover {
+  background: #0F87B7;
+  color: white; }
+
+.ui-datepicker-unselectable .ui-state-default {
+  background: #f4f4f4;
+  color: #b4b3b3; }
+
+.ui-datepicker-calendar td:first-child .ui-state-active {
+  width: 29px;
+  margin-left: 0; }
+
+.ui-datepicker-calendar td:last-child .ui-state-active {
+  width: 29px;
+  margin-right: 0; }
+
+.ui-datepicker-calendar tr:last-child .ui-state-active {
+  height: 29px;
+  margin-bottom: 0; }
+
+.ui-datepicker-calendar .ui-datepicker-cmd-today {
+  background: #f1c40f;
+  color: #c0392b; }
+
+#formulario table {
+  width: 100%;
+  border: none;
+  margin: 0;
+  cellpadding: 0px;
+  border: 0; }
+
+#formulario th {
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #556566;
+  padding: 5px 10px;
+  color: white;
+  text-align: left;
+  border: solid 1px #bdc3c7; }
+
+#formulario td {
+  font: 500 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  border: solid 1px #bdc3c7;
+  padding: 5px 10px;
+  text-align: left; }
+
+#formulario td.oculta {
+  background: transparent;
+  border: solid 1px transparent;
+  font: 500 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 5px 10px;
+  margin: 0;
+  color: transparent;
+  text-transform: none; }
+
+#formulario td.total {
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 5px 10px;
+  margin: 0;
+  color: #253536;
+  text-transform: none; }
+
+#formulario td .campo, #formulario td .controle {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%; }
+
+#formulario td input {
+  border: 0;
+  color: blue;
+  font-weight: 700; }
+
+#formulario button.aplicar {
+  background-color: #e67e22;
+  color: white; }
+
+#formulario button.aplicar:hover {
+  background-color: #d35400;
+  color: white; }
+
+/******************************************************************************
+ * 
+ * 
+ *   super-combo
+ * 
+ * 
+ ******************************************************************************/
+.super-combo {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  border: solid 1px #A5B5B6; }
+
+.super-combo:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -3px;
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: grey transparent; }
+
+.super-combo .dropdown {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  background-color: white;
+  transition: all 0.3s ease-out;
+  list-style: none;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 50000;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-height: 180px;
+  overflow-y: auto; }
+
+.super-combo .dropdown li a {
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 0;
+  transition: all 0.3s ease-out;
+  backgroundr: transparent;
+  border: 0;
+  margin: 0; }
+
+.super-combo .dropdown li i {
+  border: 0;
+  margin-right: 5px;
+  color: inherit;
+  vertical-align: middle; }
+
+/* Hover state */
+.super-combo .dropdown li:hover a {
+  background-color: #F0FFE6;
+  color: black; }
+
+.super-combo.active:after {
+  border-width: 0 6px 6px 6px; }
+
+.super-combo.active .dropdown {
+  opacity: 1;
+  pointer-events: auto; }
+
+.super-combo .item_richcombo {
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+  z-index: 100;
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  margin: 0;
+  border: solid 1px #ecf0f1; }
+
+/******************************************************************************
+ * 
+ * 
+ *   div_knob
+ * 
+ * 
+ ******************************************************************************/
+.div_knob {
+  position: relative;
+  float: left;
+  display: block;
+  border: solid 1px #bdc3c7;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 5px;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-alig: center; }
+
+.div_knob .contador {
+  display: block;
+  width: 100%;
+  font: 700 32px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  padding: 10px 0px;
+  text-align: center; }
+
+.div_knob .info {
+  display: block;
+  width: 100%;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase; }
+
+/******************************************************************************
+ * 
+ * 
+ *   btgenerico
+ * 
+ * 
+ ******************************************************************************/
+span.btgenerico {
+  display: inline-block;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 3px 0; }
+
+span.btgenerico:hover {
+  color: white;
+  cursor: pointer; }
+
+/******************************************************************************
+ * 
+ * 
+ *   msg
+ * 
+ * 
+ ******************************************************************************/
+.msg_erro {
+  display: table;
+  margin: 5px auto;
+  background-color: rgba(255, 0, 0, 0.5);
+  border: solid 3px transparent;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white; }
+
+.msg_sucesso {
+  display: table;
+  margin: 5px auto;
+  background-color: rgba(0, 255, 0, 0.5);
+  border: solid 3px transparent;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.msg_info {
+  display: table;
+  margin: 5px auto;
+  background-color: rgba(0, 0, 255, 0.5);
+  border: solid 3px transparent;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white; }
+
+/******************************************************************************
+ * 
+ * 
+ *   input[type=search]
+ * 
+ * 
+ ******************************************************************************/
+input[type=search] {
+  -webkit-appearance: none; }
+
+/******************************************************************************
+ * 
+ * 
+ *   filtro
+ * 
+ * 
+ ******************************************************************************/
+#filtro {
+  float: left;
+  position: relative;
+  display: table;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  text-align: left;
+  color: #253536; }
+
+@media screen and (max-width: 767px) {
+  #filtro {
+    margin-bottom: 20px; } }
+#filtro .tag {
+  float: left;
+  display: block;
+  border: 0;
+  border-radius: 5px 0;
+  background: #0F87B7;
+  padding: 4px 10px;
+  margin: 0 5px 0 0;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase; }
+
+#filtro .tag_site {
+  float: left;
+  display: block;
+  border: solid 1px #0C6C92;
+  border-left: solid 5px #0C6C92;
+  background: lightyellow;
+  padding: 4px 10px;
+  margin: 0 5px 0 0;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
+
+#filtro .taground {
+  float: left;
+  display: block;
+  border: 0;
+  border-radius: 5px;
+  background: #2ecc71;
+  padding: 3px 10px;
+  margin: 0 0 0px 5px;
+  font: 700 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#filtro .icofiltro {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0 3px 0 0;
+  padding: 0px;
+  height: 16px;
+  width: 16px;
+  border: solid 1px transparent;
+  border-radius: 8px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  color: black;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center; }
+
+#filtro .exibicao {
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 0; }
+
+#filtro .exibicao .etiqueta {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  padding: 3px 10px;
+  background: #556566;
+  color: white;
+  font: normal 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+#filtro .header {
+  float: left;
+  display: block;
+  width: 100%;
+  font: 500 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 0 0 15px 0;
+  padding: 0;
+  background: transparent;
+  color: white;
+  border: 0;
+  clear: none; }
+
+#filtro .header .esquerda {
+  float: left;
+  display: block;
+  width: 40%;
+  font: 500 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 5px 10px;
+  background: #0C6C92;
+  color: white;
+  border: 0;
+  clear: none;
+  text-transform: uppercase;
+  text-align: left; }
+
+#filtro .header .direita {
+  float: right;
+  display: block;
+  width: 60%;
+  font: 500 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 5px 10px;
+  background: #2c3e50;
+  color: white;
+  border: 0;
+  text-align: right;
+  clear: none;
+  text-transform: uppercase; }
+
+#filtro .header .extra {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 5px 0 0 0;
+  text-align: left;
+  border: 0;
+  background-color: transparent;
+  clear: none;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #2c3e50;
+  text-transform: uppercase; }
+
+#filtro .header .painel_botao {
+  position: relative;
+  float: right;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  background-color: transparent;
+  clear: none; }
+
+#filtro .header .painel_botao .botao {
+  float: right;
+  display: block;
+  margin: 5px 0px 0px 0px;
+  padding: 0;
+  font: normal 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  border: 0; }
+
+#filtro .header .painel_botao .botao a {
+  display: inline-block;
+  margin-left: 5px;
+  border: 0;
+  background-color: #0F87B7;
+  color: white;
+  font: normal 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 4px 10px 4px 10px; }
+
+#filtro .header .painel_botao .botao a:hover {
+  background-color: #657576;
+  color: white; }
+
+#filtro .header .painel_botao .botao span {
+  margin-left: 5px;
+  border: 0;
+  background-color: #0F87B7;
+  color: white;
+  font: normal 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 4px 10px 4px 10px; }
+
+#filtro .header .painel_botao .botao span:hover {
+  background-color: #657576;
+  color: white;
+  cursor: pointer; }
+
+#filtro .header .painel_botao .botao img {
+  float: left;
+  height: 16px;
+  padding: 0px 10px 5px 0px; }
+
+#filtro .header .painel_botao .btdivisor {
+  float: right;
+  margin: 5px 0px 0px 0px;
+  display: block;
+  width: 20px;
+  height: 10px;
+  padding: 0;
+  font: normal 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left; }
+
+@media screen and (max-width: 992px) {
+  #filtro .header .esquerda {
+    text-align: left;
+    width: 100%; }
+
+  #filtro .header .direita {
+    text-align: left;
+    width: 100%; }
+
+  #filtro .header .extra {
+    text-align: left;
+    width: 100%; }
+
+  #filtro .header .painel_botao {
+    text-align: center;
+    width: 100%; } }
+#filtro h1 {
+  float: left;
+  display: block;
+  font: 500 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 0 0 5px 0;
+  padding: 3px 10px;
+  background: #0F87B7;
+  color: white;
+  border: 0;
+  border-radius: 0 0 0 0;
+  clear: none; }
+
+#filtro h2 {
+  float: left;
+  display: block;
+  font: 700 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 3px 0 0 0;
+  padding: 0px 10px;
+  color: #0F87B7;
+  border: 0;
+  clear: none; }
+
+#filtro h2 a {
+  float: right;
+  color: #0F87B7;
+  margin: 5px 0 0 5px;
+  border: 0;
+  background-color: #0F87B7;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2px 8px 2px 8px; }
+
+#filtro h2 a:hover {
+  background-color: #0F87B7;
+  color: white; }
+
+#filtro .divisor {
+  float: left;
+  width: 100%;
+  display: block;
+  margin: 5px 0px 10px 0;
+  border: 0;
+  padding: 0px 0 0 2px;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  color: black; }
+
+#filtro .divisor h1 {
+  float: left;
+  display: block;
+  width: auto;
+  font: 700 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 0 10px 0 0;
+  padding: 3px 10px 3px 0;
+  background: transparent;
+  color: black;
+  border: 0;
+  clear: none; }
+
+#filtro .divisor h2 {
+  float: left;
+  display: block;
+  width: auto;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 3px 10px;
+  color: #253536;
+  clear: none; }
+
+#filtro .subtitle {
+  margin: 3px 0px 2px 5px;
+  font: normal 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  float: right; }
+
+#filtro .subtitle a {
+  background-color: #0F87B7;
+  color: white;
+  display: block;
+  border: 0;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding: 4px 10px 4px 10px; }
+
+#filtro .subtitle a:hover {
+  background-color: #556566;
+  color: white; }
+
+#filtro .subtitle img {
+  float: left;
+  width: 200px;
+  padding: 0px 10px 5px 0px; }
+
+#filtro .categoria {
+  font: 700 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: dimgray;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  clear: left; }
+
+#filtro .categoria a {
+  border: none;
+  color: dimgray; }
+
+#filtro .categoria img {
+  float: left;
+  width: 200px;
+  padding: 0px 10px 5px 0px; }
+
+#filtro .chamada {
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-decoration: none; }
+
+#filtro .chamada img {
+  border: 0px;
+  padding-left: 5px; }
+
+#filtro .introducao {
+  font: italic 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-decoration: none; }
+
+#filtro .introducao img {
+  border: 0px;
+  padding-left: 5px; }
+
+#filtro .texto {
+  font: normal 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin-top: 0;
+  margin-bottom: 10px; }
+
+#filtro .ui-tabs {
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 5px 5px 5px 5px;
+  background: white;
+  border: solid 1px #bdc3c7; }
+
+#filtro .ui-tabs-panel {
+  padding: 0;
+  border: 0;
+  margin: 5px 0 0 0; }
+
+#filtro .ui-tabs-panel #ficha {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+#filtro .ui-widget-header {
+  background: transparent;
+  border: none; }
+
+#filtro .ui-tabs-nav {
+  background: #bdc3c7;
+  padding: 3px;
+  margin: 0; }
+
+#filtro .ui-tabs-nav .ui-state-default {
+  padding: 3px;
+  margin: 0 3px 0 0;
+  background: white;
+  color: #0F87B7;
+  border: 0; }
+
+#filtro .ui-tabs-nav .ui-state-active {
+  padding: 3px;
+  margin: 0 3px 0 0;
+  background: #0F87B7;
+  color: white;
+  border: 0; }
+
+#filtro .ui-tabs-nav .ui-state-default a {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #0F87B7;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  outline: none; }
+
+#filtro .ui-tabs-nav .ui-state-active a {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  outline: none; }
+
+#filtro .ui-tabs-nav img {
+  border: 0;
+  background: #bdc3c7; }
+
+#filtro .ui-tabs-nav img:hover {
+  cursor: pointer;
+  background: yellow;
+  border: 0; }
+
+#filtro .breadcrumb {
+  float: left;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 0 0 5px 0;
+  border: 0;
+  text-align: left;
+  background: transparent; }
+  #filtro .breadcrumb span {
+    float: left;
+    display: inline-block;
+    clear: none;
+    border: 0;
+    width: auto; }
+  #filtro .breadcrumb .inicio {
+    margin: 0;
+    padding: 0;
+    font: 500 11px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+    color: black; }
+  #filtro .breadcrumb .divisor {
+    margin: 0;
+    padding: 0 5px;
+    font: 700 11px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+    color: black; }
+  #filtro .breadcrumb .texto {
+    font: 500 11px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 0;
+    margin: 0; }
+  #filtro .breadcrumb a {
+    text-decoration: none;
+    font: 500 11px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+    color: #0F87B7;
+    padding: 0;
+    margin: 0; }
+    #filtro .breadcrumb a:hover {
+      text-decoration: none;
+      color: #0F87B7; }
+
+.botoeira {
+  position: relative;
+  float: right;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  background-color: transparent;
+  clear: none; }
+
+.botoeira .botao {
+  float: right;
+  display: block;
+  margin: 5px 0px 0px 0px;
+  padding: 0;
+  font: normal 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  border: 0; }
+
+.botoeira .botao a {
+  display: inline-block;
+  margin-left: 5px;
+  border: 0;
+  background-color: #0F87B7;
+  color: white;
+  font: 700 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 3px 8px 3px 8px; }
+
+.botoeira .botao a:hover {
+  background-color: #657576;
+  color: white; }
+
+.botoeira .botao span {
+  margin-left: 5px;
+  border: 0;
+  background-color: #0F87B7;
+  color: white;
+  font: 700 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 3px 8px 3px 8px; }
+
+.botoeira .botao span:hover {
+  background-color: #657576;
+  color: white;
+  cursor: pointer; }
+
+.botoeira .botao img {
+  float: left;
+  height: 16px;
+  padding: 0px 10px 5px 0px; }
+
+.botoeira .btdivisor {
+  float: right;
+  margin: 5px 0px 0px 0px;
+  display: block;
+  width: 20px;
+  height: 10px;
+  padding: 0;
+  font: normal 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left; }
+
+/******************************************************************************
+ * 
+ * 
+ *   formfiltro
+ * 
+ * 
+ ******************************************************************************/
+#formfiltro {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  padding: 5px 0 5px 5px;
+  color: #253536;
+  text-align: left;
+  border: solid 1px #bdc3c7;
+  clear: both;
+  background: #ecf0f1; }
+
+#formfiltro form {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: none; }
+
+#formfiltro fieldset {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  clear: both; }
+
+#formfiltro .campo {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 0px;
+  margin: 0 5px 0 0; }
+
+#formfiltro .etiqueta {
+  position: relative;
+  float: left;
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #253536; }
+
+#formfiltro .controle {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 0 0 0 0;
+  width: 100%;
+  margin: 0;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: none; }
+
+#formfiltro .readonly {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  padding: 1px 5px;
+  font: normal 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 5px 0;
+  border: solid 1px #bdc3c7;
+  background-color: lightyellow; }
+
+#formfiltro .caixa {
+  float: left;
+  display: block;
+  width: calc(100% - 8px);
+  padding: 2px 5px 0 5px;
+  font: normal 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 2px 0 5px 0;
+  border: solid 1px #bdc3c7;
+  background-color: lightyellow; }
+
+#formfiltro input {
+  float: left;
+  width: 100%;
+  padding-left: 5px;
+  font: normal 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 0 0;
+  border: solid 1px #bdc3c7;
+  background-color: white;
+  resize: none; }
+
+#formfiltro button {
+  background-color: #0F87B7;
+  color: white;
+  text-align: center;
+  min-width: 80px;
+  border: 0;
+  border-radius: 3px;
+  margin: 10px 0 0px 10px;
+  padding: 5px 13px;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s; }
+
+#formfiltro button:hover {
+  background-color: #95a5a6;
+  color: white; }
+
+#formfiltro button.ok {
+  background-color: #2ecc71;
+  color: white; }
+
+#formfiltro button.ok:hover {
+  background-color: #27ae60;
+  color: white; }
+
+#formfiltro button.cancelar {
+  background-color: #e74c3c;
+  color: white; }
+
+#formfiltro button.cancelar:hover {
+  background-color: #c0392b;
+  color: white; }
+
+#formfiltro button.limpar {
+  background-color: #f1c40f;
+  color: white; }
+
+#formfiltro button.limpar:hover {
+  background-color: #f39c12;
+  color: white; }
+
+#formfiltro select {
+  width: 100%;
+  padding: 1px 5px;
+  font: normal 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 5px 0;
+  border: solid 1px #bdc3c7;
+  overflow: hidden;
+  background: url("img/ico-down.png") no-repeat right white;
+  outline: none; }
+
+#formfiltro select::-ms-expand {
+  display: none;
+  /* hide default arrow in IE10 */ }
+
+#formfiltro select {
+  width: 100%;
+  font: normal 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0 0 5px 0;
+  border: solid 1px #bdc3c7;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: "";
+  background: url("img/ico-down.png") no-repeat right center white;
+  -webkit-appearance: none;
+  /* gets rid of default appearance in Webkit browsers*/
+  -moz-appearance: none;
+  /* Get rid of default appearance for older Firefox browsers */
+  -ms-appearance: none;
+  /* get rid of default appearance for IE8, 9 and 10*/
+  appearance: none;
+  outline: none; }
+
+#formfiltro select option {
+  background: white;
+  font: normal 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536; }
+
+/******************************************************************************
+ * 
+ * 
+ *   rolagem
+ * 
+ * 
+ ******************************************************************************/
+.rolagem {
+  float: left;
+  display: block;
+  align: center;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0 0 0;
+  background: white;
+  border: solid 1px #bdc3c7;
+  clear: both;
+  overflow: hidden;
+  height: calc( 90vh - 280px ); }
+
+.rolagem .scroll {
+  height: 100%;
+  border: solid 1px #bdc3c7; }
+
+.rolagem table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-color: gray;
+  width: 100%;
+  position: relative;
+  border: 0;
+  margin: 0px 0px 0px 0px; }
+
+.rolagem table.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white; }
+
+.rolagem thead {
+  vertical-align: middle;
+  border-color: inherit; }
+
+.rolagem tbody {
+  vertical-align: middle;
+  border-color: inherit; }
+
+.rolagem tfoot {
+  vertical-align: middle;
+  border-color: inherit; }
+
+.rolagem table > tr {
+  vertical-align: middle;
+  background-color: white; }
+
+.rolagem tbody tr:nth-child(odd) {
+  background-color: lightyellow; }
+
+.rolagem tbody tr:hover {
+  background-color: #8EFFC1; }
+
+.rolagem tr {
+  vertical-align: inherit;
+  border-color: inherit; }
+
+.rolagem td, th {
+  vertical-align: inherit; }
+
+.rolagem th {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  background: #bdc3c7;
+  padding: 5px 5px;
+  color: #253536;
+  text-align: left; }
+
+.rolagem th.sticky {
+  position: sticky;
+  top: 0; }
+
+.rolagem td {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: none;
+  padding: 3px 5px; }
+
+.rolagem table.doc {
+  border-spacing: 2px; }
+
+.rolagem td.volume {
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #859596;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px; }
+
+.rolagem td.secao {
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #bdc3c7;
+  color: #253536;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px; }
+
+.rolagem td.espec {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #ecf0f1;
+  color: #253536;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px; }
+
+.rolagem a.btacao {
+  float: right;
+  display: block;
+  padding: 2px 10px;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #859596;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.rolagem a.btacao:hover {
+  background: #07ABA0;
+  color: white; }
+
+.rolagem td.opcao {
+  text-align: center; }
+
+.rolagem td.opcao a {
+  float: none;
+  display: block;
+  width: 100%;
+  padding: 5px 0px;
+  margin: 0;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #f39c12;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.rolagem td.opcao a:hover {
+  background: #f1c40f;
+  color: white; }
+
+.rolagem a.icoacao {
+  float: right;
+  display: block;
+  padding: 0;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  border: 0;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.rolagem a.icoacao:hover {
+  color: white; }
+
+.rolagem th.vazio {
+  background: transparent;
+  padding: 0;
+  height: 0; }
+
+.rolagem th.header {
+  width: auto;
+  background-image: url(img/bg.gif);
+  cursor: pointer;
+  font-weight: 700;
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 20px;
+  border-right: 1px solid white;
+  margin-left: -1px; }
+
+.rolagem .pequeno {
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.rolagem th.headerSortUp {
+  background-image: url(img/asc.gif); }
+
+.rolagem th.headerSortDown {
+  background-image: url(img/desc.gif); }
+
+/******************************************************************************
+ * 
+ * 
+ *   rolagembloco
+ * 
+ * 
+ ******************************************************************************/
+.rolagembloco {
+  float: left;
+  display: block;
+  align: center;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0 0 0;
+  background: white;
+  border: solid 1px #bdc3c7;
+  clear: both;
+  overflow: hidden;
+  height: calc( 90vh - 280px ); }
+
+.rolagembloco .scroll {
+  height: 100%;
+  border: solid 1px #bdc3c7; }
+
+.rolagembloco table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+  width: 100%;
+  position: relative;
+  margin: 0px 0px 0px 0px;
+  padding: 0px; }
+
+.rolagembloco table.sticky {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-spacing: 2px 0;
+  margin-top: 2px; }
+
+.rolagembloco thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+.rolagembloco tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+.rolagembloco tfoot {
+  display: table-footer-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+.rolagembloco table > tr {
+  vertical-align: middle; }
+
+.rolagembloco col {
+  display: table-column; }
+
+.rolagembloco colgroup {
+  display: table-column-group; }
+
+.rolagembloco tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0; }
+
+.rolagembloco a.btacao {
+  float: right;
+  display: block;
+  padding: 2px 10px;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #859596;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.rolagembloco a.btacao:hover {
+  background: #07ABA0;
+  color: white; }
+
+.rolagembloco a.icoacao {
+  float: right;
+  display: block;
+  padding: 0;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  border: 0;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.rolagembloco a.icoacao:hover {
+  color: white; }
+
+.rolagembloco td, th {
+  display: table-cell;
+  vertical-align: inherit; }
+
+.rolagembloco th {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #bdc3c7;
+  padding: 5px 5px;
+  margin: 0;
+  color: black;
+  text-align: left;
+  text-transform: uppercase; }
+
+.rolagembloco th.sticky {
+  position: sticky;
+  top: 0; }
+
+.rolagembloco td {
+  position: relative;
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  color: black;
+  text-transform: none; }
+
+.rolagembloco table.doc {
+  border-spacing: 2px; }
+
+.rolagembloco td.volume {
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #859596;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px; }
+
+.rolagembloco td.secao {
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #bdc3c7;
+  color: #253536;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px; }
+
+.rolagembloco td.espec {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #ecf0f1;
+  color: #253536;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2px; }
+
+.rolagembloco th.vazio {
+  background: transparent;
+  padding: 0;
+  height: 0; }
+
+.rolagembloco th.header {
+  display: table-cell;
+  width: auto;
+  background-image: url(img/bg.gif);
+  cursor: pointer;
+  font-weight: 700;
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 20px;
+  border-right: 1px solid white;
+  margin-left: -1px; }
+
+.rolagembloco .pequeno {
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.rolagembloco th.headerSortUp {
+  background-image: url(img/asc.gif); }
+
+.rolagembloco th.headerSortDown {
+  background-image: url(img/desc.gif); }
+
+.rolagembloco td.oculta {
+  background: transparent;
+  border: solid 1px transparent;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  margin: 0;
+  color: transparent;
+  text-transform: none; }
+
+.rolagembloco td.total {
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  margin: 0;
+  color: #253536;
+  text-transform: none; }
+
+.rolagembloco td.titulo {
+  background: #0F87B7;
+  border: solid 1px #0F87B7;
+  border-radius: 5px;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 3px 3px 3px;
+  text-align: center;
+  color: white; }
+
+.rolagembloco td.centro {
+  background: #ecf0f1;
+  border: solid 1px #253536;
+  border-radius: 5px;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  color: #253536;
+  text-align: center; }
+
+.rolagembloco td.direita {
+  background: #ecf0f1;
+  border: solid 1px #253536;
+  border-radius: 5px;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  color: #253536;
+  text-align: right; }
+
+.rolagembloco td.mini {
+  background: #ecf0f1;
+  border: solid 1px #253536;
+  border-radius: 5px;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  text-align: left;
+  color: #253536; }
+
+.rolagembloco .comentario {
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.rolagembloco p {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  color: black; }
+
+.rolagembloco td p {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  color: black; }
+
+.rolagembloco span.titulo {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.rolagembloco span.tag {
+  display: inline-block;
+  border: 0;
+  border-radius: 5px 0;
+  background: #C5D5D6;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 9px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.rolagembloco .bt_acao {
+  float: right;
+  margin: 0 1px;
+  padding: 2px 5px;
+  background: #2c3e50;
+  color: white;
+  font: 400 9px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+.rolagembloco .bt_acao:hover {
+  background: #c0392b;
+  color: white; }
+
+/******************************************************************************
+ * 
+ * 
+ *   rolagempainel
+ * 
+ * 
+ ******************************************************************************/
+.rolagempainel {
+  float: left;
+  display: block;
+  align: center;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0 0 0;
+  background: white;
+  border: 0;
+  clear: both;
+  overflow: hidden;
+  height: calc( 90vh - 280px ); }
+
+.rolagempainel .scroll {
+  height: calc( 100% - 25px ); }
+
+.rolagempainel table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-color: gray;
+  width: 100%;
+  position: relative;
+  border: 0;
+  margin: 0px 0px 0px 0px; }
+
+.rolagempainel table > tr {
+  vertical-align: middle; }
+
+.rolagempainel col {
+  display: table-column; }
+
+.rolagempainel colgroup {
+  display: table-column-group; }
+
+.rolagempainel tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit; }
+
+.rolagempainel td, th {
+  display: table-cell;
+  vertical-align: inherit; }
+
+.rolagempainel td, th {
+  border: 0;
+  padding: 3px 5px; }
+
+/******************************************************************************
+ * 
+ * 
+ *   scroll
+ * 
+ * 
+ ******************************************************************************/
+.scroll {
+  float: left;
+  display: block;
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  clear: both;
+  margin: 0;
+  background: white;
+  padding: 0;
+  border: solid 1px #bdc3c7;
+  height: calc( 90vh - 280px );
+  scrollbar-width: thin;
+  scrollbar-color: transparent; }
+
+.scroll::-webkit-scrollbar {
+  width: 8px; }
+
+.scroll::-webkit-scrollbar-track {
+  background: #ecf0f1; }
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #556566;
+  border-radius: 6px;
+  border: 3px solid #556566; }
+
+.scroll .pnscroll {
+  width: 100%;
+  height: 100%;
+  font: 300 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 15px; }
+
+.scroll img {
+  border: none;
+  text-decoration: none;
+  padding-left: 3px; }
+
+.scroll a {
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #253536;
+  text-decoration: none; }
+
+.scroll a:hover {
+  color: #0F87B7; }
+
+.scroll .comentario {
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.scroll_fecho {
+  float: left;
+  display: table;
+  position: relative;
+  width: 100%;
+  margin: 5px 0 0 0;
+  background: transparent;
+  padding: 5px;
+  clear: both;
+  border: solid 1px #bdc3c7; }
+
+.scroll_botoeira {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: transparent; }
+
+.scroll_botao {
+  float: right;
+  display: block;
+  margin: 0 5px 0px 0px;
+  padding: 0;
+  font: normal 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  border: 0;
+  color: white; }
+
+.scroll_botao a {
+  display: inline-block;
+  margin-left: 5px;
+  border: solid 1px #0C6C92;
+  background-color: white;
+  color: #0C6C92;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2px 8px 2px 8px; }
+
+.scroll_botao a:hover {
+  background-color: #0C6C92;
+  color: white; }
+
+.scroll_botao span {
+  margin-left: 5px;
+  border: 0;
+  border: solid 1px #0C6C92;
+  background-color: white;
+  color: #0C6C92;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2px 8px 2px 8px; }
+
+.scroll_botao span:hover {
+  background-color: #0C6C92;
+  color: white;
+  cursor: pointer; }
+
+.scroll_botao img {
+  float: left;
+  height: 16px;
+  padding: 0px 10px 5px 0px; }
+
+.scroll_btdivisor {
+  float: right;
+  margin: 5px 0px 0px 0px;
+  display: block;
+  width: 20px;
+  height: 10px;
+  padding: 0;
+  font: normal 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left; }
+
+.scroll_legenda {
+  float: right;
+  display: table;
+  vertical-align: middle;
+  font: normal 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  border: 0; }
+
+.scroll_legenda .icone {
+  float: left;
+  margin: 0 0 0 5px;
+  padding: 2px 0px 0 0;
+  display: table-cell;
+  vertical-align: middle;
+  border: 0; }
+
+.scroll_legenda .texto {
+  float: right;
+  display: table-cell;
+  vertical-align: middle;
+  font: normal 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  margin: 0;
+  padding: 0 5px 0 0;
+  text-align: left; }
+
+/******************************************************************************
+ * 
+ * 
+ *   ficha
+ * 
+ * 
+ ******************************************************************************/
+#ficha {
+  float: left;
+  align: left;
+  display: table;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0 5px 0;
+  background: white;
+  clear: both;
+  border: solid 1px #bdc3c7; }
+
+#ficha .header {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent; }
+
+#ficha .header .capa {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-image: url("img/fundo-base.jpg");
+  background-color: #bdc3c7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+#ficha .header .foto {
+  float: left;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-image: url("img/foto-base.jpg");
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+#ficha .header .foto img {
+  height: 180px; }
+
+#ficha .header .titulo {
+  float: right;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 15px;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 0 0 0 10px; }
+
+#ficha .header .lista_tag {
+  float: right;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  z-index: 10;
+  margin: 0px 0px 0px 0px;
+  padding: 0 5px;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: white;
+  background: transparent;
+  border: 0; }
+
+#ficha .header .lista_tag .tag {
+  background: #f1c40f;
+  color: black; }
+
+#ficha .header .lista_bottom {
+  float: right;
+  position: absolute;
+  top: 180px;
+  right: 0px;
+  z-index: 10;
+  margin: 0px 0px 0px 0px;
+  padding: 0 5px;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: white;
+  background: transparent;
+  border: 0; }
+
+#ficha .header .lista_bottom .tag {
+  background: #2c3e50;
+  color: white; }
+
+#ficha .header .idioma {
+  float: right;
+  position: absolute;
+  top: 60px;
+  right: 5px;
+  z-index: 10;
+  margin: 0px 0px 0px 0px;
+  padding: 0 5px;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: white;
+  background: transparent;
+  border: 0; }
+
+#ficha .header .icobarra {
+  float: right;
+  position: absolute;
+  display: block;
+  top: 130px;
+  right: 10px;
+  z-index: 10;
+  height: 20px;
+  width: 300px; }
+
+#ficha .header .icone {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0 3px 0 0;
+  padding: 10px 0 0 0px;
+  height: 40px;
+  width: 40px;
+  border: solid 1px transparent;
+  border-radius: 20px;
+  background-color: blue;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  color: white;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center; }
+
+#ficha .header .info {
+  float: left;
+  position: relative;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 0;
+  font: 500 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: black; }
+
+#ficha .title {
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  font: 700 16px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #253536; }
+
+#ficha .divisor {
+  float: left;
+  display: block;
+  margin: 5px 0px 0px 0;
+  border: 0;
+  padding: 0px 0 0 2px;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  color: #0F87B7; }
+
+#ficha .botao {
+  float: right;
+  display: block;
+  border: 0;
+  margin: 0 0 0 0;
+  font: 700 10px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif; }
+
+#ficha .botao span {
+  display: block;
+  border: 0;
+  margin: 0 0 0 0;
+  text-align: center;
+  padding: 2px 10px 2px 10px;
+  background-color: #e74c3c;
+  color: white;
+  text-decoration: none;
+  font: 700 10px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+#ficha .botao span:hover {
+  background-color: #c0392b;
+  color: #0F87B7; }
+
+#ficha .botao a {
+  display: block;
+  border: 0;
+  margin: 0 0 0 0;
+  text-align: center;
+  padding: 3px 10px 3px 10px;
+  background-color: #16a085;
+  color: white;
+  text-decoration: none;
+  font: 700 10px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+#ficha .botao a:hover {
+  background-color: #2ecc71;
+  color: #0F87B7; }
+
+#ficha .tdbotao {
+  border: solid 1px #0F87B7;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2px 10px 2px 10px;
+  background-color: #0F87B7;
+  color: white;
+  text-decoration: none;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+#ficha .tdbotao:hover {
+  background-color: transparent;
+  color: #0F87B7; }
+
+#ficha .tdbotao a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+#ficha .tdbotao a:hover {
+  color: #0F87B7; }
+
+#ficha table {
+  width: 100%;
+  border: 0;
+  border-spacing: 2px;
+  border-collapse: separate;
+  margin: 0;
+  padding: 0px; }
+
+#ficha tr {
+  background: transparent;
+  padding: 0;
+  margin: 0; }
+
+#ficha th {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: #0F87B7;
+  text-align: left;
+  text-transform: uppercase; }
+
+#ficha td {
+  position: relative;
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  color: black;
+  text-transform: none; }
+
+#ficha td.oculta {
+  background: transparent;
+  border: solid 1px transparent;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  margin: 0;
+  color: transparent;
+  text-transform: none; }
+
+#ficha td.total {
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  margin: 0;
+  color: #253536;
+  text-transform: none; }
+
+#ficha td.titulo {
+  background: #0F87B7;
+  border: solid 1px #0F87B7;
+  border-radius: 5px;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 3px 3px 3px;
+  text-align: center;
+  color: white; }
+
+#ficha td.centro {
+  background: #ecf0f1;
+  border: solid 1px #253536;
+  border-radius: 5px;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  color: #253536;
+  text-align: center; }
+
+#ficha td.direita {
+  background: #ecf0f1;
+  border: solid 1px #253536;
+  border-radius: 5px;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  color: #253536;
+  text-align: right; }
+
+#ficha td.mini {
+  background: #ecf0f1;
+  border: solid 1px #253536;
+  border-radius: 5px;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  text-align: left;
+  color: #253536; }
+
+#ficha .comentario {
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#ficha input[type="checkbox"] {
+  display: none; }
+
+#ficha input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  background-color: white;
+  border: solid 2px #bdc3c7;
+  border-radius: 4px;
+  cursor: pointer; }
+
+#ficha input[type="checkbox"]:checked + label span {
+  background-image: url("img/ico-ok.png");
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#ficha .checkbloq {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  background-color: #c0392b;
+  border: solid 2px #c0392b;
+  border-radius: 2px;
+  outline: none; }
+
+#ficha p {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  color: black; }
+
+#ficha td p {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  color: black; }
+
+#ficha ul {
+  margin: 0;
+  padding: 5px;
+  list-style-position: inside;
+  list-style-type: square; }
+
+#ficha ul li {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  padding: 0 0 5px 0;
+  margin: 0; }
+
+#ficha a {
+  text-decoration: none;
+  color: #0F87B7; }
+
+#ficha a:hover {
+  text-decoration: none;
+  color: #27ae60; }
+
+#ficha img {
+  border: none;
+  text-decoration: none;
+  padding-left: 3px; }
+
+#ficha .legenda {
+  float: right;
+  display: table;
+  vertical-align: middle;
+  font: normal 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin: 5px 2px 10px 0px;
+  padding: 0;
+  text-align: right;
+  border: 0; }
+
+#ficha .legenda .icone {
+  margin-left: 5px;
+  padding: 0 3px;
+  display: table-cell;
+  vertical-align: middle;
+  border: 0; }
+
+#ficha .legenda .texto {
+  display: table-cell;
+  vertical-align: middle;
+  font: normal 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  border: 0; }
+
+@media (max-width: 767px) {
+  #ficha thead {
+    display: none; }
+
+  #ficha tr {
+    display: block;
+    border-bottom: 2px solid #dce0e0; }
+
+  #ficha tr th {
+    display: none; }
+
+  #ficha tr td {
+    width: 100%;
+    display: table;
+    text-align: right;
+    border-bottom: 1px dotted #ccc; }
+
+  #ficha tr td:last-child {
+    border-bottom: 0; }
+
+  #ficha tr td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold; } }
+/******************************************************************************
+ * 
+ * 
+ *   ficha_site
+ * 
+ * 
+ ******************************************************************************/
+#ficha_site {
+  float: left;
+  align: left;
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 5px 0;
+  background: white;
+  clear: both;
+  border: 0; }
+
+#ficha_site .header {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent; }
+
+#ficha_site .header .capa {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-image: url("img/fundo-base.jpg");
+  background-color: #bdc3c7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+#ficha_site .header .foto {
+  float: left;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-image: url("img/foto-base.jpg");
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+#ficha_site .header .foto img {
+  height: 180px; }
+
+#ficha_site .header .titulo {
+  float: right;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 15px;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 0 0 0 10px; }
+
+#ficha_site .header .lista_tag {
+  float: right;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  z-index: 10;
+  margin: 0px 0px 0px 0px;
+  padding: 0 5px;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: white;
+  background: transparent;
+  border: 0; }
+
+#ficha_site .header .lista_tag .tag {
+  background: #f1c40f;
+  color: black; }
+
+#ficha_site .header .lista_bottom {
+  float: right;
+  position: absolute;
+  top: 180px;
+  right: 0px;
+  z-index: 10;
+  margin: 0px 0px 0px 0px;
+  padding: 0 5px;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: white;
+  background: transparent;
+  border: 0; }
+
+#ficha_site .header .lista_bottom .tag {
+  background: #2c3e50;
+  color: white; }
+
+#ficha_site .header .idioma {
+  float: right;
+  position: absolute;
+  top: 60px;
+  right: 5px;
+  z-index: 10;
+  margin: 0px 0px 0px 0px;
+  padding: 0 5px;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: white;
+  background: transparent;
+  border: 0; }
+
+#ficha_site .header .parlare {
+  float: left;
+  position: absolute;
+  top: 150px;
+  left: 175px;
+  z-index: 10;
+  margin: 0px 0px 0px 0px;
+  padding: 0 5px;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: white;
+  background: transparent;
+  border: 0; }
+
+#ficha_site .header .icobarra {
+  float: right;
+  position: absolute;
+  display: block;
+  top: 130px;
+  right: 10px;
+  z-index: 10;
+  height: 20px;
+  width: 300px; }
+
+#ficha_site .header .icone {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0 3px 0 0;
+  padding: 10px 0 0 0px;
+  height: 40px;
+  width: 40px;
+  border: solid 1px transparent;
+  border-radius: 20px;
+  background-color: blue;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  color: white;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center; }
+
+#ficha_site .title {
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  font: 700 16px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #253536; }
+
+#ficha_site .divisor {
+  float: left;
+  display: block;
+  margin: 5px 0px 0px 0;
+  border: 0;
+  padding: 0px 0 0 2px;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  color: #0F87B7; }
+
+#ficha_site table {
+  width: 100%;
+  border: 0;
+  border-spacing: 2px;
+  border-collapse: separate;
+  margin: 0;
+  padding: 0px; }
+
+#ficha_site tr {
+  background: transparent;
+  padding: 0;
+  margin: 0; }
+
+#ficha_site th {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: #0F87B7;
+  text-align: left;
+  text-transform: uppercase; }
+
+#ficha_site td {
+  position: relative;
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  color: black;
+  text-transform: none; }
+
+#ficha_site td.oculta {
+  background: transparent;
+  border: solid 1px transparent;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  margin: 0;
+  color: transparent;
+  text-transform: none; }
+
+#ficha_site td.total {
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  margin: 0;
+  color: #253536;
+  text-transform: none; }
+
+#ficha_site td.titulo {
+  background: #0F87B7;
+  border: solid 1px #0F87B7;
+  border-radius: 5px;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 3px 3px 3px;
+  text-align: center;
+  color: white; }
+
+#ficha_site td.centro {
+  background: #ecf0f1;
+  border: solid 1px #253536;
+  border-radius: 5px;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  color: #253536;
+  text-align: center; }
+
+#ficha_site td.direita {
+  background: #ecf0f1;
+  border: solid 1px #253536;
+  border-radius: 5px;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  color: #253536;
+  text-align: right; }
+
+#ficha_site td.mini {
+  background: #ecf0f1;
+  border: solid 1px #253536;
+  border-radius: 5px;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 10px 3px 10px;
+  text-align: left;
+  color: #253536; }
+
+#ficha_site .comentario {
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#ficha_site p {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  color: black; }
+
+#ficha_site td p {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  color: black; }
+
+#ficha_site ul {
+  margin: 0;
+  padding: 5px;
+  list-style-position: inside;
+  list-style-type: lower-roman; }
+
+#ficha_site ul li {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  padding: 0 0 5px 0;
+  margin: 0; }
+
+#ficha_site img {
+  border: none;
+  text-decoration: none;
+  padding-left: 3px; }
+
+#ficha_site .ui-tabs {
+  width: 100%;
+  margin: 5px 0 0 0;
+  padding: 0;
+  background: white;
+  border: 0; }
+
+#ficha_site .ui-tabs-panel {
+  padding: 0;
+  border: 0;
+  margin: 5px 0 0 0; }
+
+#ficha_site .ui-widget-header {
+  background: transparent;
+  border: none; }
+
+#ficha_site .ui-tabs-nav {
+  background: white;
+  padding: 3px;
+  margin: 0;
+  border: solid 1px #bdc3c7; }
+
+#ficha_site .ui-tabs-nav .ui-state-default {
+  padding: 3px;
+  margin: 0 3px 0 0;
+  background: white;
+  color: #0F87B7;
+  border: 0; }
+
+#ficha_site .ui-tabs-nav .ui-state-active {
+  padding: 3px;
+  margin: 0 3px 0 0;
+  background: #0C6C92;
+  color: white;
+  border: 0; }
+
+#ficha_site .ui-tabs-nav .ui-state-default a {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #0C6C92;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  outline: none; }
+
+#ficha_site .ui-tabs-nav .ui-state-active a {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  outline: none; }
+
+#ficha_site .ui-tabs-nav img {
+  border: 0;
+  background: #bdc3c7; }
+
+#ficha_site .ui-tabs-nav img:hover {
+  cursor: pointer;
+  background: yellow;
+  border: 0; }
+
+#ficha_site .tag {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  background: #0C6C92;
+  margin: 0 5px 0 0;
+  border: 0;
+  border-radius: 5px 0; }
+
+@media (max-width: 767px) {
+  #ficha_site thead {
+    display: none; }
+
+  #ficha_site tr {
+    display: block;
+    border-bottom: 2px solid #dce0e0; }
+
+  #ficha_site tr th {
+    display: none; }
+
+  #ficha_site tr td {
+    width: 100%;
+    display: table;
+    text-align: right;
+    border-bottom: 1px dotted #ccc; }
+
+  #ficha_site tr td:last-child {
+    border-bottom: 0; }
+
+  #ficha_site tr td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold; } }
+/******************************************************************************
+ * 
+ * 
+ *   dashboard
+ * 
+ * 
+ ******************************************************************************/
+#dashboard {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: left;
+  font: 700 24px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  color: #253536; }
+
+@media screen and (max-width: 1366px) {
+  #dashboard {
+    width: 100%; } }
+#dashboard .anuncio {
+  float: left;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 30px 15px;
+  color: #0F87B7;
+  text-align: left;
+  border: solid 2px #0F87B7;
+  border-radius: 5px;
+  clear: both;
+  background: white;
+  font: 700 24px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: center; }
+
+#dashboard .resumo_dash {
+  float: left;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  padding: 5px;
+  color: #253536;
+  text-align: left;
+  border: solid 2px #ecf0f1;
+  border-radius: 5px;
+  clear: both;
+  background: white; }
+
+#dashboard .resumo_dash:hover {
+  background: lightyellow; }
+
+#dashboard .resumo_dash span.total {
+  float: left;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+  padding: 10px;
+  width: 30%;
+  height: 100%;
+  color: #253536;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  background: #ecf0f1;
+  font: 700 24px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif; }
+
+#dashboard .resumo_dash span.etiqueta {
+  float: right;
+  margin: 0 0 5px 0;
+  padding: 0;
+  color: #253536;
+  text-transform: uppercase;
+  text-align: center;
+  font: 700 16px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif; }
+
+#dashboard .resumo_dash span.funcao {
+  float: right;
+  clear: right;
+  margin: 0;
+  padding: 0;
+  color: #ecf0f1;
+  text-align: center;
+  font: 700 11px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif; }
+
+#dashboard .tag {
+  float: left;
+  display: block;
+  border: 0;
+  border-radius: 5px 0;
+  background: #2ecc71;
+  padding: 4px 10px;
+  margin: 5px 5px 0px 0;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase; }
+
+#dashboard .icodash {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0 3px 0 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  color: black;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center; }
+
+#dashboard .icodash:hover {
+  background-color: black;
+  color: white; }
+
+#dashboard .taground {
+  float: right;
+  display: block;
+  height: 20px;
+  border: 0;
+  border-radius: 10px 5px 5px 10px;
+  background: #2ecc71;
+  padding: 4px 10px;
+  margin: 2px 5px 0px 5px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
+
+#dashboard #mainpanel {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: calc( 100vh - 150px );
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  background-color: transparent;
+  color: black;
+  order: 2; }
+
+#dashboard #toppanel {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 5px 0 5px 0;
+  padding: 5px 10px;
+  text-align: left;
+  font: 500 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: solid 1px #B5C5C6;
+  border-radius: 0;
+  background-color: transparent;
+  color: #B5C5C6;
+  overflow-y: auto;
+  order: 2; }
+
+#dashboard #toppanel .logo {
+  display: inline-block;
+  float: left;
+  height: 35px;
+  margin: 0 5px 0 0; }
+
+#dashboard #toppanel .apoio {
+  display: inline-block;
+  float: right;
+  margin: 0 0 0 0;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #B5C5C6;
+  text-transform: uppercase; }
+
+#dashboard #toppanel .apoio img {
+  display: inline-block;
+  float: right;
+  height: 35px;
+  margin: 0 0 0 10px; }
+
+#dashboard #toppanel .esquerda {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+
+#dashboard #toppanel .direita {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+
+#dashboard #toppanel .titulo {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+
+#dashboard #toppanel .nome {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 400 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #354546;
+  clear: left; }
+
+#dashboard #toppanel .nome_r {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 400 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #354546;
+  clear: right; }
+
+#dashboard #toppanel .tipo {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 2px 0;
+  text-align: left;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #354546;
+  clear: left; }
+
+#dashboard #toppanel .tipo_r {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 2px 0;
+  text-align: left;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #354546;
+  clear: right; }
+
+#dashboard #toppanel .info {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 500 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #354546;
+  clear: left; }
+
+#dashboard #toppanel .info_r {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 500 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #354546;
+  clear: right; }
+
+#dashboard #toppanel a {
+  color: #B5C5C6;
+  text-decoration: none; }
+
+#dashboard #toppanel a:hover {
+  color: yellow;
+  text-decoration: none; }
+
+#dashboard #toppanel a.btacao {
+  float: right;
+  display: block;
+  padding: 5px 15px;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #859596;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+#dashboard #toppanel a.btacao:hover {
+  background: #556566;
+  color: white; }
+
+@media screen and (max-width: 1169px) {
+  #dashboard #toppanel a.btacao {
+    display: none; } }
+#dashboard #dirpanel {
+  float: right;
+  display: block;
+  position: relative;
+  width: calc( 75% - 5px );
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  background-color: transparent;
+  color: black;
+  overflow-y: auto;
+  order: 2; }
+
+#dashboard #dirpanel_ficha {
+  float: right;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  background-color: transparent;
+  color: black;
+  overflow-y: auto;
+  order: 2; }
+
+#dashboard #dirpanel a.btacao {
+  float: right;
+  position: relative;
+  display: block;
+  padding: 3px 5px 2px 5px;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+#dashboard #dirpanel a.btacao:hover {
+  background: #f39c12;
+  color: white; }
+
+#dashboard #fullpanel {
+  float: left;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  background-color: transparent;
+  color: black;
+  height: 80vh;
+  overflow-y: auto;
+  order: 2;
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+  height: calc( 90vh - 250px ); }
+
+#dashboard #fullpanel::-webkit-scrollbar {
+  width: 10px; }
+
+#dashboard #fullpanel::-webkit-scrollbar-track {
+  background: transparent; }
+
+#dashboard #fullpanel::-webkit-scrollbar-thumb {
+  background-color: #556566;
+  border-radius: 6px;
+  border: 3px solid #556566; }
+
+#dashboard #fullpanel a {
+  color: #0F87B7;
+  text-decoration: none; }
+
+#dashboard #fullpanel a:hover {
+  color: #27ae60;
+  text-decoration: none; }
+
+#dashboard #doclist {
+  width: calc( 50% - 520px );
+  height: calc( 100% - 90px );
+  margin: 0 0 0 5px;
+  padding: 5px;
+  text-align: left;
+  font: 700 22px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  background-color: transparent;
+  color: black;
+  overflow-y: auto;
+  order: 3; }
+
+#dashboard #ficha {
+  float: left;
+  align: left;
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 10px 0;
+  background: transparent;
+  clear: both;
+  border: 0; }
+
+#dashboard #ficha .title {
+  float: left;
+  display: block;
+  margin: 0px 0px 0px 0px;
+  padding: 0;
+  font: 700 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: black; }
+
+#dashboard #ficha .title img {
+  float: left;
+  display: inline-block;
+  margin: 0 15px 0 0; }
+
+#dashboard #ficha .informe {
+  float: right;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: black; }
+
+#dashboard #ficha table {
+  width: 100%;
+  border: 0;
+  border-spacing: 2px;
+  border-collapse: separate;
+  margin: 0;
+  padding: 0px; }
+
+#dashboard #ficha tr {
+  background: transparent;
+  padding: 0;
+  margin: 0; }
+
+#dashboard #ficha th {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+  padding: 3px 0 0 0;
+  margin: 0;
+  color: black;
+  text-align: left;
+  text-transform: uppercase; }
+
+#dashboard #ficha td {
+  background: white;
+  color: black;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 3px 8px 3px 8px;
+  text-transform: none;
+  border: solid 1px #7f8c8d;
+  border-radius: 3px; }
+
+#dashboard #ficha p {
+  font: normal 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  color: black; }
+
+#dashboard #ficha ul {
+  margin: 0;
+  padding: 5px;
+  list-style-position: inside;
+  list-style-type: lower-roman; }
+
+#dashboard #ficha ul li {
+  font: normal 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  padding: 0 0 5px 0;
+  margin: 0; }
+
+#dashboard #ficha a {
+  text-decoration: none;
+  color: #ecf0f1; }
+
+#dashboard #ficha img {
+  border: none;
+  text-decoration: none;
+  padding-left: 3px; }
+
+#dashboard #ficha .legenda {
+  float: right;
+  display: table;
+  vertical-align: middle;
+  font: normal 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin: 5px 2px 10px 0px;
+  padding: 0;
+  text-align: right;
+  border: 0; }
+
+#dashboard #ficha .legenda .icone {
+  margin-left: 5px;
+  padding: 0 3px;
+  display: table-cell;
+  vertical-align: middle;
+  border: 0; }
+
+#dashboard #ficha .legenda .texto {
+  display: table-cell;
+  vertical-align: middle;
+  font: normal 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  border: 0; }
+
+#dashboard .item_header {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 5px;
+  text-align: left;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  background-color: white;
+  color: black;
+  text-transform: uppercase; }
+
+#dashboard .item {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 10px;
+  text-align: left;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+  color: black; }
+
+#dashboard .secao_topo {
+  float: left;
+  width: 100%;
+  display: block;
+  padding: 5px;
+  background-color: #ecf0f1;
+  margin: 0 0 0 0;
+  border: solid 2px #ecf0f1;
+  border-bottom: 0;
+  clear: both; }
+
+#dashboard .secao_conteudo {
+  float: left;
+  width: 100%;
+  display: block;
+  clear: both;
+  font: normal 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+  border: 0;
+  margin: 0 0 5px 0;
+  padding: 5px; }
+
+#dashboard #doclist .item a {
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+#dashboard .item a:hover {
+  text-decoration: none; }
+
+#dashboard .item .titulo {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 0;
+  text-align: left;
+  border: 0;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .item .esquerda {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border: 0;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .item .direita {
+  position: relative;
+  float: right;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .item .pequeno {
+  display: inline-block;
+  margin: 5px 0 0 0;
+  font: 300 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .tagdata {
+  color: black;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  font: 500 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+#dashboard .item .info {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 0;
+  text-align: left;
+  border: 0;
+  font: 300 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .item .lista {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 5px 0 0 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .item .lista > icone {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  padding: 2px 5px;
+  text-align: center;
+  border: solid 1px white;
+  border-radius: 5px 0 0 0;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  background-color: transparent;
+  text-transform: uppercase; }
+
+#dashboard .item .lista > quant {
+  display: inline-block;
+  margin: 0;
+  padding: 2px 5px;
+  text-align: center;
+  border: solid 2px black;
+  border-radius: 0 0 5px 0;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .ui-tabs {
+  float: left;
+  position: relative;
+  width: 100%;
+  border: solid 1px #B5C5C6;
+  margin: 0;
+  padding: 5px;
+  background: transparent; }
+
+#dashboard .ui-tabs-panel {
+  background: transparent;
+  display: block;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+#dashboard .ui-widget-header {
+  background: transparent;
+  border: 0;
+  border-bottom: solid 1px #B5C5C6;
+  padding: 0 0 5px 0;
+  margin: 0 0 5px 0; }
+
+#dashboard .ui-tabs-nav .ui-state-default {
+  background: transparent;
+  display: inline-block;
+  padding: 0;
+  margin: 0 4px 0 0;
+  border: 0;
+  border-radius: 0;
+  text-align: center; }
+
+#dashboard .ui-tabs-nav .ui-state-active {
+  display: inline-block;
+  padding: 0;
+  margin: 0 4px 0 0;
+  border: 0;
+  border-radius: 0;
+  text-align: center; }
+
+#dashboard .ui-tabs-nav .ui-state-default a {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+  color: #253536;
+  text-decoration: none;
+  border: solid 1px #B5C5C6;
+  text-align: center;
+  text-transform: uppercase; }
+
+#dashboard .ui-tabs-nav .ui-state-default a:hover {
+  background-color: #556566;
+  color: white; }
+
+#dashboard .ui-tabs-nav .ui-state-active a {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #B5C5C6;
+  color: white;
+  text-decoration: none;
+  border: solid 1px #B5C5C6;
+  text-align: center;
+  text-transform: uppercase; }
+
+#dashboard .ui-tabs-nav .ui-state-active a:hover {
+  background-color: #556566;
+  color: white; }
+
+#dashboard .tagrole {
+  float: left;
+  display: block;
+  border: solid 1px white;
+  border-radius: 5px 0;
+  background: transparent;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase; }
+
+#dashboard .botoeira {
+  position: relative;
+  float: right;
+  width: 100%;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 5px 5px 2px 5px;
+  text-align: right;
+  border: 0;
+  background-color: transparent; }
+
+#dashboard .botoeira img {
+  margin: 0 0 0 3px; }
+
+#dashboard .botoeira span:hover {
+  cursor: pointer; }
+
+#dashboard #formulario {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 10px 15px 10px;
+  color: #253536;
+  clear: both;
+  background: white;
+  border: solid 1px #A5B5B6;
+  border-radius: 3px; }
+
+#dashboard #formulario input {
+  border: solid 1px #A5B5B6; }
+
+#dashboard #formulario select {
+  border: solid 1px #A5B5B6; }
+
+#dashboard #formulario textarea {
+  border: solid 1px #A5B5B6; }
+
+#dashboard #printbar {
+  float: right;
+  display: table;
+  position: relative;
+  margin: 0 0 0 25px;
+  padding: 0;
+  border: 0;
+  z-index: 5;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: #f1c40f;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 15%; }
+
+#dashboard #printbar:hover {
+  background-color: #e67e22; }
+
+#dashboard .item_contato {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 0;
+  text-align: left;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  background: transparent;
+  color: black; }
+
+#dashboard .item_contato .titulo {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  text-align: left;
+  background: lightyellow;
+  border: solid 1px #bdc3c7;
+  border-radius: 0;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .item_contato .esquerda {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border: 0;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .item_contato .direita {
+  position: relative;
+  float: right;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  border: 0;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .item_contato .pequeno {
+  display: inline-block;
+  margin: 5px 0 0 0;
+  font: 300 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+#dashboard .item_contato .papeis {
+  float: left;
+  width: 100%;
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 0 0; }
+
+#dashboard .item_contato .papeis span {
+  float: left;
+  display: block;
+  border: solid 1px #bdc3c7;
+  border-radius: 5px 0;
+  background: white;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
+
+#dashboard .accordion {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  clear: both; }
+
+#dashboard .accordion .ui-accordion {
+  background: white;
+  border: 0;
+  color: white; }
+
+#dashboard .accordion .ui-accordion-header {
+  margin: 0 0 5px 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: none; }
+
+#dashboard .accordion .ui-accordion-header-active {
+  margin: 0; }
+
+#dashboard .accordion .ui-accordion-header:hover {
+  cursor: pointer; }
+
+#dashboard .accordion .ui-accordion-content {
+  margin: 0 0 10px 0;
+  padding: 5px;
+  background: transparent;
+  border: solid 1px #bdc3c7;
+  border-top: 0;
+  outline: none;
+  height: auto; }
+
+#dashboard .accordion .ui-accordion-content table {
+  width: 100%;
+  border: none;
+  margin: 0;
+  cellpadding: 2px;
+  border: 0; }
+
+#dashboard .accordion .ui-accordion-content th {
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #bdc3c7;
+  color: black;
+  border: solid 1px #bdc3c7;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  text-align: left; }
+
+#dashboard .accordion .ui-accordion-content td {
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #ecf0f1;
+  color: black;
+  border: solid 1px #bdc3c7;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  text-align: left; }
+
+/******************************************************************************
+ * 
+ * 
+ *   filtro_panel
+ * 
+ * 
+ ******************************************************************************/
+#filtro_panel {
+  float: left;
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  right: 5px;
+  top: 0;
+  width: 340px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 22px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  background-color: transparent;
+  color: black;
+  overflow-y: auto;
+  order: 2;
+  overflow: hidden; }
+
+#filtro_panel #filtro_esq {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: auto; }
+
+#filtro_panel .slide {
+  float: right;
+  height: auto;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  border: solid 2px #0C6C92;
+  border-radius: 0 0 10px 10px;
+  background: #0F87B7; }
+
+#filtro_panel .btn-slide {
+  background: url(images/white-arrow.gif) no-repeat right -50px;
+  text-align: center;
+  width: 144px;
+  height: 31px;
+  padding: 10px 10px 0 0;
+  margin: 0 auto;
+  display: block;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-decoration: none; }
+
+#filtro_panel .active {
+  background-position: right 12px;
+  height: auto; }
+
+/******************************************************************************
+ * 
+ * 
+ *   toolbar
+ * 
+ * 
+ ******************************************************************************/
+#icobar {
+  position: relative;
+  float: right;
+  display: block;
+  border: 0;
+  height: 30px;
+  width: 30px;
+  margin: -5px 0 0 0;
+  border-radius: 15px;
+  background-color: #ecf0f1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  font: 700 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  -webkit-transition: all 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: all 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: all 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  /* linear */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  /* linear */
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 15%; }
+
+#icobar.neutro {
+  background-color: #ecf0f1;
+  color: black; }
+
+#icobar.desativado {
+  background-color: transparent;
+  border: solid 1px #ecf0f1;
+  color: #bdc3c7; }
+
+#icobar.tudook {
+  border-color: #2ecc71;
+  background-color: #27ae60; }
+
+#icobar.leve {
+  border-color: #0F87B7;
+  background-color: #0C6C92; }
+
+#icobar.moderada {
+  border-color: #f1c40f;
+  background-color: #f39c12; }
+
+#icobar.alta {
+  border-color: #e67e22;
+  background-color: #d35400; }
+
+#icobar.critica {
+  border-color: #e74c3c;
+  background-color: #c0392b; }
+
+#icobar.projeto {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 15%; }
+
+#icobar.impressao {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 15%; }
+
+#icobar.neutro:hover {
+  color: #0F87B7; }
+
+#icobar > numero {
+  position: absolute;
+  display: block;
+  padding: 2px 4px;
+  bottom: -5px;
+  right: 0;
+  border: 0;
+  border-radius: 5px;
+  background-color: black;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white; }
+
+#icobar > etiqueta {
+  position: absolute;
+  display: block;
+  width: 60px;
+  text-align: center;
+  padding: 2px 0;
+  bottom: -25px;
+  left: -10px;
+  border: 0;
+  font: 500 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: white; }
+
+.ico_pend {
+  float: left;
+  display: table;
+  margin: 0 5px 0 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 10px;
+  background: white;
+  text-align: center;
+  background: white;
+  background-image: url(img/close.png);
+  background-position: center center; }
+
+/******************************************************************************
+ * 
+ * 
+ *   span_dash
+ * 
+ * 
+ ******************************************************************************/
+.span_dash {
+  float: none;
+  display: inline;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+[type="date"] {
+  background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+  height: 20px; }
+
+[type="date"]::-webkit-inner-spin-button {
+  display: none; }
+
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0; }
+
+/******************************************************************************
+ * 
+ * 
+ *   sidebar
+ * 
+ * 
+ ******************************************************************************/
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 2vh;
+  display: block;
+  background: transparent;
+  text-align: center;
+  font: 700 22px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0;
+  padding: 0;
+  color: white;
+  z-index: 1000; }
+
+#sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+#sidebar ul li {
+  float: left;
+  display: block;
+  clear: left;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0 0 0 0;
+  color: white; }
+
+#sidebar .icone {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+  border: 0;
+  color: inherited;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  width: 25px;
+  padding: 5px 0 5px 0; }
+
+#sidebar .selecao {
+  color: black; }
+
+#sidebar ul li a {
+  display: table;
+  background: #0F87B7;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  width: 30px;
+  transition: color 1s; }
+
+#sidebar ul li:first-child a {
+  border-top-right-radius: 10px; }
+
+#sidebar ul li:last-child a {
+  border-bottom-right-radius: 10px; }
+
+#sidebar ul li a .etiqueta {
+  float: left;
+  clear: right;
+  display: none;
+  position: relative;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font: 500 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  text-align: left;
+  padding: 5px 10px; }
+
+#sidebar ul li a:hover {
+  width: auto;
+  background: #0C6C92;
+  color: #f1c40f;
+  border-radius: 0 10px 10px 0; }
+
+#sidebar ul li a:hover .etiqueta {
+  display: inline-block;
+  color: white;
+  transition: all 1s; }
+
+/******************************************************************************
+ * 
+ * 
+ *   titulo_post
+ * 
+ * 
+ ******************************************************************************/
+.titulo_post {
+  font-family: 'Montserrat', 'Ubuntu','Open Sans', sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  display: block;
+  float: left;
+  width: 100%;
+  color: #0C6C92;
+  line-height: 1em;
+  margin: 0 0 15px 0;
+  padding: 0; }
+
+.titulo_post_sub {
+  font-family: 'Montserrat', 'Ubuntu','Open Sans', sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1em; }
+
+.titulo_post_margem {
+  margin-bottom: 20px; }
+
+@media screen and (max-width: 768px) {
+  .titulo_post {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center; }
+
+  .titulo_post_sub {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center; } }
+/******************************************************************************
+ * 
+ * 
+ *   lista_dash
+ * 
+ * 
+ ******************************************************************************/
+.lista_dash {
+  font: 500 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 0 0 20px 0;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px; }
+
+.lista_dash tr {
+  width: 100%; }
+
+.lista_dash tr td {
+  font: 500 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  border: 0;
+  vertical-align: middle;
+  padding: 5px 10px;
+  margind: 0; }
+
+.lista_dash tr td.imagem {
+  background: white;
+  background-image: url("img/bg-dialogo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.lista_dash tr td.botao {
+  background: #e67e22;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  vertical-align: middle;
+  text-align: center; }
+
+.lista_dash tr td.botao:hover {
+  background: #d35400; }
+
+.lista_dash tr td.botao a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: white; }
+
+.lista_dash .icone {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px 0 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  color: black;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center; }
+
+.lista_dash .pequeno {
+  font: 300 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+/******************************************************************************
+ * 
+ * 
+ *   foto
+ * 
+ * 
+ ******************************************************************************/
+.foto_pequena {
+  float: left;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #bdc3c7;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+.foto_header {
+  float: left;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-image: url("img/foto-base.jpg");
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.foto_capa {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-image: url("img/fundo-base.jpg");
+  background-color: #bdc3c7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.foto_banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 25vh;
+  background-color: #bdc3c7;
+  background-image: url("../images/hands.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  margin-bottom: 10px; }
+
+/******************************************************************************
+ * 
+ * 
+ *   survey
+ * 
+ * 
+ ******************************************************************************/
+.item_survey {
+  float: left;
+  display: block;
+  width: 100%; }
+
+.item_survey input {
+  float: left;
+  display: block;
+  width: 30px;
+  margin-top: 2px; }
+
+.item_survey label {
+  float: left;
+  display: block;
+  width: calc(100% - 30px); }
+
+/******************************************************************************
+ * 
+ * 
+ *   style-data
+ * 
+ * 
+ ******************************************************************************/
+.filtro_calendario {
+  padding: 0;
+  margin: 0; }
+
+.filtro_calendario .ui-datepicker {
+  width: 320px;
+  height: auto;
+  margin: 5px auto 0;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+
+.filtro_calendario .ui-datepicker thead {
+  background-color: #0F87B7;
+  border-bottom: 1px solid white; }
+
+.filtro_calendario .ui-datepicker th {
+  text-transform: uppercase;
+  font-size: 6pt;
+  padding: 5px 0;
+  color: #666666;
+  text-shadow: 1px 0px 0px #fff;
+  filter: dropshadow(color=#fff, offx=1, offy=0); }
+
+.filtro_calendario .ui-datepicker tbody td {
+  width: 48px;
+  padding: 0;
+  border-right: 1px solid white; }
+
+.filtro_calendario .ui-datepicker tbody td:last-child {
+  border-right: 0px; }
+
+.filtro_calendario .ui-datepicker tbody tr {
+  border-bottom: 1px solid white; }
+
+.filtro_calendario .ui-datepicker tbody tr:last-child {
+  border-bottom: 0px; }
+
+.filtro_calendario .ui-datepicker td span, .ui-datepicker td a {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #666666;
+  text-shadow: 1px 1px 0px #fff;
+  filter: dropshadow(color=#fff, offx=1, offy=1); }
+
+.filtro_calendario .ui-datepicker-calendar .ui-state-default {
+  width: 100%;
+  background: #ededed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dedede',GradientType=0 );
+  -webkit-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5);
+  -moz-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5);
+  box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, 0.5); }
+
+.filtro_calendario .ui-datepicker-unselectable .ui-state-default {
+  width: 100%;
+  background: #f4f4f4;
+  color: #b4b3b3; }
+
+.filtro_calendario .ui-datepicker-calendar .ui-state-hover {
+  background: #f7f7f7; }
+
+.filtro_calendario .ui-datepicker-calendar .ui-state-active {
+  background: #0F87B7;
+  -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  color: #e0e0e0;
+  text-shadow: 0px 1px 0px #4d7a85;
+  filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+  border: 1px solid #55838f;
+  position: relative;
+  margin: -1px; }
+
+.filtro_calendario .ui-datepicker-calendar td:first-child .ui-state-active {
+  width: 29px;
+  margin-left: 0; }
+
+.filtro_calendario .ui-datepicker-calendar td:last-child .ui-state-active {
+  width: 29px;
+  margin-right: 0; }
+
+.filtro_calendario .ui-datepicker-calendar tr:last-child .ui-state-active {
+  height: 29px;
+  margin-bottom: 0; }
+
+#relogio {
+  float: right;
+  display: block;
+  font: 500 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 3px 10px;
+  background: #0F87B7;
+  color: white;
+  border: 0;
+  border-radius: 0;
+  clear: none; }
+
+.ico_mensageria {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  left: 30px;
+  bottom: 80px;
+  background-color: #c0392b;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 1000; }
+
+/******************************************************************************
+ * 
+ * 
+ *   lista
+ * 
+ * 
+ ******************************************************************************/
+#lista {
+  float: left;
+  position: relative;
+  width: 331px;
+  height: 250px;
+  display: block;
+  overflow: hidden;
+  margin: 10px 5px 10px 5px;
+  color: dimgray;
+  padding: 0px;
+  text-align: left; }
+
+#lista .title {
+  float: right;
+  position: absolute;
+  display: block;
+  bottom: 38px;
+  font: 700 24px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
+  clear: both; }
+
+#lista .title a {
+  display: block;
+  width: 291px;
+  padding: 5px 15px;
+  font: 700 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: none;
+  background: #c0392b;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+#lista .title a:hover {
+  background: #95a5a6; }
+
+#lista .imagem {
+  float: left;
+  display: block;
+  width: 331px;
+  height: 180px;
+  padding: 0;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  border: 0;
+  clear: both; }
+
+#lista .imagem img {
+  width: 331px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0; }
+
+#lista .categoria {
+  float: left;
+  position: absolute;
+  bottom: 0;
+  height: 23px;
+  width: 291px;
+  font: normal 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  display: block;
+  padding: 5px 15px;
+  border: none;
+  background: #0F87B7;
+  color: white;
+  text-decoration: none;
+  text-transform: lowercase;
+  text-align: center;
+  clear: both; }
+
+/******************************************************************************
+ * 
+ * 
+ *   listadoc
+ * 
+ * 
+ ******************************************************************************/
+.listadoc {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.listadoc td {
+  display: table-cell;
+  vertical-align: middle;
+  border: solid 1px #bdc3c7;
+  border-radius: 5px;
+  padding: 5px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.listadoc td.titulo {
+  background: #ecf0f1;
+  color: black;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listadoc td.situacao {
+  background: #ecf0f1;
+  color: white;
+  text-transform: uppercase;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listadoc td.info {
+  background: white;
+  color: black;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listadoc td.botoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0; }
+
+.listadoc td.botoes span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  margin: 0 5px 0 0;
+  background: #7f8c8d;
+  border-radius: 10px;
+  text-align: center; }
+
+.listadoc td.botoes span:hover {
+  background: #e67e22;
+  cursor: pointer; }
+
+.listadoc td.papeis {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0; }
+
+/******************************************************************************
+ * 
+ * 
+ *   listaequipe
+ * 
+ * 
+ ******************************************************************************/
+.listaequipe {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.listaequipe td {
+  display: table-cell;
+  vertical-align: middle;
+  border: solid 1px #bdc3c7;
+  border-radius: 5px;
+  padding: 5px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.listaequipe td.nome {
+  background: #ecf0f1;
+  color: black;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listaequipe td.email {
+  background: #ecf0f1;
+  color: black;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: right; }
+
+.listaequipe td.info {
+  background: white;
+  color: black;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listaequipe td.botoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0; }
+
+.listaequipe td.botoes span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  background: #7f8c8d;
+  border-radius: 15px;
+  text-align: center; }
+
+.listaequipe td.botoes span:hover {
+  background: #e67e22; }
+
+.listaequipe td.papeis {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0; }
+
+.listaequipe td.papeis span {
+  float: right;
+  display: block;
+  border: solid 1px #7f8c8d;
+  border-radius: 5px 0;
+  background: #ecf0f1;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
+
+/******************************************************************************
+ * 
+ * 
+ *   listaproj
+ * 
+ * 
+ ******************************************************************************/
+.listaproj {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.listaproj a {
+  color: #0F87B7;
+  text-decoration: none; }
+
+.listaproj a:hover {
+  color: #27ae60;
+  text-decoration: none; }
+
+.listaproj tr {
+  padding: 0;
+  display: table-row;
+  width: 100%; }
+
+.listaproj td {
+  display: table-cell;
+  vertical-align: top;
+  border: solid 1px #bdc3c7;
+  padding: 5px 10px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.listaproj td.nome {
+  background: #ecf0f1;
+  color: black;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listaproj td.nome .tijolo {
+  width: 100%;
+  height: 100%; }
+
+.listaproj td.email {
+  background: #ecf0f1;
+  color: black;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: right; }
+
+.listaproj td.questao {
+  background: transparent;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listaproj td.questao div {
+  background: #ecf0f1;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 5px;
+  border: solid 1px #bdc3c7; }
+
+.listaproj td.equipe {
+  background: white;
+  border: solid 1px #ecf0f1;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listaproj .direita {
+  float: right;
+  display: block;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listaproj td.mudanca {
+  background: #ecf0f1;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listaproj .texto_questao {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 500 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.listaproj .texto_obs {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 300 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: black; }
+
+.listaproj .pequeno {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.listaproj td.info {
+  background: white;
+  color: black;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listaproj td.botoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0; }
+
+.listaproj td.botoes span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  background: #7f8c8d;
+  border-radius: 15px;
+  text-align: center; }
+
+.listaproj td.botoes span:hover {
+  background: #e67e22; }
+
+.listaproj td.estrutura {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 2px 0; }
+
+.listaproj td.estrutura span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 5px 5px 0 0;
+  background: #ecf0f1;
+  padding: 3px 10px;
+  margin: 0 0 0 2px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
+
+.listaproj td.estrutura .nivel_criterio {
+  float: left;
+  margin: 0 2px 0 0;
+  background: #657576;
+  color: white; }
+
+.listaproj td.estrutura .nivel_especialidade {
+  float: left;
+  margin: 0 2px 0 0;
+  background: #B5C5C6;
+  color: #253536; }
+
+.listaproj td.estrutura .nivel_fase {
+  float: left;
+  margin: 0 2px 0 0;
+  background: #455556;
+  color: white; }
+
+.listaproj td.estrutura .bt_acao {
+  float: left;
+  margin: 0 2px 0 0;
+  background: #F1892D;
+  color: white; }
+
+.listaproj td.estrutura .bt_acao:hover {
+  background: #7E349D;
+  color: white; }
+
+.listaproj td.papeis {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 2px 0 5px 0; }
+
+.listaproj td.papeis span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  background: #ecf0f1;
+  padding: 2px 10px;
+  margin: 0 2px 0 0;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
+
+.listaproj td.acoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0; }
+
+.listaproj td.acoes span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  background: #c0392b;
+  padding: 2px 10px;
+  margin: 0 0 0 2px;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase; }
+
+.listaproj td.acoes .nivel_funcao {
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  background: #009B90;
+  color: white;
+  border: 0; }
+
+.listaproj td.acoes span:hover {
+  -webkit-filter: drop-shadow(0 3px 3px black);
+  filter: drop-shadow(0 3px 3px black);
+  cursor: pointer; }
+
+.listaproj td.histcheck {
+  background: transparent;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 0 5px; }
+
+.listaproj td.histcheck div {
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  border: solid 1px #657576;
+  padding: 5px;
+  margin: 0; }
+
+.listaproj td.escopo {
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7;
+  color: black;
+  font: 500 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin: 0 0 0 0;
+  padding: 5px; }
+
+.listaproj td.escopo span {
+  float: right;
+  display: block;
+  border: solid 1px #c0392b;
+  border-radius: 5px;
+  background: transparent;
+  padding: 2px 10px;
+  margin: 0 0 0 3px;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #c0392b;
+  text-transform: uppercase; }
+
+/******************************************************************************
+ * 
+ * 
+ *   listaespec
+ * 
+ * 
+ ******************************************************************************/
+.listaespec {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 2px 0; }
+
+.listaespec .tag {
+  float: left;
+  display: block;
+  border: 0;
+  border-radius: 5px 0;
+  background: #2ecc71;
+  padding: 2px 10px;
+  margin: 5px 5px 0px 5px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase; }
+
+.listaespec .icodash {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0 3px 0 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  color: black;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center; }
+
+.listaespec .icodash:hover {
+  background-color: black;
+  color: white; }
+
+.listaespec tr {
+  padding: 0;
+  display: table-row;
+  width: 100%; }
+
+.listaespec td {
+  display: table-cell;
+  vertical-align: top;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.listaespec td.topo {
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #7f8c8d;
+  color: white;
+  padding: 3px 3px 3px 10px;
+  border: 0;
+  border-radius: 5px 10px 10px 5px;
+  margin-bottom: 2px; }
+
+.listaespec td.estrutura {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+.listaespec td.estrutura span {
+  float: right;
+  display: block;
+  border: solid 1px #7f8c8d;
+  border-radius: 5px 0;
+  background: #ecf0f1;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
+
+.listaespec td.secao {
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #bdc3c7;
+  color: #253536;
+  padding: 3px 3px 3px 10px;
+  border: 0;
+  border-radius: 5px 10px 10px 5px;
+  margin-bottom: 2px; }
+
+.listaespec td.secao .orientacoes {
+  display: block;
+  width: calc( 100% - 10px );
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  margin: 5px 0;
+  padding: 0 5px 5px 5px;
+  border: 0; }
+
+.listaespec td.espec {
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: white;
+  color: #253536;
+  border: solid 1px #bdc3c7;
+  padding: 3px 3px 3px 10px;
+  border-radius: 5px 10px 5px 5px;
+  margin-bottom: 2px; }
+
+.listaespec td.acoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0; }
+
+.listaespec td.acoes span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 5px 0;
+  background: #c0392b;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase; }
+
+.listaespec td.acoes span:hover {
+  -webkit-filter: contrast(2);
+  filter: contrast(2);
+  cursor: pointer; }
+
+.listaespec a.btacao {
+  float: right;
+  display: block;
+  padding: 2px 10px;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #859596;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.listaespec a.btacao:hover {
+  background: #07ABA0;
+  color: white; }
+
+.listaespec a.icoacao {
+  float: right;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 5px;
+  padding: 0;
+  background: transparent;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  border: 0;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.listaespec a.icoacao:hover {
+  background: #c0392b;
+  color: white; }
+
+/******************************************************************************
+ * 
+ * 
+ *   tratamento
+ * 
+ * 
+ ******************************************************************************/
+.tratamento {
+  display: table;
+  width: 100%;
+  border-radius: 0;
+  background: white;
+  padding: 5px 20px 5px 5px;
+  margin: 0 0 0 0;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.separador {
+  display: table;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  height: 2px; }
+
+.tratamento .trattitulo {
+  float: left;
+  display: block;
+  border: 0;
+  background: black;
+  padding: 5px 10px;
+  margin: 0 0 5px 0;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase;
+  clear: both; }
+
+.tratamento .trattexto {
+  float: left;
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 0 0 5px 5px;
+  margin: 0;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.tratamento .historico {
+  float: left;
+  display: table;
+  width: 100%;
+  border: 0;
+  padding: 5px;
+  margin: 0 0 5px 0;
+  font: 400 11px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  border: solid 1px #ecf0f1; }
+
+.tratamento .hist_data {
+  float: left;
+  display: block;
+  width: 20%;
+  border: 0;
+  padding: 5px;
+  margin: 0;
+  font: 700 11px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  border: 0; }
+
+.tratamento .hist_info {
+  float: right;
+  display: block;
+  width: 80%;
+  border: 0;
+  padding: 5px;
+  margin: 0;
+  font: 400 11px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  border: 0; }
+
+.tratamento .hist_pequeno {
+  font: 700 11px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #556566; }
+
+.avaliaproj {
+  display: table;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  background: #95a5a6;
+  padding: 5px;
+  margin: 0;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black; }
+
+/******************************************************************************
+ * 
+ * 
+ *   cronograma
+ * 
+ * 
+ ******************************************************************************/
+.cronograma {
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 2px; }
+
+.cronograma td {
+  vertical-align: middle;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 2px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.cronograma td.fase {
+  background: #07ABA0;
+  width: 15%;
+  color: white;
+  font: 500 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.cronograma td.fase a {
+  display: inline-block;
+  background: white;
+  color: #07ABA0;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 3px 10px;
+  border: 0;
+  border-radius: 5px;
+  margin: 5px 0 0 0;
+  text-transform: uppercase; }
+
+.cronograma td.fase .bt_novo {
+  float: left;
+  margin: 0;
+  display: block; }
+
+.cronograma td.fase .bt_novo a {
+  background-color: #07ABA0;
+  color: white;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 3px 7px;
+  border: solid 1px white;
+  border-radius: 5px;
+  text-transform: uppercase; }
+
+.cronograma td.fase .bt_novo a:hover {
+  background-color: white;
+  color: #07ABA0; }
+
+.cronograma td.fase .bt_opcoes {
+  float: left;
+  background: white;
+  display: block;
+  text-align: left;
+  clear: left;
+  border: solid 1px white;
+  border-radius: 5px;
+  margin: 3px 0 0 0;
+  padding: 3px; }
+
+.cronograma td.fase .bt_opcoes img {
+  display: inline-block;
+  margin: 0; }
+
+.cronograma td.fase .bt_opcoes a {
+  background: transparent;
+  margin: 0;
+  padding: 0; }
+
+.cronograma td.sistema {
+  background: #859596;
+  width: 20%;
+  color: white;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.cronograma td.sistema .bt_novo {
+  float: left;
+  display: block; }
+
+.cronograma td.sistema .bt_novo a {
+  background-color: #859596;
+  color: white;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 3px 7px;
+  border: solid 1px white;
+  border-radius: 5px;
+  text-transform: uppercase; }
+
+.cronograma td.sistema .bt_novo a:hover {
+  background-color: white;
+  color: #859596; }
+
+.cronograma td.sistema .bt_opcoes {
+  float: left;
+  background: white;
+  display: block;
+  text-align: left;
+  clear: left;
+  border: solid 1px white;
+  border-radius: 5px;
+  margin: 3px 0 0 0;
+  padding: 3px; }
+
+.cronograma td.sistema .bt_opcoes img {
+  display: inline-block;
+  margin: 0; }
+
+.cronograma td.sistema .bt_opcoes a {
+  background: transparent;
+  margin: 0; }
+
+.cronograma td.item {
+  background: #ecf0f1;
+  border: solid 2px #ecf0f1;
+  width: 65%;
+  color: black;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.cronograma td.item a {
+  color: black;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none; }
+
+.cronograma td.item .bt_questao {
+  float: left;
+  width: 85%;
+  display: block; }
+
+.cronograma td.item .bt_opcoes {
+  float: right;
+  width: 15%;
+  display: block;
+  text-align: right; }
+
+.cronograma td.item .bt_opcoes img {
+  display: inline-block;
+  margin: 0 0 0 5px; }
+
+.cronograma td.item .bt_novo {
+  float: right;
+  display: block; }
+
+.cronograma td.item .bt_novo a {
+  background-color: #95a5a6;
+  color: white;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 3px 7px;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase; }
+
+.cronograma td.item .bt_novo a:hover {
+  background-color: #07ABA0; }
+
+.cronograma td.secao {
+  background: #859596;
+  border: solid 2px #859596;
+  width: 35%;
+  color: white;
+  font: 500 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.cronograma td.secao a {
+  color: white;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none; }
+
+.cronograma td.secao .bt_questao {
+  float: left;
+  width: 70%;
+  display: block; }
+
+.cronograma td.secao .comentario {
+  font: 300 9px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.cronograma td.secao .comentario p {
+  font: 300 9px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.cronograma td.secao .comentario ul {
+  font: 300 9px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.cronograma td.secao .bt_opcoes {
+  float: right;
+  display: table;
+  width: 30%;
+  height: 100%;
+  text-align: right;
+  vertical-align: middle; }
+
+.cronograma td.secao .bt_opcoes img {
+  display: inline-block;
+  margin: 0 0 0 5px; }
+
+.cronograma td.secao .bt_novo {
+  float: right;
+  display: block; }
+
+.cronograma td.secao .bt_novo a {
+  background-color: #95a5a6;
+  color: white;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 3px 7px;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase; }
+
+.cronograma td.secao .bt_novo a:hover {
+  background-color: #07ABA0; }
+
+.cronograma td.data {
+  background: white;
+  width: 8%;
+  color: black;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: center; }
+
+.cronograma td.progresso {
+  background: white;
+  width: 8%;
+  color: black;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: center; }
+
+.cronograma td.status {
+  background: white;
+  width: 26%;
+  color: black;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.cronograma td.status a {
+  color: white;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none; }
+
+/******************************************************************************
+ * 
+ * 
+ *   detalhes
+ * 
+ * 
+ ******************************************************************************/
+.head_detalhe {
+  display: table;
+  width: 100%;
+  background: lightyellow;
+  border: solid 1px #bdc3c7;
+  padding: 0 0 0 5px;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: left; }
+
+.item_detalhe {
+  width: 100%;
+  padding: 2px;
+  margin: 0;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 2px; }
+
+.item_detalhe th {
+  inherited: none;
+  vertical-align: middle;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 2px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0; }
+
+.item_detalhe td {
+  vertical-align: middle;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 2px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  border: 0; }
+
+/******************************************************************************
+ * 
+ * 
+ *   listapipe
+ * 
+ * 
+ ******************************************************************************/
+.listapipe {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 1em; }
+
+.listapipe a {
+  color: #253536;
+  text-decoration: none; }
+
+.listapipe a:hover {
+  color: #c0392b;
+  text-decoration: none; }
+
+.listapipe tr {
+  padding: 0;
+  display: table-row;
+  width: 100%; }
+
+.listapipe td {
+  display: table-cell;
+  vertical-align: top;
+  border: solid 1px #bdc3c7;
+  padding: 5px 10px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif; }
+
+.listapipe td.pipeline {
+  background: #B5C5C6;
+  color: black;
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listapipe td.nome .tijolo {
+  width: 100%;
+  height: 100%; }
+
+.listapipe td.acao {
+  background: #ecf0f1;
+  color: black;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-align: left; }
+
+.listapipe td.tarefa {
+  background: transparent;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listapipe td.dia {
+  background: transparent;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listapipe td.questao div {
+  background: #ecf0f1;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 5px;
+  border: solid 1px #bdc3c7; }
+
+.listapipe td.equipe {
+  background: white;
+  border: solid 1px #ecf0f1;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listapipe .direita {
+  float: right;
+  display: block;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listapipe td.mudanca {
+  background: #ecf0f1;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listapipe .texto_questao {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 500 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.listapipe .texto_obs {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 300 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: black; }
+
+.listapipe .pequeno {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black; }
+
+.listapipe td.info {
+  background: white;
+  color: black;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.listapipe td.botoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0; }
+
+.listapipe td.botoes span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  background: #7f8c8d;
+  border-radius: 15px;
+  text-align: center; }
+
+.listapipe td.botoes span:hover {
+  background: #e67e22; }
+
+.listapipe td.estrutura {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 2px 0; }
+
+.listapipe td.estrutura span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 5px 5px 0 0;
+  background: #ecf0f1;
+  padding: 3px 10px;
+  margin: 0 0 0 2px;
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
+
+.listapipe td.estrutura .nivel_criterio {
+  float: left;
+  margin: 0 2px 0 0;
+  background: #657576;
+  color: white; }
+
+.listapipe td.estrutura .nivel_especialidade {
+  float: left;
+  margin: 0 2px 0 0;
+  background: #B5C5C6;
+  color: #253536; }
+
+.listapipe td.estrutura .nivel_fase {
+  float: left;
+  margin: 0 2px 0 0;
+  background: #455556;
+  color: white; }
+
+.listapipe td.estrutura .bt_acao {
+  float: left;
+  margin: 0 2px 0 0;
+  background: #F1892D;
+  color: white; }
+
+.listapipe td.estrutura .bt_acao:hover {
+  background: #7E349D;
+  color: white; }
+
+.listapipe td.papeis {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 2px 0 5px 0; }
+
+.listapipe td.papeis span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  background: #ecf0f1;
+  padding: 2px 10px;
+  margin: 0 2px 0 0;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
+
+.listapipe td.acoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0; }
+
+.listapipe td.acoes span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  background: #c0392b;
+  padding: 2px 10px;
+  margin: 0 0 0 2px;
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase; }
+
+.listapipe td.acoes .nivel_funcao {
+  font: 500 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  background: #009B90;
+  color: white;
+  border: 0; }
+
+.listapipe td.acoes span:hover {
+  -webkit-filter: drop-shadow(0 3px 3px black);
+  filter: drop-shadow(0 3px 3px black);
+  cursor: pointer; }
+
+.listapipe td.histcheck {
+  background: transparent;
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 0 5px; }
+
+.listapipe td.histcheck div {
+  color: black;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  border: solid 1px #657576;
+  padding: 5px;
+  margin: 0; }
+
+.listapipe td.escopo {
+  background: #ecf0f1;
+  border: solid 1px #bdc3c7;
+  color: black;
+  font: 500 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin: 0 0 0 0;
+  padding: 5px; }
+
+.listapipe td.escopo span {
+  float: right;
+  display: block;
+  border: solid 1px #c0392b;
+  border-radius: 5px;
+  background: transparent;
+  padding: 2px 10px;
+  margin: 0 0 0 3px;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #c0392b;
+  text-transform: uppercase; }
+
+.listapipe .icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  padding: 2px 5px;
+  text-align: center;
+  border: solid 1px white;
+  border-radius: 10px;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: red;
+  text-transform: uppercase; }
+
+.listapipe .prioridade_tag {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+  border: solid 1px #bdc3c7; }
+
+/******************************************************************************
+ * 
+ * 
+ *   arvore
+ * 
+ * 
+ ******************************************************************************/
+.arvore {
+  float: left;
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: white;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-color: gray;
+  position: relative; }
+
+.arvore .item {
+  display: inline-block;
+  position: relative;
+  width: 85%; }
+
+.arvore .icone {
+  float: left;
+  display: inline-block;
+  position: relative;
+  margin: 0 5px 0 0;
+  padding: 0px;
+  height: 16px;
+  width: 16px;
+  border: solid 1px transparent;
+  border-radius: 8px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  color: #0F87B7;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center; }
+
+.arvore .etiqueta {
+  display: inline-block;
+  position: relative;
+  width: 90%; }
+
+.arvore a {
+  text-decoration: none;
+  font: normal 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #253536;
+  margin: 0;
+  padding: 0; }
+
+.arvore > tr {
+  vertical-align: middle;
+  background-color: white; }
+
+.arvore tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit; }
+
+.arvore td, th {
+  display: table-cell;
+  vertical-align: inherit; }
+
+.arvore td {
+  font: normal 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: none;
+  padding: 2px 5px 2px 5px;
+  vertical-align: middle;
+  background: transparent; }
+
+.arvore td img {
+  border: 0;
+  padding: 0;
+  margin: 0 2px; }
+
+.arvore .categoria td {
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.arvore .base {
+  background: inherited; }
+
+.arvore .base .icone {
+  color: #0C6C92; }
+
+.arvore .base td {
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.arvore .base td a {
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.arvore .nivel_01 .icone {
+  color: #0C6C92; }
+
+.arvore .nivel_01 td {
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent; }
+
+.arvore .nivel_01 td a {
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.arvore .nivel_02 td {
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent; }
+
+.arvore .nivel_02 td a {
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.arvore .nivel_02 .icone {
+  color: #0F87B7; }
+
+.arvore .nivel_03 td {
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent; }
+
+.arvore .nivel_03 td a {
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.arvore .nivel_03 .icone {
+  color: #17BBB0; }
+
+.arvore .nivel_04 td {
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent; }
+
+.arvore .nivel_04 td a {
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.arvore .nivel_04 .icone {
+  color: #37DBD0; }
+
+.arvore .nivel_extra td {
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent; }
+
+.arvore .nivel_extra td a {
+  font: 400 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif; }
+
+.arvore .nivel_extra .icone {
+  color: #859596; }
+
+.arvore .indice {
+  width: 10%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  display: table-cell;
+  vertical-align: middle; }
+
+.arvore .descricao {
+  width: 90%;
+  text-align: left;
+  border: solid 1px #bdc3c7; }
+
+.arvore .acoes {
+  width: 10%;
+  text-align: right; }
+
+.arvore .status {
+  width: 30%;
+  text-align: right; }
+
+.arvore .cor {
+  display: block;
+  float: left;
+  height: 10px;
+  width: 10px;
+  border: 0;
+  border-radius: 5px;
+  background: #bdc3c7;
+  margin: 3px 5px 0 0;
+  padding: 0; }
+
+.arvore tr:hover {
+  background-color: lightyellow; }
+
+.arvore .opcoes {
+  float: right;
+  display: none;
+  margin: 0;
+  padding: 0; }
+
+.arvore tr:hover .opcoes {
+  display: table; }
+
+/******************************************************************************
+ * 
+ * 
+ *   sanfona
+ * 
+ * 
+ ******************************************************************************/
+.sanfona_list {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  margin-top: 5px; }
+
+.sanfona_list ul {
+  margin: 0;
+  padding: 0 5px;
+  list-style-position: inside;
+  list-style-type: none; }
+
+.sanfona_list ul li {
+  font: 500 11px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  padding: 0 0 5px 0;
+  margin: 0; }
+
+.sanfona_list table {
+  border: 0; }
+
+.sanfona_list tr {
+  border: 0; }
+
+.sanfona_list td {
+  border: solid 1px #bdc3c7;
+  background-color: #ecf0f1; }
+
+/******************************************************************************
+ * 
+ * 
+ *   ns_lista
+ * 
+ * 
+ ******************************************************************************/
+.ns_lista {
+  float: left;
+  position: relative;
+  display: table;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 0; }
+
+.ns_lista .esquerda {
+  float: left;
+  position: relative;
+  display: table;
+  width: 90%;
+  text-align: right;
+  margin: 0;
+  padding: 10px;
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  border: solid 1px #bdc3c7; }
+
+.ns_lista .direita {
+  float: left;
+  position: relative;
+  display: table;
+  width: 10%;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  background: #bdc3c7;
+  border: 0; }
+
+.ns_lista .direita a {
+  float: right;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  offset: 0;
+  width: 100%;
+  text-decoration: none;
+  font: 500 11px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #0F87B7;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 10px; }
+
+.ns_lista .direita a:hover {
+  text-decoration: none;
+  background: #e67e22; }
+
+.ns_lista img {
+  float: left;
+  display: inline-block;
+  height: 50px;
+  margin: 0 15px 0 0; }
+
+.ns_lista .nome {
+  font: 500 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  float: right;
+  clear: right; }
+
+.ns_lista .cidade {
+  font: 300 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  float: right;
+  clear: right; }
+
+.ns_lista .pais {
+  font: 300 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  float: right;
+  clear: right; }
+
+/******************************************************************************
+ * 
+ * 
+ *   poc_list
+ * 
+ * 
+ ******************************************************************************/
+.poc_list {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 0; }
+
+.poc_list .azul {
+  background: AliceBlue; }
+
+.poc_list .full {
+  float: left;
+  position: relative;
+  display: block;
+  width: calc( 100% - 15px );
+  text-align: right;
+  margin: 0;
+  padding: 10px 30px 10px 10px;
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  border: solid 1px #bdc3c7; }
+
+.poc_list .full a {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: block;
+  width: auto;
+  text-decoration: none;
+  font: 500 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+  color: #0C6C92;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: solid 2px #0C6C92;
+  border-radius: 5px; }
+
+.poc_list .full a:hover {
+  text-decoration: none;
+  background: #0C6C92;
+  color: white; }
+
+.poc_list .esquerda {
+  float: left;
+  display: block;
+  width: 90%;
+  text-align: right;
+  margin: 0;
+  padding: 10px;
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  border: solid 1px #bdc3c7; }
+
+.poc_list .direita {
+  float: right;
+  display: block;
+  width: 10%;
+  height: 100%;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  font: 300 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  background: #bdc3c7;
+  border: 0; }
+
+.poc_list .direita a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font: 500 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  background: #0F87B7;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 10px; }
+
+.poc_list .direita a:hover {
+  text-decoration: none;
+  background: #e67e22; }
+
+.poc_list img {
+  float: left;
+  display: inline-block;
+  height: 60px;
+  margin: 0 15px 0 0; }
+
+.poc_list .nome {
+  font: 500 18px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  float: right;
+  clear: right; }
+
+.poc_list .qualificador {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font: 300 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  float: right;
+  clear: right; }
+
+.poc_list .pais {
+  font: 300 12px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  float: right;
+  clear: right; }
+
+.poc_list .conexao {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  margin: 0;
+  padding: 7px 0;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  border-radius: 15px;
+  background-color: #27ae60;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  color: white;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none; }
+
+.poc_list .conexao:hover {
+  background-color: #e67e22; }
+
+.poc_list .desconexao {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  margin: 0;
+  padding: 7px 0;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  border-radius: 15px;
+  background-color: #c0392b;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  color: white;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none; }
+
+.poc_list .desconexao:hover {
+  background-color: #e74c3c; }
+
+/******************************************************************************
+ * 
+ * 
+ *   file upload
+ * 
+ * 
+ ******************************************************************************/
+#file_browse_wrapper {
+  position: relative;
+  top: 5px;
+  right: 0px;
+  float: right;
+  display: table;
+  font: 700 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  background: #0F87B7;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 5px 10px;
+  margin: 0;
+  text-transform: uppercase;
+  color: white; }
+  #file_browse_wrapper:hover {
+    background: #e67e22; }
+  #file_browse_wrapper:active {
+    background: #c0392b; }
+  #file_browse_wrapper .file_browse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0); }
+
+#upload {
+  position: relative;
+  clear: both;
+  display: table;
+  border: solid 1px #0F87B7;
+  background-color: lightyellow;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 5px 0;
+  font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536; }
+  #upload .files {
+    background-color: transparent;
+    display: none;
+    width: 100%;
+    padding: 0 5px;
+    font: normal 14px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    color: #253536;
+    margin: 5px 0; }
+  #upload a {
+    float: right;
+    width: 22px;
+    height: 21px;
+    background-color: #0F87B7;
+    background-image: url("img/ico-folder.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 6px 0;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin: 0; }
+    #upload a:hover {
+      background-color: #d35400;
+      color: white; }
+    #upload a img {
+      height: 18px; }
+  #upload input {
+    display: none; }
+  #upload .ui-progressbar {
+    float: left;
+    border: solid 1px #ecf0f1;
+    display: inline-block;
+    width: calc( 100% - 22px );
+    height: 21px;
+    font: normal 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    background-color: #ecf0f1;
+    color: black;
+    position: relative;
+    margin: 0;
+    text-align: center;
+    padding: 0; }
+    #upload .ui-progressbar div {
+      height: 21px;
+      padding: 2px 0 0 0;
+      margin: 0;
+      text-align: center;
+      font: 500 12px "Akshar", "Open Sans", Trebuchet MS, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+      color: black;
+      background: transparent; }
+    #upload .ui-progressbar.ui-widget-header {
+      background-color: #e67e22; }
+    #upload .ui-progressbar.ui-progressbar-value {
+      margin: -1px;
+      diplay: block;
+      height: 100%;
+      background-color: #e67e22;
+      transition: width 0.5s;
+      -webkit-transition: width 0.5s; }
+    #upload .ui-progressbar.ui-progressbar-overlay {
+      margin: -1px;
+      height: 100%;
+      background-color: #e74c3c;
+      transition: width 0.5s;
+      -webkit-transition: width 0.5s; }
+
+/******************************************************************************
+ * 
+ * 
+ *   breadcrumb
+ * 
+ * 
+ ******************************************************************************/
+.breadcrumb {
+  float: left;
+  display: block;
+  margin: 0 0 0 0;
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  clear: none;
+  border: 0;
+  text-align: left;
+  background: #0F87B7; }
+  .breadcrumb .inicio {
+    float: left;
+    display: block;
+    margin: 0;
+    display: block;
+    padding: 0;
+    border: 0;
+    font: 500 11px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+    color: white; }
+  .breadcrumb .divisor {
+    float: left;
+    display: block;
+    margin: 0;
+    display: block;
+    padding: 0 5px;
+    border: 0;
+    font: 700 11px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+    color: white; }
+  .breadcrumb .texto {
+    float: left;
+    display: block;
+    font: 500 11px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 0;
+    border: 0;
+    margin: 0; }
+  .breadcrumb a {
+    float: left;
+    display: block;
+    text-decoration: none;
+    font: 500 11px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+    background: transparent;
+    color: white;
+    padding: 0;
+    border: 0;
+    margin: 0; }
+    .breadcrumb a:hover {
+      text-decoration: none;
+      color: white; }
+
+/******************************************************************************
+ * 
+ * 
+ *   toggle
+ * 
+ * 
+ ******************************************************************************/
+#toggle {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  color: black;
+  background-color: transparent;
+  border: 0;
+  padding: 0px; }
+  #toggle div {
+    margin: 0;
+    padding: 0; }
+  #toggle .titulo {
+    position: relative;
+    float: left;
+    margin: 0px;
+    width: 100%;
+    text-align: justify;
+    font: 400 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+    display: block;
+    background-color: #B5C5C6;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    text-transform: uppercase; }
+  #toggle .botao {
+    float: right;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    color: white;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center; }
+    #toggle .botao:hover {
+      color: black; }
+  #toggle .toggle_panel {
+    display: block;
+    transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    -webkit-transition: 0.5s ease-out; }
+
+#togglediv {
+  float: left;
+  margin: 0;
+  padding: 5px 0 0 0;
+  width: 100%;
+  background: transparente;
+  border: 0; }
+
+#toggle_min {
+  position: relative;
+  float: left;
+  width: calc( 100% - 5px );
+  margin: 10px 0 5px 0;
+  color: black;
+  background-color: transparent;
+  border: 0;
+  padding: 0px; }
+
+#toggle_min div {
+  margin: 0;
+  padding: 0; }
+
+#toggle_min .titulo {
+  position: relative;
+  float: left;
+  margin: 0px;
+  width: 100%;
+  text-align: justify;
+  font: 700 10px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  display: block;
+  background-color: lightyellow;
+  border: 0;
+  border-radius: 5px;
+  color: black;
+  padding: 5px 10px;
+  text-transform: uppercase; }
+
+#toggle_min .botao {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: 5;
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  color: black;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  text-align: center; }
+
+#toggle_min .botao:hover {
+  color: black; }
+
+#toggle_min .toggle_panel {
+  display: block;
+  transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  -webkit-transition: 0.5s ease-out; }
+
+#toggle_min #togglediv {
+  float: left;
+  margin: 5px 0 0 0;
+  padding: 0 5px 5px 5px;
+  width: 100%;
+  background-color: lightyellow;
+  font: 400 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+  border: 0;
+  border-radius: 5px; }
+
+/******************************************************************************
+ * 
+ * 
+ *   faqboard
+ * 
+ * 
+ ******************************************************************************/
+#faqboard {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font: 700 24px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #253536;
+  border: 0; }
+
+@media screen and (max-width: 1366px) {
+  #faqboard {
+    width: calc( 100% - 10px ); } }
+@media screen and (max-width: 600px) {
+  #faqboard {
+    height: calc( 100vh - 160px ); } }
+#faqboard h1 {
+  position: relative;
+  clear: both;
+  display: block;
+  width: 100%;
+  font: 700 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: #0F87B7;
+  text-align: left;
+  padding: 10px 0px;
+  margin: 20px 0;
+  border-bottom: dotted 3px #0F87B7; }
+
+#faqboard h2 {
+  float: left;
+  position: relative;
+  clear: both;
+  display: block;
+  font: 400 20px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  padding: 5px 0 5px 50px;
+  margin: 0; }
+
+#faqboard h2 .icone {
+  float: left;
+  display: table;
+  position: absolute;
+  left: 5px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: 5;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  color: #16a085;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  text-align: center;
+  z-index: 50000; }
+
+#faqboard h2 .icone:hover {
+  color: #e67e22; }
+
+#faqboard .accordion {
+  position: relative;
+  display: table;
+  width: calc(100% - 2px);
+  font: normal 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  margin: 10px 0 10px 40px;
+  padding: 0;
+  color: white;
+  clear: both; }
+
+#faqboard .accordion .ui-accordion {
+  background: white;
+  border: 0;
+  color: white; }
+
+#faqboard .accordion .ui-accordion-header {
+  margin: 0;
+  font: 700 12px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  padding: 5px 0 5px 15px;
+  border: 0;
+  background: transparent;
+  border: 0;
+  color: #0F87B7; }
+
+#faqboard .accordion .ui-accordion-header .titulo {
+  font: 700 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  color: #0F87B7;
+  display: block;
+  padding: 5px 10px; }
+
+#faqboard .accordion .ui-accordion-header-active .titulo {
+  color: #c0392b; }
+
+#faqboard .accordion .ui-accordion-header:hover {
+  cursor: help; }
+
+#faqboard .accordion .ui-accordion-content {
+  display: block;
+  border: 0;
+  font: 400 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: #ecf0f1;
+  color: black;
+  margin: 0 50px 10px 30px;
+  padding: 10px;
+  border: solid 1px #bdc3c7;
+  border-radius: 10px; }
+
+#faqboard .accordion .ui-accordion-content p {
+  display: block;
+  width: 100%;
+  font: 400 14px "Montserrat", "Open Sans", Trebuchet, Tahoma, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #253536;
+  margin: 0 0 10px 0;
+  padding: 0; }
+
+/******************************************************************************
+ * 
+ * 
+ *   site_destaque
+ * 
+ * 
+ ******************************************************************************/
+.site_destaque {
+  display: table;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 0 10px 0; }
+
+.bt_site_destaque {
+  float: right;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin: 5px 0 0 0;
+  padding: 10px 10px;
+  border: 0;
+  border-radius: 5px;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  background: #e67e22;
+  color: white; }
+
+.bt_site_destaque:hover {
+  background: #f1c40f;
+  color: black; }
+
+.bt_site_notifica {
+  float: left;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin: 5px 0 0 0;
+  padding: 10px 10px;
+  border: 0;
+  border-radius: 5px;
+  font: 500 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  background: #c0392b;
+  color: white; }
+
+.bt_site_notifica:hover {
+  background: #0F87B7;
+  color: white; }
+
+/******************************************************************************
+ * 
+ * 
+ *   ethos
+ * 
+ * 
+ ******************************************************************************/
+.ethos_nome {
+  background-color: #ecf0f1;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white; }
+
+.ethos_etiq_impar {
+  background-color: #ecf0f1;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white; }
+
+.ethos_etiq_par {
+  background-color: white;
+  font: 400 10px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white; }
+
+.ethos_escala_07 {
+  background-color: #9b59b6;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center; }
+
+.ethos_escala_06 {
+  background-color: #3498db;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center; }
+
+.ethos_escala_05 {
+  background-color: #2ecc71;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center; }
+
+.ethos_escala_04 {
+  background-color: #bdc3c7;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center; }
+
+.ethos_escala_03 {
+  background-color: #f1c40f;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center; }
+
+.ethos_escala_02 {
+  background-color: #e67e22;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center; }
+
+.ethos_escala_01 {
+  background-color: #e74c3c;
+  font: 700 14px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center; }
+
+a.botao_acao {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 15px;
+  font: 700 16px "Quicksand", Verdana, Trebuchet, Tahoma, Arial, Helvetica, sans-serif;
+  background: #f39c12;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none; }
+
+a.botao_acao:hover {
+  background: #e74c3c;
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */

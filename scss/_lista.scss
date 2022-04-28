@@ -1,0 +1,1956 @@
+@import 'variables';
+
+/******************************************************************************
+ * 
+ * 
+ *   lista
+ * 
+ * 
+ ******************************************************************************/
+
+#lista {
+  float: left;
+  position: relative;
+  width: 331px;
+  height: 250px;
+  display: block;
+  overflow: hidden;
+  margin: 10px 5px 10px 5px;
+  color: dimgray;
+  padding: 0px;
+  text-align: left;
+}
+
+#lista .title {
+  float:right;
+  position: absolute;
+  display: block;
+  bottom: 38px;
+  font: 700 24px $fonteTitulo;
+  margin-bottom: 5px;
+  clear: both;
+}
+
+#lista .title a {
+  display: block;
+  width: 291px;
+  padding: 5px 15px;
+  font: 700 18px $fonteTitulo;
+  border: none;
+  background: $Pomegranate;
+  color: $corBranco;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#lista .title a:hover {
+  background: $corCinza;
+}
+
+#lista .imagem {
+  float: left;
+  display: block;
+  width: 331px;
+  height: 180px;
+  padding: 0;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  border: 0;
+  clear: both;
+}
+
+#lista .imagem img {
+  width: 331px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+#lista .categoria {
+  float:left;
+  position: absolute;
+  bottom: 0;
+  height: 23px;
+  width: 291px;
+  font: normal 14px $fonteTitulo;
+  display: block;
+  padding: 5px 15px;
+  border: none;
+  background: $corBase;
+  color: $corBranco;
+  text-decoration: none;
+  text-transform: lowercase;
+  text-align: center;
+  clear: both;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   listadoc
+ * 
+ * 
+ ******************************************************************************/
+ 
+.listadoc {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.listadoc td {
+  display: table-cell;
+  vertical-align: middle;
+  border: solid 1px $Silver;
+  border-radius: 5px;
+  padding: 5px;
+  font: 500 10px $fonteTitulo;
+}
+
+.listadoc td.titulo {
+  background: $Clouds;
+  color: $corPreto;
+  font: 700 14px $fonteTexto;
+}
+
+.listadoc td.situacao {
+  background: $Clouds;
+  color: $corBranco;
+  text-transform: uppercase;
+  font: 700 10px $fonteTexto;
+}
+
+.listadoc td.info {
+  background: $corBranco;
+  color: $corPreto;
+  font: 500 10px $fonteTexto;
+}
+
+.listadoc td.botoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+.listadoc td.botoes span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  margin: 0 5px 0 0;
+  background: $Asbestos;
+  border-radius: 10px;
+  text-align: center;
+}
+.listadoc td.botoes span:hover {
+  background: $Carrot;
+  cursor: pointer;
+}
+.listadoc td.papeis {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   listaequipe
+ * 
+ * 
+ ******************************************************************************/
+ 
+.listaequipe {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.listaequipe td {
+  display: table-cell;
+  vertical-align: middle;
+  border: solid 1px $Silver;
+  border-radius: 5px;
+  padding: 5px;
+  font: 500 10px $fonteTitulo;
+}
+
+.listaequipe td.nome {
+  background: $Clouds;
+  color: $corPreto;
+  font: 700 14px $fonteTexto;
+}
+
+.listaequipe td.email {
+  background: $Clouds;
+  color: $corPreto;
+  font: 700 12px $fonteTexto;
+  text-align: right;
+}
+
+.listaequipe td.info {
+  background: $corBranco;
+  color: $corPreto;
+  font: 500 10px $fonteTexto;
+}
+.listaequipe td.botoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+.listaequipe td.botoes span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  background: $Asbestos;
+  border-radius: 15px;
+  text-align: center;
+}
+.listaequipe td.botoes span:hover {
+  background: $Carrot;
+}
+.listaequipe td.papeis {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+.listaequipe td.papeis span {
+  float: right;
+  display: block;
+  border: solid 1px $Asbestos;
+  border-radius: 5px 0;
+  background: $Clouds;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px $fonteTexto;
+  color: $corPreto;
+  text-transform: uppercase;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   listaproj
+ * 
+ * 
+ ******************************************************************************/
+ 
+.listaproj {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.listaproj a {
+  color: $corBase;
+  text-decoration: none;
+}
+.listaproj a:hover {
+  color: $corBaseHover;
+  text-decoration: none;
+}
+
+.listaproj tr {
+  padding : 0;
+  display: table-row;
+  width: 100%;
+}
+
+.listaproj td {
+  display: table-cell;
+  vertical-align: top;
+  border: solid 1px $Silver;
+  padding: 5px 10px;
+  font: 500 10px $fonteTitulo;
+}
+
+.listaproj td.nome {
+  background: $corDashFundo; 
+  color: $corPreto;
+  font: 700 14px $fonteTexto;
+}
+
+.listaproj td.nome .tijolo {
+  width: 100%;
+  height: 100%;
+}
+
+.listaproj td.email {
+  background: $corDashFundo;
+  color: $corPreto;
+  font: 700 12px $fonteTexto;
+  text-align: right;
+}
+
+.listaproj td.questao {
+  background: transparent;
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+  
+}
+
+.listaproj td.questao div {
+  background: $Clouds;
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+  padding: 5px;
+  border: solid 1px $Silver;
+}
+
+.listaproj td.equipe {
+  background : $corBranco;
+  border: solid 1px $corDashFundo; 
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+}
+.listaproj .direita {
+  float: right;
+  display: block;
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+}
+.listaproj td.mudanca {
+  background: $corDashFundo; 
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+}
+.listaproj .texto_questao {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 500 12px $fonteTitulo;
+  color: $corPreto;
+}
+.listaproj .texto_obs {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 300 12px $fonteTitulo;
+  font-style: italic;
+  color: $corPreto;
+}
+.listaproj .pequeno {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 300 10px $fonteTitulo;
+  color: $corPreto;
+}
+.listaproj td.info {
+  background: $corBranco;
+  color: $corPreto;
+  font: 500 10px $fonteTexto;
+}
+.listaproj td.botoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+.listaproj td.botoes span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  background: $Asbestos;
+  border-radius: 15px;
+  text-align: center;
+}
+.listaproj td.botoes span:hover {
+  background: $Carrot;
+}
+.listaproj td.estrutura {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 2px 0;
+}
+.listaproj td.estrutura span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 5px 5px 0 0;
+  background: $Clouds;
+  padding: 3px 10px;
+  margin: 0 0 0 2px;
+  font: 500 10px $fonteTitulo;
+  color: $corPreto;
+  text-transform: uppercase;
+}
+.listaproj td.estrutura .nivel_criterio {
+  float: left;
+  margin: 0 2px 0 0;
+  background : $cor_cinza_L8;
+  color: $corBranco;
+}
+.listaproj td.estrutura .nivel_especialidade {
+  float: left;
+  margin: 0 2px 0 0;
+  background : $cor_cinza_L3;
+  color: $cor_cinza_L12;
+}
+.listaproj td.estrutura .nivel_fase {
+  float: left;
+  margin: 0 2px 0 0;
+  background : $cor_cinza_L10;
+  color: $corBranco;
+}
+.listaproj td.estrutura .bt_acao {
+  float: left;
+  margin: 0 2px 0 0;
+  background : #F1892D;
+  color: $corBranco;
+}
+.listaproj td.estrutura .bt_acao:hover {
+  background : #7E349D;
+  color: $corBranco;
+}
+.listaproj td.papeis {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 2px 0 5px 0;
+}
+.listaproj td.papeis span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  background: $Clouds;
+  padding: 2px 10px;
+  margin: 0 2px 0 0;
+  font: 400 10px $fonteTexto;
+  color: $corPreto;
+  text-transform: uppercase;
+} 
+  
+.listaproj td.acoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+.listaproj td.acoes span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  background: $Pomegranate;
+  padding: 2px 10px;
+  margin: 0 0 0 2px;
+  font: 400 10px $fonteTexto;
+  color: $corBranco;
+  text-transform: uppercase;
+}
+.listaproj td.acoes .nivel_funcao {
+  font: 500 10px $fonteTitulo;
+  background : $cor_cyan_F8;
+  color: $corBranco;
+  border: 0;
+}
+.listaproj td.acoes span:hover {
+  -webkit-filter: drop-shadow(0 3px 3px $corPreto);
+  filter: drop-shadow(0 3px 3px $corPreto);
+  cursor: pointer;
+}
+.listaproj td.histcheck {
+  background: transparent;
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+  
+  padding: 0 5px;
+}
+.listaproj td.histcheck div {
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+  border: solid 1px $cor_cinza_L8;
+  padding: 5px;
+  margin: 0;
+}
+.listaproj td.escopo {
+  background: $Clouds;
+  border: solid 1px $Silver;
+  color: $corPreto;
+  font: 500 14px $fonteTexto;
+  margin: 0 0 0 0;
+  padding: 5px;
+}
+.listaproj td.escopo span {
+  float: right;
+  display: block;
+  border: solid 1px $Pomegranate;
+  border-radius: 5px;
+  background: transparent;
+  padding: 2px 10px;
+  margin: 0 0 0 3px;
+  font: 400 10px $fonteTitulo;
+  color: $Pomegranate;
+  text-transform: uppercase;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   listaespec
+ * 
+ * 
+ ******************************************************************************/
+ 
+.listaespec {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 2px 0;
+}
+
+.listaespec .tag {
+  float: left;
+  display: block;
+  border: 0;
+  border-radius: 5px 0;
+  background: $corBaseTag;
+  padding: 2px 10px;
+  margin: 5px 5px 0px 5px;
+  font: 500 10px $fonteTitulo;
+  color: $corBranco;
+  text-transform: uppercase;
+}
+
+.listaespec .icodash {
+  float: right;
+  display: block;
+  position: relative;
+  margin: 0 3px 0 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  color: $corPreto;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+}
+
+.listaespec .icodash:hover {
+  background-color: $corPreto;
+  color: $corBranco;
+}
+
+.listaespec tr {
+  padding : 0;
+  display: table-row;
+  width: 100%;
+}
+
+.listaespec td {
+  display: table-cell;
+  vertical-align: top;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font: 500 10px $fonteTitulo;
+}
+
+.listaespec td.topo {
+  font: 700 14px $fonteTexto;
+  background: $Asbestos;
+  color: $corBranco;
+  padding: 3px 3px 3px 10px;
+  border: 0;
+  border-radius: 5px 10px 10px 5px; 
+  margin-bottom: 2px;
+}
+
+.listaespec td.estrutura {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.listaespec td.estrutura span {
+  float: right;
+  display: block;
+  border: solid 1px $Asbestos;
+  border-radius: 5px 0;
+  background: $Clouds;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px $fonteTexto;
+  color: $corPreto;
+  text-transform: uppercase;
+}
+
+.listaespec td.secao {
+  font: 700 14px $fonteTexto;
+  background: $Silver;
+  color: $corTexto;
+  padding: 3px 3px 3px 10px;
+  border: 0;
+  border-radius: 5px 10px 10px 5px; 
+  margin-bottom: 2px;
+}
+
+.listaespec td.secao .orientacoes {
+  display: block;
+  width: calc( 100% - 10px );
+  font: 400 10px $fonteTexto;
+  color: $corPreto;
+  margin: 5px 0;
+  padding: 0 5px 5px 5px;
+  border: 0;
+}
+
+.listaespec td.espec {
+  font: 500 12px $fonteTexto;
+  background: $corBranco;
+  color: $corTexto;
+  border: solid 1px $Silver;
+  padding: 3px 3px 3px 10px;
+  border-radius: 5px 10px 5px 5px; 
+  margin-bottom: 2px;
+}
+.listaespec td.acoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+.listaespec td.acoes span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 5px 0;
+  background: $Pomegranate;
+  padding: 2px 10px;
+  margin: 1px 2px 1px 0;
+  font: 400 10px $fonteTexto;
+  color: $corBranco;
+  text-transform: uppercase;
+}
+
+.listaespec td.acoes span:hover {
+  -webkit-filter: contrast(2);
+  filter: contrast(2);
+  cursor: pointer;
+}
+.listaespec a.btacao {
+  float: right;
+  display: block;
+  padding: 2px 10px;
+  font: 500 10px $fonteTexto;
+  background: $cor_crono_sistema;
+  color: $corBranco;
+  border: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.listaespec a.btacao:hover {
+  background: $cor_crono_fase;
+  color: $corBranco;
+}
+
+.listaespec a.icoacao {
+  float: right;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 5px;
+  padding: 0;
+  background: transparent;
+  font: 500 10px $fonteTexto;
+  color: $corBranco;
+  border: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.listaespec a.icoacao:hover {
+  background: $Pomegranate;
+  color: $corBranco;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   tratamento
+ * 
+ * 
+ ******************************************************************************/
+ 
+.tratamento {
+  display: table;
+  width: 100%;
+
+  border-radius: 0;
+  background: $corCampo;
+  padding: 5px 20px 5px 5px;
+  margin: 0 0 0 0;
+  font: 400 12px $fonteTexto;
+  color: $corPreto;
+}
+
+.separador {
+  display: table;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  height: 2px;
+}
+
+.tratamento .trattitulo {
+  float: left;
+  display: block;
+  border: 0;
+  background: $corPreto;
+  padding: 5px 10px;
+  margin: 0 0 5px 0;
+  font: 700 10px $fonteTexto;
+  color: $corBranco;
+  text-transform: uppercase;
+  clear: both;
+}
+.tratamento .trattexto {
+  float: left; 
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 0 0 5px 5px;
+  margin: 0;
+  font: 400 12px $fonteTexto;
+  color: $corPreto;
+}
+.tratamento .historico {
+  float: left; 
+  display: table;
+  width: 100%;
+  border: 0;
+  padding: 5px;
+  margin: 0 0 5px 0;
+  font: 400 11px $fonteTexto;
+  color: $corPreto;
+  border: solid 1px $Clouds;
+}
+.tratamento .hist_data {
+  float: left; 
+  display: block;
+  width: 20%;
+  border: 0;
+  padding: 5px;
+  margin: 0;
+  font: 700 11px $fonteTexto;
+  color: $corPreto;
+  border: 0;
+}
+.tratamento .hist_info {
+  float: right; 
+  display: block;
+  width: 80%;
+  border: 0;
+  padding: 5px;
+  margin: 0;
+  font: 400 11px $fonteTexto;
+  color: $corPreto;
+  border: 0;
+}
+.tratamento .hist_pequeno {
+  font: 700 11px $fonteTexto;
+  color: $corCinzaEscuro;
+}
+
+.avaliaproj {
+  display: table;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  background: $Concrete;
+  padding: 5px;
+  margin: 0;
+  font: 700 12px $fonteTexto;
+  color: $corPreto;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   cronograma
+ * 
+ * 
+ ******************************************************************************/
+ 
+.cronograma {
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.cronograma td {
+  vertical-align: middle;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 2px;
+  font: 500 10px $fonteTitulo;
+}
+
+.cronograma td.fase {
+  background: $cor_crono_fase;
+  width: 15%;
+  color: $corBranco;
+  font: 500 16px $fonteTitulo;
+}
+
+.cronograma td.fase a {
+  display: inline-block;
+  background: $corBranco;
+  color: $cor_crono_fase;
+  font: 400 10px $fonteTexto;
+  text-decoration: none;
+  padding: 3px 10px;
+  border:0;
+  border-radius: 5px;
+  margin: 5px 0 0 0;
+  text-transform: uppercase;
+}
+
+.cronograma td.fase .bt_novo {
+  float: left;
+  margin: 0;
+  display: block;
+}
+
+.cronograma td.fase .bt_novo a {
+  background-color: $cor_crono_fase;
+  color: $corBranco;
+  font: 700 10px $fonteTexto;
+  text-decoration: none;
+  padding: 3px 7px;
+  border: solid 1px $corBranco;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.cronograma td.fase .bt_novo a:hover {
+  background-color: $corBranco;
+  color: $cor_crono_fase;
+}
+
+.cronograma td.fase .bt_opcoes {
+  float: left;
+  background: $corBranco;
+  display: block;
+  text-align: left;
+  clear: left;
+  border: solid 1px $corBranco;
+  border-radius: 5px;
+  margin: 3px 0 0 0;
+  padding: 3px;
+}
+
+.cronograma td.fase .bt_opcoes img {
+  display: inline-block;
+  margin: 0;
+}
+
+.cronograma td.fase .bt_opcoes a {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.cronograma td.sistema {
+  background: $cor_crono_sistema;
+  width: 20%;
+  color: $corBranco;
+  font: 500 14px $fonteTitulo;
+}
+
+.cronograma td.sistema .bt_novo {
+  float: left;
+  display: block;
+}
+
+.cronograma td.sistema .bt_novo a {
+  background-color: $cor_crono_sistema;
+  color: $corBranco;
+  font: 700 10px $fonteTexto;
+  text-decoration: none;
+  padding: 3px 7px;
+  border: solid 1px $corBranco;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.cronograma td.sistema .bt_novo a:hover {
+  background-color: $corBranco;
+  color: $cor_crono_sistema;
+}
+
+.cronograma td.sistema .bt_opcoes {
+  float: left;
+  background: $corBranco;
+  display: block;
+  text-align: left;
+  clear: left;
+  border: solid 1px $corBranco;
+  border-radius: 5px;
+  margin: 3px 0 0 0;
+  padding: 3px;
+}
+
+.cronograma td.sistema .bt_opcoes img {
+  display: inline-block;
+  margin: 0;
+}
+
+.cronograma td.sistema .bt_opcoes a {
+  background: transparent;
+  margin: 0;
+}
+
+.cronograma td.item {
+  background: $cor_crono_item;
+  border: solid 2px $cor_crono_item;
+  width: 65%;
+  color: $corPreto;
+  font: 500 12px $fonteTexto;
+}
+
+.cronograma td.item a {
+  color: $corPreto;
+  font: 500 12px $fonteTexto;
+  text-decoration: none;
+}
+
+.cronograma td.item .bt_questao {
+  float: left;
+  width: 85%;
+  display: block;
+}
+
+.cronograma td.item .bt_opcoes {
+  float: right;
+  width: 15%;
+  display: block;
+  text-align: right;
+}
+
+.cronograma td.item .bt_opcoes img {
+  display: inline-block;
+  margin: 0 0 0 5px;
+}
+
+.cronograma td.item .bt_novo {
+  float: right;
+  display: block;
+}
+
+.cronograma td.item .bt_novo a {
+  background-color: $corCinza;
+  color: $corBranco;
+  font: 500 10px $fonteTexto;
+  text-decoration: none;
+  padding: 3px 7px;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.cronograma td.item .bt_novo a:hover {
+  background-color: $cor_crono_fase;
+}
+
+.cronograma td.secao {
+  background: $cor_crono_secao;
+  border: solid 2px $cor_crono_secao;
+  width: 35%;
+  color: $corBranco;
+  font: 500 14px $fonteTexto;
+}
+
+.cronograma td.secao a {
+  color: $corBranco;
+  font: 500 12px $fonteTexto;
+  text-decoration: none;
+}
+
+.cronograma td.secao .bt_questao {
+  float: left;
+  width: 70%;
+  display: block;
+}
+
+.cronograma td.secao .comentario {
+  font: 300 9px $fonteTexto;
+}
+
+.cronograma td.secao .comentario p {
+  font: 300 9px $fonteTexto;
+}
+
+.cronograma td.secao .comentario ul {
+  font: 300 9px $fonteTexto;
+}
+
+.cronograma td.secao .bt_opcoes {
+  float: right;
+  display: table;
+  width: 30%;
+  height: 100%;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.cronograma td.secao .bt_opcoes img {
+  display: inline-block;
+  margin: 0 0 0 5px;
+}
+
+.cronograma td.secao .bt_novo {
+  float: right;
+  display: block;
+}
+
+.cronograma td.secao .bt_novo a {
+  background-color: $corCinza;
+  color: $corBranco;
+  font: 500 10px $fonteTexto;
+  text-decoration: none;
+  padding: 3px 7px;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.cronograma td.secao .bt_novo a:hover {
+  background-color: $cor_crono_fase;
+}
+
+
+.cronograma td.data {
+  background: $corBranco;
+  width: 8%;
+  color: $corPreto;
+  font: 500 10px $fonteTexto;
+  text-align: center;
+}
+
+.cronograma td.progresso {
+  background: $corBranco;
+  width: 8%;
+  color: $corPreto;
+  font: 500 10px $fonteTexto;
+  text-align: center;
+}
+
+.cronograma td.status {
+  background: $corBranco;
+  width: 26%;
+  color: $corPreto;
+  font: 500 10px $fonteTexto;
+}
+
+.cronograma td.status a {
+  color: $corBranco;
+  font: 700 10px $fonteTexto;
+  text-decoration: none;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   detalhes
+ * 
+ * 
+ ******************************************************************************/
+ 
+.head_detalhe {
+  display: table; 
+  width: 100%; 
+  background: $corAmareloClaro;
+  border: solid 1px $Silver; 
+  padding: 0 0 0 5px;
+  font: 700 10px $fonteTexto;
+  color: $corPreto;
+  text-align: left;
+}
+
+.item_detalhe {
+  width: 100%;
+  padding: 2px;
+  margin: 0;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.item_detalhe th {
+  inherited: none;
+  vertical-align: middle;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 2px;
+  font: 500 10px $fonteTitulo;
+  border: 0;
+}
+
+.item_detalhe td {
+  vertical-align: middle;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 2px;
+  font: 500 10px $fonteTitulo;
+  border: 0;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   listapipe
+ * 
+ * 
+ ******************************************************************************/
+ 
+.listapipe {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 1em;
+}
+
+.listapipe a {
+  color: $corTexto;
+  text-decoration: none;
+}
+.listapipe a:hover {
+  color: $Pomegranate;
+  text-decoration: none;
+}
+
+.listapipe tr {
+  padding : 0;
+  display: table-row;
+  width: 100%;
+}
+
+.listapipe td {
+  display: table-cell;
+  vertical-align: top;
+  border: solid 1px $Silver;
+  
+  padding: 5px 10px;
+  font: 500 10px $fonteTitulo;
+}
+
+.listapipe td.pipeline {
+  background: $corDashDark; 
+  color: $corPreto;
+  font: 700 14px $fonteTexto;
+}
+
+.listapipe td.nome .tijolo {
+  width: 100%;
+  height: 100%;
+}
+
+.listapipe td.acao {
+  background: $corDashFundo;
+  color: $corPreto;
+  font: 700 12px $fonteTexto;
+  text-align: left;
+}
+
+.listapipe td.tarefa {
+  background: transparent;
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+  
+}
+.listapipe td.dia {
+  background: transparent;
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+  
+}
+.listapipe td.questao div {
+  background: $Clouds;
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+  padding: 5px;
+  border: solid 1px $Silver;
+}
+
+.listapipe td.equipe {
+  background : $corBranco;
+  border: solid 1px $corDashFundo; 
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+}
+.listapipe .direita {
+  float: right;
+  display: block;
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+}
+.listapipe td.mudanca {
+  background: $corDashFundo; 
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+}
+.listapipe .texto_questao {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 500 12px $fonteTitulo;
+  color: $corPreto;
+}
+.listapipe .texto_obs {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 300 12px $fonteTitulo;
+  font-style: italic;
+  color: $corPreto;
+}
+.listapipe .pequeno {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font: 300 10px $fonteTitulo;
+  color: $corPreto;
+}
+.listapipe td.info {
+  background: $corBranco;
+  color: $corPreto;
+  font: 500 10px $fonteTexto;
+}
+.listapipe td.botoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+.listapipe td.botoes span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  background: $Asbestos;
+  border-radius: 15px;
+  text-align: center;
+}
+.listapipe td.botoes span:hover {
+  background: $Carrot;
+}
+.listapipe td.estrutura {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 2px 0;
+}
+.listapipe td.estrutura span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 5px 5px 0 0;
+  background: $Clouds;
+  padding: 3px 10px;
+  margin: 0 0 0 2px;
+  font: 500 10px $fonteTitulo;
+  color: $corPreto;
+  text-transform: uppercase;
+}
+.listapipe td.estrutura .nivel_criterio {
+  float: left;
+  margin: 0 2px 0 0;
+  background : $cor_cinza_L8;
+  color: $corBranco;
+}
+.listapipe td.estrutura .nivel_especialidade {
+  float: left;
+  margin: 0 2px 0 0;
+  background : $cor_cinza_L3;
+  color: $cor_cinza_L12;
+}
+.listapipe td.estrutura .nivel_fase {
+  float: left;
+  margin: 0 2px 0 0;
+  background : $cor_cinza_L10;
+  color: $corBranco;
+}
+.listapipe td.estrutura .bt_acao {
+  float: left;
+  margin: 0 2px 0 0;
+  background : #F1892D;
+  color: $corBranco;
+}
+.listapipe td.estrutura .bt_acao:hover {
+  background : #7E349D;
+  color: $corBranco;
+}
+.listapipe td.papeis {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 2px 0 5px 0;
+}
+.listapipe td.papeis span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  background: $Clouds;
+  padding: 2px 10px;
+  margin: 0 2px 0 0;
+  font: 400 10px $fonteTexto;
+  color: $corPreto;
+  text-transform: uppercase;
+} 
+  
+.listapipe td.acoes {
+  background: transparent;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+.listapipe td.acoes span {
+  float: right;
+  display: block;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  background: $Pomegranate;
+  padding: 2px 10px;
+  margin: 0 0 0 2px;
+  font: 400 10px $fonteTexto;
+  color: $corBranco;
+  text-transform: uppercase;
+}
+.listapipe td.acoes .nivel_funcao {
+  font: 500 10px $fonteTitulo;
+  background : $cor_cyan_F8;
+  color: $corBranco;
+  border: 0;
+}
+.listapipe td.acoes span:hover {
+  -webkit-filter: drop-shadow(0 3px 3px $corPreto);
+  filter: drop-shadow(0 3px 3px $corPreto);
+  cursor: pointer;
+}
+.listapipe td.histcheck {
+  background: transparent;
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+  
+  padding: 0 5px;
+}
+.listapipe td.histcheck div {
+  color: $corPreto;
+  font: 400 12px $fonteTexto;
+  border: solid 1px $cor_cinza_L8;
+  padding: 5px;
+  margin: 0;
+}
+.listapipe td.escopo {
+  background: $Clouds;
+  border: solid 1px $Silver;
+  color: $corPreto;
+  font: 500 14px $fonteTexto;
+  margin: 0 0 0 0;
+  padding: 5px;
+}
+.listapipe td.escopo span {
+  float: right;
+  display: block;
+  border: solid 1px $Pomegranate;
+  border-radius: 5px;
+  background: transparent;
+  padding: 2px 10px;
+  margin: 0 0 0 3px;
+  font: 400 10px $fonteTitulo;
+  color: $Pomegranate;
+  text-transform: uppercase;
+}
+.listapipe .icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  padding: 2px 5px;
+  text-align: center;
+  border: solid 1px $corBranco;
+  border-radius: 10px;
+  font: 400 10px $fonteTitulo;
+  color: $corBranco;
+  background-color: red;
+  text-transform: uppercase;
+}
+.listapipe .prioridade_tag {
+  display:inline-block; 
+  text-align: center; 
+  width: 100%; 
+  font-size: 10px; 
+  padding: 0;
+  margin: 0;
+  border: solid 1px $Silver;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   arvore
+ * 
+ * 
+ ******************************************************************************/
+ 
+.arvore {
+  float: left;
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: $corBranco;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-color: gray;
+  position: relative;
+}
+.arvore .item {
+  display: inline-block;
+  position: relative;
+  width: 85%;
+}
+.arvore .icone {
+  float: left;
+  display: inline-block;
+  position: relative;
+  margin: 0 5px 0 0;
+  padding: 0px;
+  height: 16px;
+  width: 16px;
+  border: solid 1px transparent;
+  border-radius: 8px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  color: $corBase;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+}
+.arvore .etiqueta {
+  display: inline-block;
+  position: relative;
+  width: 90%;
+}
+.arvore a {
+  text-decoration: none;
+  font: normal 10px $fonteTexto;
+  color: $corTexto;
+  margin: 0;
+  padding: 0;
+}
+
+.arvore > tr {
+  vertical-align: middle;
+  background-color: $corLinhaPar;
+}
+.arvore tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit
+}
+.arvore td, th {
+  display: table-cell;
+  vertical-align: inherit
+}
+.arvore td {
+  font: normal 10px $fonteTexto;
+  color: $corTexto;
+  border: none;
+  padding: 2px 5px 2px 5px;
+  vertical-align: middle;
+  background: transparent;
+}
+
+.arvore td img {
+  border: 0;
+  padding: 0;
+  margin: 0 2px;
+}
+
+.arvore .categoria td {
+  font: 700 10px $fonteTexto;
+}
+.arvore .base {
+  background: inherited;
+}
+.arvore .base .icone {
+  color: $corBaseDark;
+}
+.arvore .base td {
+  font: 700 12px $fonteTexto;
+}
+
+.arvore .base td a {
+  font: 700 12px $fonteTexto;
+}
+
+.arvore .nivel_01 .icone {
+  color: $corBaseDark;
+}
+.arvore .nivel_01 td {
+  font: 400 12px $fonteTexto;
+  background: transparent;
+}
+
+.arvore .nivel_01 td a {
+  font: 400 12px $fonteTexto;
+}
+
+.arvore .nivel_02 td {
+  font: 400 10px $fonteTexto;
+  background: transparent;
+}
+
+.arvore .nivel_02 td a {
+  font: 400 10px $fonteTexto;
+}
+
+.arvore .nivel_02 .icone {
+  color: $corBase;
+}
+
+.arvore .nivel_03 td {
+  font: 400 10px $fonteTexto;
+  background: transparent;
+}
+
+.arvore .nivel_03 td a {
+  font: 400 10px $fonteTexto;
+}
+
+.arvore .nivel_03 .icone {
+  color: $cor_cyan_F6;
+}
+
+.arvore .nivel_04 td {
+  font: 400 10px $fonteTexto;
+  background: transparent;
+}
+
+.arvore .nivel_04 td a {
+  font: 400 10px $fonteTexto;
+}
+
+.arvore .nivel_04 .icone {
+  color: $cor_cyan_F4;
+}
+
+.arvore .nivel_extra td {
+  font: 400 10px $fonteTexto;
+  background: transparent;
+}
+
+.arvore .nivel_extra td a {
+  font: 400 10px $fonteTexto;
+}
+
+.arvore .nivel_extra .icone {
+  color: $cor_cinza_L6;
+}
+
+.arvore .indice {
+  width: 10%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.arvore .descricao {
+  width: 90%;
+  text-align: left;
+  border: solid 1px $Silver;
+}
+
+.arvore .acoes {
+  width: 10%;
+  text-align: right;
+}
+.arvore .status {
+  width: 30%;
+  text-align: right;
+}
+.arvore .cor {
+  display: block;
+  float: left;
+  height: 10px;
+  width: 10px;
+  border: 0;
+  border-radius: 5px;
+  background: $Silver;
+  margin: 3px 5px 0 0;
+  padding: 0;
+}
+.arvore tr:hover {
+  background-color: $corAmareloClaro;
+}
+.arvore .opcoes {
+  float: right;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.arvore tr:hover .opcoes {
+  display: table;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   sanfona
+ * 
+ * 
+ ******************************************************************************/
+ 
+.sanfona_list {
+  display: block; 
+  width: 100%; 
+  padding: 0; 
+  background-color: transparent;
+  border: 0;
+  margin-top: 5px;
+}
+
+.sanfona_list ul {
+  margin: 0;
+  padding: 0 5px;
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+.sanfona_list ul li {
+  font: 500 11px $fonteTexto;
+  color: $corPreto;
+  padding:0 0 5px 0;
+  margin: 0;
+}
+
+.sanfona_list table {
+  border: 0;
+}
+
+.sanfona_list tr {
+  border: 0;
+}
+
+.sanfona_list td {
+  border: solid 1px $Silver;
+  background-color: $Clouds;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   ns_lista
+ * 
+ * 
+ ******************************************************************************/
+ 
+.ns_lista {
+  float: left;
+  position: relative;
+  display: table;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.ns_lista .esquerda {
+  float: left;
+  position: relative;
+  display: table;
+  width: 90%;
+  text-align: right;
+  margin: 0;
+  padding: 10px;
+  font: 300 10px $fonteTitulo;
+  color: $corPreto;
+  border: solid 1px $Silver;
+}
+
+.ns_lista .direita {
+  float: left;
+  position: relative;
+  display: table;
+  width: 10%;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  font: 300 10px $fonteTitulo;
+  color: $corPreto;
+  background: $Silver;
+  border: 0;
+}
+
+.ns_lista .direita a {
+  float: right;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  offset: 0;
+  width: 100%;
+  text-decoration : none;
+  font: 500 11px $fonteTexto;
+  background: $corBase;
+  color: $corBranco;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+.ns_lista .direita a:hover {
+  text-decoration : none;
+  background: $Carrot;
+}
+
+.ns_lista img {
+  float: left;
+  display: inline-block;
+  height: 50px;
+  margin: 0 15px 0 0;
+}
+
+.ns_lista .nome {
+  font: 500 18px $fonteTitulo;
+  color: $corPreto;
+  float: right;
+  clear: right;
+}
+
+.ns_lista .cidade {
+  font: 300 12px $fonteTitulo;
+  color: $corPreto;
+  float: right;
+  clear: right;
+}
+
+.ns_lista .pais {
+  font: 300 12px $fonteTitulo;
+  color: $corPreto;
+  float: right;
+  clear: right;
+}
+
+/******************************************************************************
+ * 
+ * 
+ *   poc_list
+ * 
+ * 
+ ******************************************************************************/
+ 
+.poc_list {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.poc_list .azul {
+  background: AliceBlue;
+}
+
+.poc_list .full {
+  float: left;
+  position: relative;
+  display: block;
+  width: calc( 100% - 15px );
+  text-align: right;
+  margin: 0;
+  padding: 10px 30px 10px 10px;
+  font: 300 10px $fonteTitulo;
+  color: $corPreto;
+  border: solid 1px $Silver;
+}
+.poc_list .full a {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: block;
+  width: auto;
+  text-decoration : none;
+  font: 500 10px $fonteTexto;
+  background: transparent;
+  color: $corBaseDark;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: solid 2px $corBaseDark;
+  border-radius: 5px;
+}
+.poc_list .full a:hover {
+  text-decoration : none;
+  background: $corBaseDark;
+  color: $corBranco;
+}
+.poc_list .esquerda {
+  float: left;
+  display: block;
+  width: 90%;
+  text-align: right;
+  margin: 0;
+  padding: 10px;
+  font: 300 10px $fonteTitulo;
+  color: $corPreto;
+  border: solid 1px $Silver;
+}
+
+.poc_list .direita {
+  float: right;
+  display: block;
+  width: 10%;
+  height: 100%;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  font: 300 10px $fonteTitulo;
+  color: $corPreto;
+  background: $Silver;
+  border: 0;
+}
+
+.poc_list .direita a {
+  display: block;
+  width: 100%;
+  height : 100%;
+  text-decoration : none;
+  font: 500 12px $fonteTexto;
+  background: $corBase;
+  color: $corBranco;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+.poc_list .direita a:hover {
+  text-decoration : none;
+  background: $Carrot;
+}
+
+.poc_list img {
+  float: left;
+  display: inline-block;
+  height: 60px;
+  margin: 0 15px 0 0;
+}
+
+.poc_list .nome {
+  font: 500 18px $fonteTitulo;
+  color: $corPreto;
+  float: right;
+  clear: right;
+}
+
+.poc_list .qualificador {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font: 300 14px $fonteTitulo;
+  color: $corPreto;
+  float: right;
+  clear: right;
+}
+
+.poc_list .pais {
+  font: 300 12px $fonteTitulo;
+  color: $corPreto;
+  float: right;
+  clear: right;
+}
+
+.poc_list .conexao {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  margin: 0;
+  padding: 7px 0;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  border-radius: 15px;
+  background-color: $corBaseHover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  color: $corBranco;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  text-decoration : none;
+}
+.poc_list .conexao:hover {
+  background-color: $Carrot;
+}
+.poc_list .desconexao {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  margin: 0;
+  padding: 7px 0;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  border-radius: 15px;
+  background-color: $Pomegranate;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  color: $corBranco;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  text-decoration : none;
+}
+.poc_list .desconexao:hover {
+  background-color: $Alizarin;
+}
