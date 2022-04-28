@@ -107,7 +107,7 @@ class PipelineView {
     if ( $q_pipeline > 0 ) {
       $exibe .= $lista_pipe;
     } else {
-      $exibe .= '<span class=msg_info>CRIE SEU PRIMEIRO PIPELINE!</span>
+      $exibe .= '<span class=msg_info>CREATE YOUR FIRST PIPELINE!</span>
        ';
     }
     $exibe .= '</table></div>
@@ -127,36 +127,36 @@ class PipelineView {
     //
     $exibe = '';
     if ( $q_acao == 0 ) {
-      $exibe .= $this->url->dlg_question('exclui_bt','Confirma a exclusão do pipeline<br/><b>'.$pipeline.'</b> ?',
+      $exibe .= $this->url->dlg_question('exclui_bt','Confirm to delete the pipeline ?',
                                          $this->url->get_href_int($this->route,'exclusao',$token));
     }
     $link1 = $this->url->get_link_int('My Tasks');
     $breadcrumb = $this->url->breadcrumb(2,$pipeline,$link1);
     //
     $vetor = array();
-    $vetor[] = $this->url->get_link_int('Editar',$this->route,'editar',$token);
-    if ( $q_acao == 0 ) $vetor[] = $this->url->dlg_button('exclui_bt','excluir'); 
-    $exibe .= $this->html->filtro_header('Ficha do Pipeline','',$vetor,$o_pipeline.'. '.$pipeline,$breadcrumb);
+    $vetor[] = $this->url->get_link_int('Edit',$this->route,'editar',$token);
+    if ( $q_acao == 0 ) $vetor[] = $this->url->dlg_button('exclui_bt','Delete'); 
+    $exibe .= $this->html->filtro_header('Pipeline','',$vetor,$o_pipeline.'. '.$pipeline,$breadcrumb);
     //
-    if ( $q_acao == 0 ) $q_acao = 'Nenhuma';
+    if ( $q_acao == 0 ) $q_acao = 'None';
     //
     $exibe .= $this->html->ficha_inicio();
     $vetor = Array();
     $vetor[] = 'Pipeline¦'.$pipeline.'¦90';
-    $vetor[] = 'Ações¦'.$q_acao.'¦10';
+    $vetor[] = 'Actions¦'.$q_acao.'¦10';
     $exibe .= $this->html->ficha_vetor($vetor);
     $vetor = Array();
-    $vetor[] = 'Informação¦'.nl2br($info).'¦100';
+    $vetor[] = 'Info¦'.nl2br($info).'¦100';
     $exibe .= $this->html->ficha_vetor($vetor);
     $exibe .= $this->html->ficha_fim();
     //
     $vetor = array();
-    $vetor[] = $this->url->get_link_int('nova ação','action','novo',$token);
-    $exibe .= $this->html->filtro_divisor('Ações',$vetor);
+    $vetor[] = $this->url->get_link_int('new action','action','novo',$token);
+    $exibe .= $this->html->filtro_divisor('Actions',$vetor);
     $colunas = array();
-    $colunas[] = 'Ação¦85¦false';
-    $colunas[] = 'Tarefas¦10¦false';
-    $colunas[] = 'Opções¦5¦false';
+    $colunas[] = 'Action¦85¦false';
+    $colunas[] = 'Tasks¦10¦false';
+    $colunas[] = 'Options¦5¦false';
     $exibe .= $this->html->scroll_inicio($colunas,'30vh');
     foreach( $obj->action_list as $action ) {
       $idacao = $action->id_acao;
@@ -204,7 +204,7 @@ class PipelineView {
       $obj->info = $obj->get_post("info");
       $dados_ok = true;
       if ( empty($obj->pipeline) ) {
-        $msg_erro .= 'Pipeline não informado<br/>';
+        $msg_erro .= 'Pipeline name is required';
         $dados_ok = false;
       }
       if ( $dados_ok ) {
@@ -216,8 +216,7 @@ class PipelineView {
     }
     if( $exibe_form ) {
       $exibe = '';
-      $titform = 'Novo';
-      $obj->pipeline = 'New Pipeline';
+      $titform = 'New';
       //
       $link1 = $this->url->get_link_int('My Tasks');
       $breadcrumb = $this->url->breadcrumb(2,$titform,$link1);
@@ -226,7 +225,7 @@ class PipelineView {
       $linkform = $this->url->get_href_int($this->route,'novo');
       $exibe .= $this->form->inicio($linkform,$msg_erro);
       $exibe .= $this->form->texto('pipeline','Pipeline',$obj->pipeline,100,100);
-      $exibe .= $this->form->memo('info','Informação',$obj->info,10,100);
+      $exibe .= $this->form->memo('info','Info',$obj->info,10,100);
       $botoes = $this->form->botao_cancelar($this->url->get_href_int());
       $botoes .= $this->form->botao_ok();
       $exibe .= $this->form->fim($botoes);
@@ -243,7 +242,7 @@ class PipelineView {
       $obj->info = $obj->get_post("info");
       $dados_ok = true;
       if ( empty($obj->pipeline) ) {
-        $msg_erro .= 'Pipeline não informado<br/>';
+        $msg_erro .= 'Pipeline name is required';
         $dados_ok = false;
       }
       if ( $dados_ok ) {
@@ -254,7 +253,7 @@ class PipelineView {
       }
     }
     if( $exibe_form ) {
-      $titform = 'Edição';
+      $titform = 'Edit';
       $exibe = '';
       $link1 = $this->url->get_link_int('My Tasks');
       $link2 = $this->url->get_link_int($obj->pipeline,$this->route,'ficha',$obj->token);
@@ -264,7 +263,7 @@ class PipelineView {
       $linkform = $this->url->get_href_int($this->route,'editar',$obj->token);
       $exibe .= $this->form->inicio($linkform,$msg_erro);
       $exibe .= $this->form->texto('pipeline','Pipeline',$obj->pipeline,100,100);
-      $exibe .= $this->form->memo('info','Informação',$obj->info,10,100);
+      $exibe .= $this->form->memo('info','Info',$obj->info,10,100);
       $botoes = $this->form->botao_cancelar($this->url->get_href_int($this->route,'ficha',$obj->token));
       $botoes .= $this->form->botao_ok();
       $exibe .= $this->form->fim($botoes);
