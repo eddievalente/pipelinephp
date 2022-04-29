@@ -20,3 +20,11 @@ This is my first project, entirely written in PHP. After this, I will be creatin
 
 The application was configured as MVP ( Model-View-Presenter ). There are some library classes that group together some functions used by other classes.
 
+## Database
+
+Into the folder /sql there is the export file pipeline.sql. Just download it and restore in your mySQL database admin.
+
+## Next Steps
+
+I'm adjusting all classes to be 100% compliant with PHP8. Then the Laravel and React versions will be published.
+
