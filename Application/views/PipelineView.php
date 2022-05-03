@@ -101,6 +101,7 @@ class PipelineView {
     $vetor = array();
     $vetor[] = $this->url->get_link_int('novo pipeline',$this->route,'novo');
     $exibe .= $this->html->filtro_header($etiq_header,'',$vetor,'',$breadcrumb);
+    //
     $exibe .= '<div id=dashboard>
       <div id=fullpanel style="height: calc( 80vh - 150px );"><table class=listapipe>
       ';
