@@ -40,5 +40,27 @@ class ActionController {
     }
     return $ret;
   }
-  
+
+  function api($modo,$token) {
+    $obj = new Action();
+    $ret = '';
+    if ( $modo == 'load' ) {
+      $obj->loadItem($token);
+    } elseif ( $modo == 'save' ) {
+      $obj->loadNew($objson->p_token);
+      $obj->acao = $objson->acao;
+      $obj->info = $objson->info;
+      $obj->save();
+    } elseif ( $modo == 'update' ) {
+      $obj->loadItem($objson->token);
+      $obj->acao = $objson->acao;
+      $obj->info = $objson->info;      
+      $obj->update();
+    } elseif ( $modo == 'delete' ) {
+      $obj->loadItem($objson->token);
+      $obj->remove();
+    }
+    return $obj;
+  }
+
 }

@@ -44,5 +44,37 @@ class TaskController {
     }
     return $ret;
   }
+
+  function api($modo,$token) {   
+    $obj = new Task();
+    $ret = '';
+    if ( $modo == 'load' ) {
+      $obj->loadItem($token);
+    } elseif ( $modo == 'save' ) {
+      $obj->loadNew($token);
+      $obj->tarefa = $objson->tarefa;
+      $obj->instrucao = $objson->instrucao;
+      $obj->dtinicio = $objson->dtinicio;
+      $obj->dtentrega = $objson->dtentrega;
+      $obj->progresso = $objson->progresso;
+      $obj->indicador = $objson->indicador;
+      $obj->prioridade = $objson->prioridade;
+      $obj->save();
+    } elseif ( $modo == 'update' ) {
+      $obj->loadItem($token);
+      $obj->tarefa = $objson->tarefa;
+      $obj->instrucao = $objson->instrucao;
+      $obj->dtinicio = $objson->dtinicio;
+      $obj->dtentrega = $objson->dtentrega;
+      $obj->progresso = $objson->progresso;
+      $obj->indicador = $objson->indicador;
+      $obj->prioridade = $objson->prioridade;
+      $obj->update();
+    } elseif ( $modo == 'delete' ) {
+      $obj->loadItem($token);
+      $obj->remove();
+    }
+    return $obj;
+  }
   
 }

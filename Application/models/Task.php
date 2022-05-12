@@ -28,6 +28,14 @@ class Task extends Base {
   var $p_token;
   var $p_ordem;
   var $pipeline;
+  
+  var $dtinicio_str;
+  var $dtentrega_str;
+  var $cor_prioridade;
+  var $prioridade_str;
+  var $progresso_str;
+  var $str_schedule;
+  var $icone;
     
   function __construct() {
     parent::__construct();
@@ -45,6 +53,21 @@ class Task extends Base {
     return $lista;
   }
 
+  private function set_str() {
+    $this->dtinicio_str = $this->utili->get_strdata($this->dtinicio);
+    $this->dtentrega_str = $this->utili->get_strdata($this->dtentrega);
+    if ( empty($this->dtentrega_str) ) $this->dtentrega_str = 'N/I';
+    $this->cor_prioridade = $this->utili->get_prioridade_cor($this->prioridade);
+    $this->prioridade_str = $this->utili->get_prioridade($this->prioridade);
+    $this->prioridade_str = '<span class=prioridade_tag style="border: solid 1px '.$this->cor_prioridade.';">'.$this->prioridade_str.'</span>';
+    $this->progresso_str = $this->utili->get_str_progresso($this->dtinicio,$this->progresso,$this->indicador);
+    $this->str_schedule = $this->utili->get_schedule($this->dtinicio,$this->dtentrega,$this->prioridade);
+    
+    $this->icone = '<icone class="icon fa-bolt" style="background: '.$this->cor_prioridade.'; margin:0; display: block; float: right; "></icone>';
+    if ( $this->progresso < 100 ) $this->icone = '<a href="'.$this->token.'" title="Inform Progress">'.$this->icone.'</a>';
+               
+  }
+  
   public function loadNew($token) {
     $qrstr = "SELECT * FROM gesh_pipeline_acao WHERE token='$token'";
     $item = $this->db->cons_fetch($qrstr);
@@ -58,6 +81,7 @@ class Task extends Base {
     //
     $this->tarefa = 'New Task';
     //
+    $this->set_str();
   }
   
   public function loadItem($token) {
@@ -75,6 +99,8 @@ class Task extends Base {
     $this->progresso = $item["progresso"];
     $this->indicador = $item["indicador"];
     $this->prioridade = $item["prioridade"];
+    //
+    $this->set_str();
     //    
     $this->loadItemAction();
     $this->loadItemPipeline();
@@ -95,6 +121,8 @@ class Task extends Base {
     $this->progresso = $item["progresso"];
     $this->indicador = $item["indicador"];
     $this->prioridade = $item["prioridade"];
+    //
+    $this->set_str();
     //    
     $this->loadItemAction();
     $this->loadItemPipeline();

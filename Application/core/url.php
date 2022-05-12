@@ -14,9 +14,10 @@ define('PREFIXO_SESSAO','pipe_');
  */
 
 class url {
-  var $route;
-  var $modo;
-  var $id;
+  var $route = '';
+  var $modo = '';
+  var $id = '';
+  var $aux = '';
   
   function __construct() {
     $this->decode_param();
@@ -27,6 +28,7 @@ class url {
     $vet_menu[] = 'pipeline';
     $vet_menu[] = 'action';
     $vet_menu[] = 'task';
+    $vet_menu[] = 'api';
     return in_array($menu,$vet_menu);
   }
   
@@ -36,10 +38,12 @@ class url {
     $param0 = isset($parametros[0]) ? $parametros[0] : '';
     $param1 = isset($parametros[1]) ? $parametros[1] : '';
     $param2 = isset($parametros[2]) ? $parametros[2] : '';
+    $param3 = isset($parametros[3]) ? $parametros[3] : '';
     if ( $this->is_route($param0) ) {
       $this->route = $param0;
       $this->modo = $param1;
       $this->id = $param2;
+      $this->aux = $param3;
     } else {
       $this->route = '';
       $this->modo = $param0;

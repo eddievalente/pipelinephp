@@ -17,10 +17,14 @@ class Pipeline extends Base {
   var $q_task;
   var $max_ordem;
   
+  var $schedule_title = '';
+  
   var $action_list = Array();
    
   function __construct() {
     parent::__construct();
+    
+    $this->utili = new utili;
   }
 
   public function listAll() {
@@ -52,6 +56,8 @@ class Pipeline extends Base {
     $this->pipeline = $item["pipeline"];
     $this->info = $item["info"];
     //
+    $this->schedule_title = $this->utili->get_schedule_title();
+    //
     $this->loadActionList();
   }
 
@@ -63,6 +69,8 @@ class Pipeline extends Base {
     $this->token = $item["token"];
     $this->pipeline = $item["pipeline"];
     $this->info = $item["info"];
+    //
+    $this->schedule_title = $this->utili->get_schedule_title();
     //
     $this->loadActionList();
   }

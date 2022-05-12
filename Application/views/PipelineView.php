@@ -9,14 +9,12 @@ class PipelineView {
 
   var $url;
   var $html;
-  var $utili;
   var $form;
   var $route = 'pipeline';  
 
   function __construct() {
     $this->url = new url;
     $this->html = new html;
-    $this->utili = new utili;
     $this->form = new form;
   }
   
@@ -37,7 +35,7 @@ class PipelineView {
       $pipeline = $this->url->get_link_int($pipe->pipeline,$this->route,'ficha',$p_token);
       //
       $bloco = '<table style="width:100%; border: 0;">
-        <tr>'.$this->utili->get_schedule_title().'</tr>
+        <tr>'.$pipe->schedule_title.'</tr>
         </table>
         ';
       $lista_pipe .= '<tr><td class=pipeline colspan=3 width=65% >'.$o_pipeline.' &bull; '.$pipeline.'</td><td class=pipeline width=35%>'.$bloco.'</td></tr>
@@ -67,25 +65,17 @@ class PipelineView {
             $indicador = $task->indicador;
             $prioridade = $task->prioridade;
             $tarefa = $this->url->get_link_int($o_pipeline.'.'.$o_acao.'.'.$o_task.' &bull; '.$task->tarefa,'task','ficha',$t_token,'Ficha da tarefa');
-          
-            $dtentrega_str = $this->utili->get_strdata($dtentrega);
-            if ( empty($dtentrega_str) ) $dtentrega_str = 'N/I';
-            $cor_prioridade = $this->utili->get_prioridade_cor($prioridade);
-            $prioridade_str = $this->utili->get_prioridade($prioridade);
-            $prioridade_str = '<span class=prioridade_tag style="border: solid 1px '.$cor_prioridade.';">'.$prioridade_str.'</span>';
-            $progresso_str = $this->utili->get_str_progresso($dtinicio,$progresso,$indicador);
+
             $bloco = '<table style="width:100%; border: 0;">
               <tr>
-              ';
-            $bloco .= $this->utili->get_schedule($dtinicio,$dtentrega,$prioridade);
-            $bloco .= '</tr>
-              <tr><td style="border:0; padding: 5px 0 0 0;" colspan=20>'.$progresso_str.'</td></tr>
+              '.$task->str_schedule.'</tr>
+              <tr><td style="border:0; padding: 5px 0 0 0;" colspan=20>'.$task->progresso_str.'</td></tr>
               </table>
               ';
-            $icone = '<icone class="icon fa-bolt" style="background: '.$cor_prioridade.'; margin:0; display: block; float: right; "></icone>';
+            $icone = '<icone class="icon fa-bolt" style="background: '.$task->cor_prioridade.'; margin:0; display: block; float: right; "></icone>';
             if ( $progresso < 100 ) $icone = $this->url->get_link_int($icone,'task','progresso',$t_token,'Informar Progresso');
             $lista_pipe .= '<td width=35% class=tarefa><b>'.$tarefa.'</b>'.'</td>'.
-              '<td width=12% class=tarefa><b>'.$dtentrega_str.$icone.'</b><br/>'.$prioridade_str.'</td>'.
+              '<td width=12% class=tarefa><b>'.$task->dtentrega_str.$icone.'</b><br/>'.$task->prioridade_str.'</td>'.
               '<td width=35% class=dia>'.$bloco.'</td></tr>
               ';
           }

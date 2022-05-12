@@ -128,35 +128,44 @@ class site {
   
   function start() {
     $route = $this->url->route;
-    $modo = $this->url->modo;
-    $id = $this->url->id;
-    if ( $route == 'action' ) {
-      include_once('Application/controllers/ActionController.php');
-      $controller = new ActionController();
-    } elseif ( $route == 'task' ) {
-      include_once('Application/controllers/TaskController.php');
-      $controller = new TaskController();
+    if ( $route == 'api' ) {
+      $tipo = $this->url->modo;
+      $modo = $this->url->id;
+      $id = $this->url->aux;
+      include_once('Application/controllers/APIController.php');
+      $api = new APIController();
+      $api->painel($tipo,$modo,$id);
     } else {
-      include_once('Application/controllers/PipelineController.php');
-      $controller = new PipelineController();
-    }
-    $ret = '';
-    $ret .= $this->site_cabecalho();
-    $ret .= '<div class="section section-breadcrumbs" style="padding: 5px 0;"><div class="container"><div class="row" >
-      <div class="col-md-12">
-        <h1 style="display:block; float:left; clear:left; width: auto; ">Personal Task Manager</h1>
-      </div>
-      </div></div></div>
-      <div class="section" style="padding: 5px 0;"><div class="container"><div class="row" >
-      <div class="col-md-12"><div id="filtro">
-      ';
+      $modo = $this->url->modo;
+      $id = $this->url->id;
+      if ( $route == 'action' ) {
+        include_once('Application/controllers/ActionController.php');
+        $controller = new ActionController();
+      } elseif ( $route == 'task' ) {
+        include_once('Application/controllers/TaskController.php');
+        $controller = new TaskController();
+      } else {
+        include_once('Application/controllers/PipelineController.php');
+        $controller = new PipelineController();
+      }
+      $ret = '';
+      $ret .= $this->site_cabecalho();
+      $ret .= '<div class="section section-breadcrumbs" style="padding: 5px 0;"><div class="container"><div class="row" >
+        <div class="col-md-12">
+          <h1 style="display:block; float:left; clear:left; width: auto; ">Personal Task Manager</h1>
+        </div>
+        </div></div></div>
+        <div class="section" style="padding: 5px 0;"><div class="container"><div class="row" >
+        <div class="col-md-12"><div id="filtro">
+        ';
     
-    $ret .= $controller->painel($modo,$id);
-    $ret .= '</div></div>
-       </div></div></div>
-      ';
-    $ret .= $this->site_footer();
-    return $ret;
+      $ret .= $controller->painel($modo,$id);
+      $ret .= '</div></div>
+         </div></div></div>
+        ';
+      $ret .= $this->site_footer();
+      return $ret;
+    }
   }
   
 }
