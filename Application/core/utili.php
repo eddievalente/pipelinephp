@@ -146,13 +146,22 @@ class utili {
     $vetor[] = '7¦'.$this->get_progresso_vies(7);
     return $vetor;
   }
-  
-  function get_schedule_title() {
-    $ret = '';
+
+  function get_vet_schedule() {
+    $vetor = Array();
     for ( $i = 0; $i < 20; $i++ ) { 
       $data = $this->get_days_forward($i);
       $dia = $this->get_data_dia($data);
-      $ret .= '<td style="border:0; width: 5%; padding: 3px 0; text-align: center; ">'.$dia.'</td>
+      $vetor[] = $dia;
+    }
+    return $vetor;
+  }
+  
+  function get_schedule_title() {
+    $vetor = $this->get_vet_schedule();
+    $ret = '';
+    foreach($vetor as $dia) {
+      $ret .= '<td class="fonte_schedule">'.$dia.'</td>
         ';
     }
     return $ret;
@@ -209,7 +218,7 @@ class utili {
     if ( $progresso == 0 ) {
       if ( !empty($inicio) )  {
         if ( $dthoje > $inicio ) {
-          $ret .= ' ( início previsto '.$this->get_strdata($inicio).' &bull; atrasada )';
+          $ret .= ' ( início previsto '.$this->get_strdata($inicio).' - atrasada )';
         } else {
           $ret .= ' ( início previsto '.$this->get_strdata($inicio).' )';
         }

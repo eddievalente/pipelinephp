@@ -59,7 +59,7 @@ class Task extends Base {
     if ( empty($this->dtentrega_str) ) $this->dtentrega_str = 'N/I';
     $this->cor_prioridade = $this->utili->get_prioridade_cor($this->prioridade);
     $this->prioridade_str = $this->utili->get_prioridade($this->prioridade);
-    $this->prioridade_str = '<span class=prioridade_tag style="border: solid 1px '.$this->cor_prioridade.';">'.$this->prioridade_str.'</span>';
+    //$this->prioridade_str = '<span class=prioridade_tag style="border: solid 1px '.$this->cor_prioridade.';">'.$this->prioridade_str.'</span>';
     $this->progresso_str = $this->utili->get_str_progresso($this->dtinicio,$this->progresso,$this->indicador);
     $this->str_schedule = $this->utili->get_schedule($this->dtinicio,$this->dtentrega,$this->prioridade);
     

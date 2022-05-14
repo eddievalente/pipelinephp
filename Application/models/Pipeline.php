@@ -17,6 +17,7 @@ class Pipeline extends Base {
   var $q_task;
   var $max_ordem;
   
+  var $schedule = Array();
   var $schedule_title = '';
   
   var $action_list = Array();
@@ -57,6 +58,7 @@ class Pipeline extends Base {
     $this->info = $item["info"];
     //
     $this->schedule_title = $this->utili->get_schedule_title();
+    $this->schedule = $this->utili->get_vet_schedule();
     //
     $this->loadActionList();
   }
@@ -71,6 +73,7 @@ class Pipeline extends Base {
     $this->info = $item["info"];
     //
     $this->schedule_title = $this->utili->get_schedule_title();
+    $this->schedule = $this->utili->get_vet_schedule();
     //
     $this->loadActionList();
   }

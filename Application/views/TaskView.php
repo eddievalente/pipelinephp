@@ -144,6 +144,28 @@ class TaskView {
   }
   
   function editar($obj) {
+    $idtask = $obj->id_task;
+    $idacao = $obj->id_acao;
+    $o_task = $obj->ordem;
+    $token = $obj->token;
+    $tarefa = $obj->tarefa;
+    $instrucao = $obj->instrucao;
+    $dtinicio = $obj->dtinicio;
+    $dtentrega = $obj->dtentrega;
+    $progresso = $obj->progresso;
+    $indicador = $obj->indicador;
+    $prioridade = $obj->prioridade;
+    //    
+    $a_token = $obj->a_token;
+    $idpipeline = $obj->id_pipeline;
+    $acao = $obj->acao;
+    $o_acao = $obj->a_ordem;
+    $info = $obj->a_info;
+    //
+    $p_token = $obj->p_token;
+    $o_pipeline = $obj->p_ordem;
+    $pipeline = $obj->pipeline;
+    //
     $exibe_form = empty($_POST);
     $msg_erro = '';
     if( !$exibe_form ) {
@@ -194,15 +216,37 @@ class TaskView {
   }
   
   function progresso($obj) {
+    $idtask = $obj->id_task;
+    $idacao = $obj->id_acao;
+    $o_task = $obj->ordem;
+    $token = $obj->token;
+    $tarefa = $obj->tarefa;
+    $instrucao = $obj->instrucao;
+    $dtinicio = $obj->dtinicio;
+    $dtentrega = $obj->dtentrega;
+    $progresso = $obj->progresso;
+    $indicador = $obj->indicador;
+    $prioridade = $obj->prioridade;
+    //    
+    $a_token = $obj->a_token;
+    $idpipeline = $obj->id_pipeline;
+    $acao = $obj->acao;
+    $o_acao = $obj->a_ordem;
+    $info = $obj->a_info;
+    //
+    $p_token = $obj->p_token;
+    $o_pipeline = $obj->p_ordem;
+    $pipeline = $obj->pipeline;
+    //
     $exibe_form = empty($_POST);
     if( !$exibe_form ) {
-      $progresso = $_POST["progresso"];
-      $indicador = $_POST["indicador"];
-      $prioridade = $_POST["prioridade"];
-      $dtinicio = $this->form->get_formdata("dtinicio");
-      $dtentrega = $this->form->get_formdata("dtentrega");
-      $this->stproc->proc_tarefa_progresso($idtask,$dtinicio,$dtentrega,$prioridade,$progresso,$indicador);
-      return $this->url->redirect($this->url->get_href_int());
+      $obj->progresso = $_POST["progresso"];
+      $obj->indicador = $_POST["indicador"];
+      $obj->prioridade = $_POST["prioridade"];
+      $obj->dtinicio = $this->form->get_formdata("dtinicio");
+      $obj->dtentrega = $this->form->get_formdata("dtentrega");
+      $obj->update();
+      return $this->url->redirect($this->url->get_href_int($this->route,'ficha',$obj->token));
     }
     if( $exibe_form ) {
       $titform = 'Task Progress';
